@@ -1,15 +1,3 @@
-/* CREATE TABLE plan_cuentas(
-id SERIAL,
-Trimestre INT DEFAULT NULL,
-Rut INT DEFAULT NULL,
-Razon_Social VARCHAR(300) DEFAULT NULL,
-Dato VARCHAR(2) DEFAULT NULL,
-UM VARCHAR(5) DEFAULT NULL,
-Plan_de_Cuentas VARCHAR(255) DEFAULT NULL,
-Monto numeric DEFAULT NULL,
-Taxonomia VARCHAR(20) DEFAULT NULL,
-Tipo_de_Informe VARCHAR(20) DEFAULT NULL
-) */
 
 const { Pool } = require('pg')
 const format = require('pg-format');
