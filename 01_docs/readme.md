@@ -23,7 +23,7 @@ HU9 .- Como "Cliente", quiero actualizar la información a través de nuevas car
 
 HU10 .- Como "Cliente", quiero eliminar la información para volver a cargar una carga diferente a la actual en formato de la Comisión del Mercado Financiero
 
-<!-- Upgrade futuro -->
+*****Posibles Upgrade futuros******
 
 HU10 .- Como "Cliente", quiero que se queden guardados en un historial mis búsquedas anteriores para así tener un registro
 

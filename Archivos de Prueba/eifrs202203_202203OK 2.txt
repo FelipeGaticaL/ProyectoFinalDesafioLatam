@@ -1005,8 +1005,8 @@
 202203;61604000;POLLA CHILENA DE BENEFICENCIA S.A.;I;CLP;Ganancia (pérdida);846425000;TAX CI;ERFG
 202203;61604000;POLLA CHILENA DE BENEFICENCIA S.A.;I;CLP;Ganancia (pérdida), atribuible a los propietarios de la controladora;846425000;TAX CI;ERFG
 202203;61604000;POLLA CHILENA DE BENEFICENCIA S.A.;I;CLP;Ganancia (pérdida);846425000;TAX CI;ERFG
-202203;61604000;POLLA CHILENA DE BENEFICENCIA S.A.;I;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;338;TAX CI;ERFG
-202203;61604000;POLLA CHILENA DE BENEFICENCIA S.A.;I;CLP;Ganancia (pérdida) por acción básica;338;TAX CI;ERFG
+202203;61604000;POLLA CHILENA DE BENEFICENCIA S.A.;I;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;338.57;TAX CI;ERFG
+202203;61604000;POLLA CHILENA DE BENEFICENCIA S.A.;I;CLP;Ganancia (pérdida) por acción básica;338.57;TAX CI;ERFG
 202203;76000739;ESVAL S.A.;C;CLP;Ingresos de actividades ordinarias;67997335000;TAX CI;ERNG
 202203;76000739;ESVAL S.A.;C;CLP;Otros ingresos;280197000;TAX CI;ERNG
 202203;76000739;ESVAL S.A.;C;CLP;Materias primas y consumibles utilizados;7172051000;TAX CI;ERNG
@@ -1044,10 +1044,10 @@
 202203;76016541;INGEVEC S.A.;C;CLP;Ganancia (pérdida), atribuible a los propietarios de la controladora;2948919000;TAX CI;ERFG
 202203;76016541;INGEVEC S.A.;C;CLP;Ganancia (pérdida), atribuible a participaciones no controladoras;1000;TAX CI;ERFG
 202203;76016541;INGEVEC S.A.;C;CLP;Ganancia (pérdida);2948920000;TAX CI;ERFG
-202203;76016541;INGEVEC S.A.;C;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;2;TAX CI;ERFG
-202203;76016541;INGEVEC S.A.;C;CLP;Ganancia (pérdida) por acción básica;2;TAX CI;ERFG
-202203;76016541;INGEVEC S.A.;C;CLP;Ganancias (pérdida) diluida por acción procedente de operaciones continuadas;2;TAX CI;ERFG
-202203;76016541;INGEVEC S.A.;C;CLP;Ganancias (pérdida) diluida por acción;2;TAX CI;ERFG
+202203;76016541;INGEVEC S.A.;C;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;2.7;TAX CI;ERFG
+202203;76016541;INGEVEC S.A.;C;CLP;Ganancia (pérdida) por acción básica;2.7;TAX CI;ERFG
+202203;76016541;INGEVEC S.A.;C;CLP;Ganancias (pérdida) diluida por acción procedente de operaciones continuadas;2.7;TAX CI;ERFG
+202203;76016541;INGEVEC S.A.;C;CLP;Ganancias (pérdida) diluida por acción;2.7;TAX CI;ERFG
 202203;76036521;ADMINISTRADORA GENERAL DE FONDOS SURA S.A.;I;CLP;Ingresos de actividades ordinarias;4946670000;TAX CI;ERFG
 202203;76036521;ADMINISTRADORA GENERAL DE FONDOS SURA S.A.;I;CLP;Ganancia bruta;4946670000;TAX CI;ERFG
 202203;76036521;ADMINISTRADORA GENERAL DE FONDOS SURA S.A.;I;CLP;Costos de distribución;2937259000;TAX CI;ERFG
@@ -1078,18 +1078,18 @@
 202203;76488180;PAZ CORP S.A.;C;CLP;Ganancia (pérdida), atribuible a los propietarios de la controladora;8479533000;TAX CI;ERFG
 202203;76488180;PAZ CORP S.A.;C;CLP;Ganancia (pérdida), atribuible a participaciones no controladoras;1177381000;TAX CI;ERFG
 202203;76488180;PAZ CORP S.A.;C;CLP;Ganancia (pérdida);9656914000;TAX CI;ERFG
-202203;76488180;PAZ CORP S.A.;C;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;29;TAX CI;ERFG
-202203;76488180;PAZ CORP S.A.;C;CLP;Ganancia (pérdida) por acción básica;29;TAX CI;ERFG
-202203;76488180;PAZ CORP S.A.;C;CLP;Ganancias (pérdida) diluida por acción procedente de operaciones continuadas;29;TAX CI;ERFG
-202203;76488180;PAZ CORP S.A.;C;CLP;Ganancias (pérdida) diluida por acción;29;TAX CI;ERFG
+202203;76488180;PAZ CORP S.A.;C;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;29.92;TAX CI;ERFG
+202203;76488180;PAZ CORP S.A.;C;CLP;Ganancia (pérdida) por acción básica;29.92;TAX CI;ERFG
+202203;76488180;PAZ CORP S.A.;C;CLP;Ganancias (pérdida) diluida por acción procedente de operaciones continuadas;29.92;TAX CI;ERFG
+202203;76488180;PAZ CORP S.A.;C;CLP;Ganancias (pérdida) diluida por acción;29.92;TAX CI;ERFG
 202203;76527570;SOCIEDAD ADMINISTRADORA DEL FONDO PARA LA BONIFICACION POR RETIRO CAJALOSANDES S.A.;I;CLP;Materias primas y consumibles utilizados;42000;TAX CI;ERNG
 202203;76527570;SOCIEDAD ADMINISTRADORA DEL FONDO PARA LA BONIFICACION POR RETIRO CAJALOSANDES S.A.;I;CLP;Ganancias (pérdidas) de actividades operacionales;-42000;TAX CI;ERNG
 202203;76527570;SOCIEDAD ADMINISTRADORA DEL FONDO PARA LA BONIFICACION POR RETIRO CAJALOSANDES S.A.;I;CLP;Ganancia (pérdida), antes de impuestos;-42000;TAX CI;ERNG
 202203;76527570;SOCIEDAD ADMINISTRADORA DEL FONDO PARA LA BONIFICACION POR RETIRO CAJALOSANDES S.A.;I;CLP;Ganancia (pérdida) procedente de operaciones continuadas;-42000;TAX CI;ERNG
 202203;76527570;SOCIEDAD ADMINISTRADORA DEL FONDO PARA LA BONIFICACION POR RETIRO CAJALOSANDES S.A.;I;CLP;Ganancia (pérdida);-42000;TAX CI;ERNG
 202203;76527570;SOCIEDAD ADMINISTRADORA DEL FONDO PARA LA BONIFICACION POR RETIRO CAJALOSANDES S.A.;I;CLP;Ganancia (pérdida);-42000;TAX CI;ERNG
-202203;76527570;SOCIEDAD ADMINISTRADORA DEL FONDO PARA LA BONIFICACION POR RETIRO CAJALOSANDES S.A.;I;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;0;TAX CI;ERNG
-202203;76527570;SOCIEDAD ADMINISTRADORA DEL FONDO PARA LA BONIFICACION POR RETIRO CAJALOSANDES S.A.;I;CLP;Ganancia (pérdida) por acción básica;0;TAX CI;ERNG
+202203;76527570;SOCIEDAD ADMINISTRADORA DEL FONDO PARA LA BONIFICACION POR RETIRO CAJALOSANDES S.A.;I;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;-.042;TAX CI;ERNG
+202203;76527570;SOCIEDAD ADMINISTRADORA DEL FONDO PARA LA BONIFICACION POR RETIRO CAJALOSANDES S.A.;I;CLP;Ganancia (pérdida) por acción básica;-.042;TAX CI;ERNG
 202203;76833300;ESSBIO S.A.;C;CLP;Ingresos de actividades ordinarias;59532685000;TAX CI;ERNG
 202203;76833300;ESSBIO S.A.;C;CLP;Otros ingresos;184860000;TAX CI;ERNG
 202203;76833300;ESSBIO S.A.;C;CLP;Materias primas y consumibles utilizados;7056189000;TAX CI;ERNG
@@ -1110,8 +1110,8 @@
 202203;76833300;ESSBIO S.A.;C;CLP;Ganancia (pérdida), atribuible a los propietarios de la controladora;11674832000;TAX CI;ERNG
 202203;76833300;ESSBIO S.A.;C;CLP;Ganancia (pérdida), atribuible a participaciones no controladoras;5973000;TAX CI;ERNG
 202203;76833300;ESSBIO S.A.;C;CLP;Ganancia (pérdida);11680805000;TAX CI;ERNG
-202203;76833300;ESSBIO S.A.;C;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;0;TAX CI;ERNG
-202203;76833300;ESSBIO S.A.;C;CLP;Ganancia (pérdida) por acción básica;0;TAX CI;ERNG
+202203;76833300;ESSBIO S.A.;C;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;.00044;TAX CI;ERNG
+202203;76833300;ESSBIO S.A.;C;CLP;Ganancia (pérdida) por acción básica;.00044;TAX CI;ERNG
 202203;81826800;CAJA DE COMPENSACION DE ASIGNACION FAMILIAR DE LOS ANDES;C;CLP;Ingresos de actividades ordinarias;10183190000;TAX CI;ERNG
 202203;81826800;CAJA DE COMPENSACION DE ASIGNACION FAMILIAR DE LOS ANDES;C;CLP;Otros ingresos;7716548000;TAX CI;ERNG
 202203;81826800;CAJA DE COMPENSACION DE ASIGNACION FAMILIAR DE LOS ANDES;C;CLP;Materias primas y consumibles utilizados;19819893000;TAX CI;ERNG
@@ -1151,10 +1151,10 @@
 202203;83628100;SONDA S.A.;C;CLP;Ganancia (pérdida), atribuible a los propietarios de la controladora;1474602000;TAX CI;ERFG
 202203;83628100;SONDA S.A.;C;CLP;Ganancia (pérdida), atribuible a participaciones no controladoras;153317000;TAX CI;ERFG
 202203;83628100;SONDA S.A.;C;CLP;Ganancia (pérdida);1627919000;TAX CI;ERFG
-202203;83628100;SONDA S.A.;C;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;1;TAX CI;ERFG
-202203;83628100;SONDA S.A.;C;CLP;Ganancia (pérdida) por acción básica;1;TAX CI;ERFG
-202203;83628100;SONDA S.A.;C;CLP;Ganancias (pérdida) diluida por acción procedente de operaciones continuadas;1;TAX CI;ERFG
-202203;83628100;SONDA S.A.;C;CLP;Ganancias (pérdida) diluida por acción;1;TAX CI;ERFG
+202203;83628100;SONDA S.A.;C;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;1.69;TAX CI;ERFG
+202203;83628100;SONDA S.A.;C;CLP;Ganancia (pérdida) por acción básica;1.69;TAX CI;ERFG
+202203;83628100;SONDA S.A.;C;CLP;Ganancias (pérdida) diluida por acción procedente de operaciones continuadas;1.69;TAX CI;ERFG
+202203;83628100;SONDA S.A.;C;CLP;Ganancias (pérdida) diluida por acción;1.69;TAX CI;ERFG
 202203;86547900;SOCIEDAD ANONIMA VIÑA SANTA RITA;C;CLP;Ingresos de actividades ordinarias;30608517000;TAX CI;ERFG
 202203;86547900;SOCIEDAD ANONIMA VIÑA SANTA RITA;C;CLP;Costo de ventas;21037026000;TAX CI;ERFG
 202203;86547900;SOCIEDAD ANONIMA VIÑA SANTA RITA;C;CLP;Ganancia bruta;9571491000;TAX CI;ERFG
@@ -1176,10 +1176,10 @@
 202203;86547900;SOCIEDAD ANONIMA VIÑA SANTA RITA;C;CLP;Ganancia (pérdida), atribuible a los propietarios de la controladora;257581000;TAX CI;ERFG
 202203;86547900;SOCIEDAD ANONIMA VIÑA SANTA RITA;C;CLP;Ganancia (pérdida), atribuible a participaciones no controladoras;-39000;TAX CI;ERFG
 202203;86547900;SOCIEDAD ANONIMA VIÑA SANTA RITA;C;CLP;Ganancia (pérdida);257542000;TAX CI;ERFG
-202203;86547900;SOCIEDAD ANONIMA VIÑA SANTA RITA;C;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;0;TAX CI;ERFG
-202203;86547900;SOCIEDAD ANONIMA VIÑA SANTA RITA;C;CLP;Ganancia (pérdida) por acción básica;0;TAX CI;ERFG
-202203;86547900;SOCIEDAD ANONIMA VIÑA SANTA RITA;C;CLP;Ganancias (pérdida) diluida por acción procedente de operaciones continuadas;0;TAX CI;ERFG
-202203;86547900;SOCIEDAD ANONIMA VIÑA SANTA RITA;C;CLP;Ganancias (pérdida) diluida por acción;0;TAX CI;ERFG
+202203;86547900;SOCIEDAD ANONIMA VIÑA SANTA RITA;C;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;.25;TAX CI;ERFG
+202203;86547900;SOCIEDAD ANONIMA VIÑA SANTA RITA;C;CLP;Ganancia (pérdida) por acción básica;.25;TAX CI;ERFG
+202203;86547900;SOCIEDAD ANONIMA VIÑA SANTA RITA;C;CLP;Ganancias (pérdida) diluida por acción procedente de operaciones continuadas;.25;TAX CI;ERFG
+202203;86547900;SOCIEDAD ANONIMA VIÑA SANTA RITA;C;CLP;Ganancias (pérdida) diluida por acción;.25;TAX CI;ERFG
 202203;90209000;COMPAÑIA INDUSTRIAL EL VOLCAN S.A.;C;CLP;Ingresos de actividades ordinarias;43257720000;TAX CI;ERFG
 202203;90209000;COMPAÑIA INDUSTRIAL EL VOLCAN S.A.;C;CLP;Costo de ventas;26380512000;TAX CI;ERFG
 202203;90209000;COMPAÑIA INDUSTRIAL EL VOLCAN S.A.;C;CLP;Ganancia bruta;16877208000;TAX CI;ERFG
@@ -1201,10 +1201,10 @@
 202203;90209000;COMPAÑIA INDUSTRIAL EL VOLCAN S.A.;C;CLP;Ganancia (pérdida), atribuible a los propietarios de la controladora;10052057000;TAX CI;ERFG
 202203;90209000;COMPAÑIA INDUSTRIAL EL VOLCAN S.A.;C;CLP;Ganancia (pérdida), atribuible a participaciones no controladoras;4226000;TAX CI;ERFG
 202203;90209000;COMPAÑIA INDUSTRIAL EL VOLCAN S.A.;C;CLP;Ganancia (pérdida);10056283000;TAX CI;ERFG
-202203;90209000;COMPAÑIA INDUSTRIAL EL VOLCAN S.A.;C;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;134;TAX CI;ERFG
-202203;90209000;COMPAÑIA INDUSTRIAL EL VOLCAN S.A.;C;CLP;Ganancia (pérdida) por acción básica;134;TAX CI;ERFG
-202203;90209000;COMPAÑIA INDUSTRIAL EL VOLCAN S.A.;C;CLP;Ganancias (pérdida) diluida por acción procedente de operaciones continuadas;134;TAX CI;ERFG
-202203;90209000;COMPAÑIA INDUSTRIAL EL VOLCAN S.A.;C;CLP;Ganancias (pérdida) diluida por acción;134;TAX CI;ERFG
+202203;90209000;COMPAÑIA INDUSTRIAL EL VOLCAN S.A.;C;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;134.03;TAX CI;ERFG
+202203;90209000;COMPAÑIA INDUSTRIAL EL VOLCAN S.A.;C;CLP;Ganancia (pérdida) por acción básica;134.03;TAX CI;ERFG
+202203;90209000;COMPAÑIA INDUSTRIAL EL VOLCAN S.A.;C;CLP;Ganancias (pérdida) diluida por acción procedente de operaciones continuadas;134.03;TAX CI;ERFG
+202203;90209000;COMPAÑIA INDUSTRIAL EL VOLCAN S.A.;C;CLP;Ganancias (pérdida) diluida por acción;134.03;TAX CI;ERFG
 202203;90320000;COMPAÑIA ELECTRO METALURGICA S.A.;C;CLP;Ingresos de actividades ordinarias;236842211000;TAX CI;ERNG
 202203;90320000;COMPAÑIA ELECTRO METALURGICA S.A.;C;CLP;Otros ingresos;565140000;TAX CI;ERNG
 202203;90320000;COMPAÑIA ELECTRO METALURGICA S.A.;C;CLP;Gasto por depreciación y amortización;11124796000;TAX CI;ERNG
@@ -1223,8 +1223,8 @@
 202203;90320000;COMPAÑIA ELECTRO METALURGICA S.A.;C;CLP;Ganancia (pérdida), atribuible a los propietarios de la controladora;3413858000;TAX CI;ERNG
 202203;90320000;COMPAÑIA ELECTRO METALURGICA S.A.;C;CLP;Ganancia (pérdida), atribuible a participaciones no controladoras;1429577000;TAX CI;ERNG
 202203;90320000;COMPAÑIA ELECTRO METALURGICA S.A.;C;CLP;Ganancia (pérdida);4843435000;TAX CI;ERNG
-202203;90320000;COMPAÑIA ELECTRO METALURGICA S.A.;C;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;77;TAX CI;ERNG
-202203;90320000;COMPAÑIA ELECTRO METALURGICA S.A.;C;CLP;Ganancia (pérdida) por acción básica;77;TAX CI;ERNG
+202203;90320000;COMPAÑIA ELECTRO METALURGICA S.A.;C;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;77.94;TAX CI;ERNG
+202203;90320000;COMPAÑIA ELECTRO METALURGICA S.A.;C;CLP;Ganancia (pérdida) por acción básica;77.94;TAX CI;ERNG
 202203;90331000;CRISTALERIAS DE CHILE S.A.;C;CLP;Ingresos de actividades ordinarias;80590691000;TAX CI;ERFG
 202203;90331000;CRISTALERIAS DE CHILE S.A.;C;CLP;Costo de ventas;60470788000;TAX CI;ERFG
 202203;90331000;CRISTALERIAS DE CHILE S.A.;C;CLP;Ganancia bruta;20119903000;TAX CI;ERFG
@@ -1247,8 +1247,8 @@
 202203;90331000;CRISTALERIAS DE CHILE S.A.;C;CLP;Ganancia (pérdida), atribuible a los propietarios de la controladora;3012296000;TAX CI;ERFG
 202203;90331000;CRISTALERIAS DE CHILE S.A.;C;CLP;Ganancia (pérdida), atribuible a participaciones no controladoras;95552000;TAX CI;ERFG
 202203;90331000;CRISTALERIAS DE CHILE S.A.;C;CLP;Ganancia (pérdida);3107848000;TAX CI;ERFG
-202203;90331000;CRISTALERIAS DE CHILE S.A.;C;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;47;TAX CI;ERFG
-202203;90331000;CRISTALERIAS DE CHILE S.A.;C;CLP;Ganancia (pérdida) por acción básica;47;TAX CI;ERFG
+202203;90331000;CRISTALERIAS DE CHILE S.A.;C;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;47.07;TAX CI;ERFG
+202203;90331000;CRISTALERIAS DE CHILE S.A.;C;CLP;Ganancia (pérdida) por acción básica;47.07;TAX CI;ERFG
 202203;91144000;EMBOTELLADORA ANDINA S.A.;C;CLP;Ingresos de actividades ordinarias;624227678000;TAX CI;ERFG
 202203;91144000;EMBOTELLADORA ANDINA S.A.;C;CLP;Costo de ventas;378019256000;TAX CI;ERFG
 202203;91144000;EMBOTELLADORA ANDINA S.A.;C;CLP;Ganancia bruta;246208422000;TAX CI;ERFG
@@ -1269,9 +1269,9 @@
 202203;91144000;EMBOTELLADORA ANDINA S.A.;C;CLP;Ganancia (pérdida), atribuible a los propietarios de la controladora;32997634000;TAX CI;ERFG
 202203;91144000;EMBOTELLADORA ANDINA S.A.;C;CLP;Ganancia (pérdida), atribuible a participaciones no controladoras;1215763000;TAX CI;ERFG
 202203;91144000;EMBOTELLADORA ANDINA S.A.;C;CLP;Ganancia (pérdida);34213397000;TAX CI;ERFG
-202203;91144000;EMBOTELLADORA ANDINA S.A.;C;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;33;TAX CI;ERFG
-202203;91144000;EMBOTELLADORA ANDINA S.A.;C;CLP;Ganancia (pérdida) por acción básica en operaciones discontinuadas;36;TAX CI;ERFG
-202203;91144000;EMBOTELLADORA ANDINA S.A.;C;CLP;Ganancia (pérdida) por acción básica;69;TAX CI;ERFG
+202203;91144000;EMBOTELLADORA ANDINA S.A.;C;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;33.2;TAX CI;ERFG
+202203;91144000;EMBOTELLADORA ANDINA S.A.;C;CLP;Ganancia (pérdida) por acción básica en operaciones discontinuadas;36.52;TAX CI;ERFG
+202203;91144000;EMBOTELLADORA ANDINA S.A.;C;CLP;Ganancia (pérdida) por acción básica;69.72;TAX CI;ERFG
 202203;92580000;EMPRESA NACIONAL DE TELECOMUNICACIONES S.A.;C;CLP;Ingresos de actividades ordinarias;640785578000;TAX CI;ERNG
 202203;92580000;EMPRESA NACIONAL DE TELECOMUNICACIONES S.A.;C;CLP;Otros ingresos;9547493000;TAX CI;ERNG
 202203;92580000;EMPRESA NACIONAL DE TELECOMUNICACIONES S.A.;C;CLP;Gastos por beneficios a los empleados;73170807000;TAX CI;ERNG
@@ -1290,8 +1290,8 @@
 202203;92580000;EMPRESA NACIONAL DE TELECOMUNICACIONES S.A.;C;CLP;Ganancia (pérdida);52307452000;TAX CI;ERNG
 202203;92580000;EMPRESA NACIONAL DE TELECOMUNICACIONES S.A.;C;CLP;Ganancia (pérdida), atribuible a los propietarios de la controladora;52307452000;TAX CI;ERNG
 202203;92580000;EMPRESA NACIONAL DE TELECOMUNICACIONES S.A.;C;CLP;Ganancia (pérdida);52307452000;TAX CI;ERNG
-202203;92580000;EMPRESA NACIONAL DE TELECOMUNICACIONES S.A.;C;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;173;TAX CI;ERNG
-202203;92580000;EMPRESA NACIONAL DE TELECOMUNICACIONES S.A.;C;CLP;Ganancia (pérdida) por acción básica;173;TAX CI;ERNG
+202203;92580000;EMPRESA NACIONAL DE TELECOMUNICACIONES S.A.;C;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;173.19;TAX CI;ERNG
+202203;92580000;EMPRESA NACIONAL DE TELECOMUNICACIONES S.A.;C;CLP;Ganancia (pérdida) por acción básica;173.19;TAX CI;ERNG
 202203;93281000;COCA COLA EMBONOR S.A.;C;CLP;Ingresos de actividades ordinarias;288125008000;TAX CI;ERFG
 202203;93281000;COCA COLA EMBONOR S.A.;C;CLP;Costo de ventas;177806227000;TAX CI;ERFG
 202203;93281000;COCA COLA EMBONOR S.A.;C;CLP;Ganancia bruta;110318781000;TAX CI;ERFG
@@ -1312,10 +1312,10 @@
 202203;93281000;COCA COLA EMBONOR S.A.;C;CLP;Ganancia (pérdida), atribuible a los propietarios de la controladora;33058990000;TAX CI;ERFG
 202203;93281000;COCA COLA EMBONOR S.A.;C;CLP;Ganancia (pérdida), atribuible a participaciones no controladoras;1356000;TAX CI;ERFG
 202203;93281000;COCA COLA EMBONOR S.A.;C;CLP;Ganancia (pérdida);33060346000;TAX CI;ERFG
-202203;93281000;COCA COLA EMBONOR S.A.;C;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;64;TAX CI;ERFG
-202203;93281000;COCA COLA EMBONOR S.A.;C;CLP;Ganancia (pérdida) por acción básica;64;TAX CI;ERFG
-202203;93281000;COCA COLA EMBONOR S.A.;C;CLP;Ganancias (pérdida) diluida por acción procedente de operaciones continuadas;64;TAX CI;ERFG
-202203;93281000;COCA COLA EMBONOR S.A.;C;CLP;Ganancias (pérdida) diluida por acción;64;TAX CI;ERFG
+202203;93281000;COCA COLA EMBONOR S.A.;C;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;64.71;TAX CI;ERFG
+202203;93281000;COCA COLA EMBONOR S.A.;C;CLP;Ganancia (pérdida) por acción básica;64.71;TAX CI;ERFG
+202203;93281000;COCA COLA EMBONOR S.A.;C;CLP;Ganancias (pérdida) diluida por acción procedente de operaciones continuadas;64.71;TAX CI;ERFG
+202203;93281000;COCA COLA EMBONOR S.A.;C;CLP;Ganancias (pérdida) diluida por acción;64.71;TAX CI;ERFG
 202203;94627000;PARQUE ARAUCO S.A.;C;CLP;Ingresos de actividades ordinarias;52364264000;TAX CI;ERFG
 202203;94627000;PARQUE ARAUCO S.A.;C;CLP;Costo de ventas;11984227000;TAX CI;ERFG
 202203;94627000;PARQUE ARAUCO S.A.;C;CLP;Ganancia bruta;40380037000;TAX CI;ERFG
@@ -1335,9 +1335,9 @@
 202203;94627000;PARQUE ARAUCO S.A.;C;CLP;Ganancia (pérdida), atribuible a los propietarios de la controladora;6430185000;TAX CI;ERFG
 202203;94627000;PARQUE ARAUCO S.A.;C;CLP;Ganancia (pérdida), atribuible a participaciones no controladoras;4081640000;TAX CI;ERFG
 202203;94627000;PARQUE ARAUCO S.A.;C;CLP;Ganancia (pérdida);10511825000;TAX CI;ERFG
-202203;94627000;PARQUE ARAUCO S.A.;C;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;7;TAX CI;ERFG
-202203;94627000;PARQUE ARAUCO S.A.;C;CLP;Ganancia (pérdida) por acción básica en operaciones discontinuadas;7;TAX CI;ERFG
-202203;94627000;PARQUE ARAUCO S.A.;C;CLP;Ganancia (pérdida) por acción básica;14;TAX CI;ERFG
+202203;94627000;PARQUE ARAUCO S.A.;C;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;7.1;TAX CI;ERFG
+202203;94627000;PARQUE ARAUCO S.A.;C;CLP;Ganancia (pérdida) por acción básica en operaciones discontinuadas;7.1;TAX CI;ERFG
+202203;94627000;PARQUE ARAUCO S.A.;C;CLP;Ganancia (pérdida) por acción básica;14.2;TAX CI;ERFG
 202203;94660000;MARITIMA DE INVERSIONES S.A.;I;CLP;Ingresos de actividades ordinarias;28789000;TAX CI;ERFG
 202203;94660000;MARITIMA DE INVERSIONES S.A.;I;CLP;Costo de ventas;522831000;TAX CI;ERFG
 202203;94660000;MARITIMA DE INVERSIONES S.A.;I;CLP;Ganancia bruta;-494042000;TAX CI;ERFG
@@ -1351,8 +1351,8 @@
 202203;94660000;MARITIMA DE INVERSIONES S.A.;I;CLP;Ganancia (pérdida) procedente de operaciones continuadas;32978350000;TAX CI;ERFG
 202203;94660000;MARITIMA DE INVERSIONES S.A.;I;CLP;Ganancia (pérdida);32978350000;TAX CI;ERFG
 202203;94660000;MARITIMA DE INVERSIONES S.A.;I;CLP;Ganancia (pérdida);32978350000;TAX CI;ERFG
-202203;94660000;MARITIMA DE INVERSIONES S.A.;I;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;11;TAX CI;ERFG
-202203;94660000;MARITIMA DE INVERSIONES S.A.;I;CLP;Ganancia (pérdida) por acción básica;11;TAX CI;ERFG
+202203;94660000;MARITIMA DE INVERSIONES S.A.;I;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;11.72;TAX CI;ERFG
+202203;94660000;MARITIMA DE INVERSIONES S.A.;I;CLP;Ganancia (pérdida) por acción básica;11.72;TAX CI;ERFG
 202203;96505760;COLBUN S.A.;C;USD;Ingresos de actividades ordinarias;416831000;TAX CI;ERNG
 202203;96505760;COLBUN S.A.;C;USD;Materias primas y consumibles utilizados;237668000;TAX CI;ERNG
 202203;96505760;COLBUN S.A.;C;USD;Gastos por beneficios a los empleados;20242000;TAX CI;ERNG
@@ -1371,10 +1371,10 @@
 202203;96505760;COLBUN S.A.;C;USD;Ganancia (pérdida), atribuible a los propietarios de la controladora;47635000;TAX CI;ERNG
 202203;96505760;COLBUN S.A.;C;USD;Ganancia (pérdida), atribuible a participaciones no controladoras;8251000;TAX CI;ERNG
 202203;96505760;COLBUN S.A.;C;USD;Ganancia (pérdida);55886000;TAX CI;ERNG
-202203;96505760;COLBUN S.A.;C;USD;Ganancia (pérdida) por acción básica en operaciones continuadas;0;TAX CI;ERNG
-202203;96505760;COLBUN S.A.;C;USD;Ganancia (pérdida) por acción básica;0;TAX CI;ERNG
-202203;96505760;COLBUN S.A.;C;USD;Ganancias (pérdida) diluida por acción procedente de operaciones continuadas;0;TAX CI;ERNG
-202203;96505760;COLBUN S.A.;C;USD;Ganancias (pérdida) diluida por acción;0;TAX CI;ERNG
+202203;96505760;COLBUN S.A.;C;USD;Ganancia (pérdida) por acción básica en operaciones continuadas;.00272;TAX CI;ERNG
+202203;96505760;COLBUN S.A.;C;USD;Ganancia (pérdida) por acción básica;.00272;TAX CI;ERNG
+202203;96505760;COLBUN S.A.;C;USD;Ganancias (pérdida) diluida por acción procedente de operaciones continuadas;.00272;TAX CI;ERNG
+202203;96505760;COLBUN S.A.;C;USD;Ganancias (pérdida) diluida por acción;.00272;TAX CI;ERNG
 202203;96530900;BCI ASSET MANAGEMENT ADMINISTRADORA  GENERAL DE FONDOS S.A.;I;CLP;Ingresos de actividades ordinarias;15784786000;TAX CI;ERFG
 202203;96530900;BCI ASSET MANAGEMENT ADMINISTRADORA  GENERAL DE FONDOS S.A.;I;CLP;Ganancia bruta;15784786000;TAX CI;ERFG
 202203;96530900;BCI ASSET MANAGEMENT ADMINISTRADORA  GENERAL DE FONDOS S.A.;I;CLP;Gastos de administración;5285974000;TAX CI;ERFG
@@ -1391,10 +1391,10 @@
 202203;96530900;BCI ASSET MANAGEMENT ADMINISTRADORA  GENERAL DE FONDOS S.A.;I;CLP;Ganancia (pérdida);9965054000;TAX CI;ERFG
 202203;96530900;BCI ASSET MANAGEMENT ADMINISTRADORA  GENERAL DE FONDOS S.A.;I;CLP;Ganancia (pérdida), atribuible a los propietarios de la controladora;9965054000;TAX CI;ERFG
 202203;96530900;BCI ASSET MANAGEMENT ADMINISTRADORA  GENERAL DE FONDOS S.A.;I;CLP;Ganancia (pérdida);9965054000;TAX CI;ERFG
-202203;96530900;BCI ASSET MANAGEMENT ADMINISTRADORA  GENERAL DE FONDOS S.A.;I;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;9572578;TAX CI;ERFG
-202203;96530900;BCI ASSET MANAGEMENT ADMINISTRADORA  GENERAL DE FONDOS S.A.;I;CLP;Ganancia (pérdida) por acción básica;9572578;TAX CI;ERFG
-202203;96530900;BCI ASSET MANAGEMENT ADMINISTRADORA  GENERAL DE FONDOS S.A.;I;CLP;Ganancias (pérdida) diluida por acción procedente de operaciones continuadas;9572578;TAX CI;ERFG
-202203;96530900;BCI ASSET MANAGEMENT ADMINISTRADORA  GENERAL DE FONDOS S.A.;I;CLP;Ganancias (pérdida) diluida por acción;9572578;TAX CI;ERFG
+202203;96530900;BCI ASSET MANAGEMENT ADMINISTRADORA  GENERAL DE FONDOS S.A.;I;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;9572578.2901;TAX CI;ERFG
+202203;96530900;BCI ASSET MANAGEMENT ADMINISTRADORA  GENERAL DE FONDOS S.A.;I;CLP;Ganancia (pérdida) por acción básica;9572578.2901;TAX CI;ERFG
+202203;96530900;BCI ASSET MANAGEMENT ADMINISTRADORA  GENERAL DE FONDOS S.A.;I;CLP;Ganancias (pérdida) diluida por acción procedente de operaciones continuadas;9572578.2901;TAX CI;ERFG
+202203;96530900;BCI ASSET MANAGEMENT ADMINISTRADORA  GENERAL DE FONDOS S.A.;I;CLP;Ganancias (pérdida) diluida por acción;9572578.2901;TAX CI;ERFG
 202203;96566900;NAVARINO S.A.;C;CLP;Ingresos de actividades ordinarias;28789000;TAX CI;ERFG
 202203;96566900;NAVARINO S.A.;C;CLP;Costo de ventas;522831000;TAX CI;ERFG
 202203;96566900;NAVARINO S.A.;C;CLP;Ganancia bruta;-494042000;TAX CI;ERFG
@@ -1412,8 +1412,8 @@
 202203;96566900;NAVARINO S.A.;C;CLP;Ganancia (pérdida), atribuible a los propietarios de la controladora;29594234000;TAX CI;ERFG
 202203;96566900;NAVARINO S.A.;C;CLP;Ganancia (pérdida), atribuible a participaciones no controladoras;3405339000;TAX CI;ERFG
 202203;96566900;NAVARINO S.A.;C;CLP;Ganancia (pérdida);32999573000;TAX CI;ERFG
-202203;96566900;NAVARINO S.A.;C;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;208;TAX CI;ERFG
-202203;96566900;NAVARINO S.A.;C;CLP;Ganancia (pérdida) por acción básica;208;TAX CI;ERFG
+202203;96566900;NAVARINO S.A.;C;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;208.6;TAX CI;ERFG
+202203;96566900;NAVARINO S.A.;C;CLP;Ganancia (pérdida) por acción básica;208.6;TAX CI;ERFG
 202203;96639280;ADMINISTRADORA GENERAL DE FONDOS  SECURITY S.A.;I;CLP;Ingresos de actividades ordinarias;5934434000;TAX CI;ERFG
 202203;96639280;ADMINISTRADORA GENERAL DE FONDOS  SECURITY S.A.;I;CLP;Costo de ventas;2331247000;TAX CI;ERFG
 202203;96639280;ADMINISTRADORA GENERAL DE FONDOS  SECURITY S.A.;I;CLP;Ganancia bruta;3603187000;TAX CI;ERFG
@@ -1430,8 +1430,8 @@
 202203;96639280;ADMINISTRADORA GENERAL DE FONDOS  SECURITY S.A.;I;CLP;Ganancia (pérdida);2571657000;TAX CI;ERFG
 202203;96639280;ADMINISTRADORA GENERAL DE FONDOS  SECURITY S.A.;I;CLP;Ganancia (pérdida), atribuible a los propietarios de la controladora;2571657000;TAX CI;ERFG
 202203;96639280;ADMINISTRADORA GENERAL DE FONDOS  SECURITY S.A.;I;CLP;Ganancia (pérdida);2571657000;TAX CI;ERFG
-202203;96639280;ADMINISTRADORA GENERAL DE FONDOS  SECURITY S.A.;I;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;246;TAX CI;ERFG
-202203;96639280;ADMINISTRADORA GENERAL DE FONDOS  SECURITY S.A.;I;CLP;Ganancia (pérdida) por acción básica;246;TAX CI;ERFG
+202203;96639280;ADMINISTRADORA GENERAL DE FONDOS  SECURITY S.A.;I;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;246.2094;TAX CI;ERFG
+202203;96639280;ADMINISTRADORA GENERAL DE FONDOS  SECURITY S.A.;I;CLP;Ganancia (pérdida) por acción básica;246.2094;TAX CI;ERFG
 202203;96640360;QUEMCHI S.A.;C;CLP;Ingresos de actividades ordinarias;28789000;TAX CI;ERFG
 202203;96640360;QUEMCHI S.A.;C;CLP;Costo de ventas;522831000;TAX CI;ERFG
 202203;96640360;QUEMCHI S.A.;C;CLP;Ganancia bruta;-494042000;TAX CI;ERFG
@@ -1449,8 +1449,8 @@
 202203;96640360;QUEMCHI S.A.;C;CLP;Ganancia (pérdida), atribuible a los propietarios de la controladora;27285202000;TAX CI;ERFG
 202203;96640360;QUEMCHI S.A.;C;CLP;Ganancia (pérdida), atribuible a participaciones no controladoras;5927749000;TAX CI;ERFG
 202203;96640360;QUEMCHI S.A.;C;CLP;Ganancia (pérdida);33212951000;TAX CI;ERFG
-202203;96640360;QUEMCHI S.A.;C;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;223;TAX CI;ERFG
-202203;96640360;QUEMCHI S.A.;C;CLP;Ganancia (pérdida) por acción básica;223;TAX CI;ERFG
+202203;96640360;QUEMCHI S.A.;C;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;223.61;TAX CI;ERFG
+202203;96640360;QUEMCHI S.A.;C;CLP;Ganancia (pérdida) por acción básica;223.61;TAX CI;ERFG
 202203;96655860;FACTORING SECURITY S.A.;I;CLP;Ingresos de actividades ordinarias;11503771000;TAX CI;ERFG
 202203;96655860;FACTORING SECURITY S.A.;I;CLP;Costo de ventas;2909294000;TAX CI;ERFG
 202203;96655860;FACTORING SECURITY S.A.;I;CLP;Ganancia bruta;8594477000;TAX CI;ERFG
@@ -1464,8 +1464,8 @@
 202203;96655860;FACTORING SECURITY S.A.;I;CLP;Ganancia (pérdida);3631174000;TAX CI;ERFG
 202203;96655860;FACTORING SECURITY S.A.;I;CLP;Ganancia (pérdida), atribuible a los propietarios de la controladora;3631174000;TAX CI;ERFG
 202203;96655860;FACTORING SECURITY S.A.;I;CLP;Ganancia (pérdida);3631174000;TAX CI;ERFG
-202203;96655860;FACTORING SECURITY S.A.;I;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;7;TAX CI;ERFG
-202203;96655860;FACTORING SECURITY S.A.;I;CLP;Ganancia (pérdida) por acción básica;7;TAX CI;ERFG
+202203;96655860;FACTORING SECURITY S.A.;I;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;7.3655;TAX CI;ERFG
+202203;96655860;FACTORING SECURITY S.A.;I;CLP;Ganancia (pérdida) por acción básica;7.3655;TAX CI;ERFG
 202203;96767630;BANCHILE ADMINISTRADORA GENERAL DE FONDOS S.A.;I;CLP;Ingresos de actividades ordinarias;29268481000;TAX CI;ERFG
 202203;96767630;BANCHILE ADMINISTRADORA GENERAL DE FONDOS S.A.;I;CLP;Costo de ventas;195602000;TAX CI;ERFG
 202203;96767630;BANCHILE ADMINISTRADORA GENERAL DE FONDOS S.A.;I;CLP;Ganancia bruta;29072879000;TAX CI;ERFG
@@ -1482,10 +1482,10 @@
 202203;96767630;BANCHILE ADMINISTRADORA GENERAL DE FONDOS S.A.;I;CLP;Ganancia (pérdida);7112277000;TAX CI;ERFG
 202203;96767630;BANCHILE ADMINISTRADORA GENERAL DE FONDOS S.A.;I;CLP;Ganancia (pérdida), atribuible a los propietarios de la controladora;7112277000;TAX CI;ERFG
 202203;96767630;BANCHILE ADMINISTRADORA GENERAL DE FONDOS S.A.;I;CLP;Ganancia (pérdida);7112277000;TAX CI;ERFG
-202203;96767630;BANCHILE ADMINISTRADORA GENERAL DE FONDOS S.A.;I;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;623;TAX CI;ERFG
-202203;96767630;BANCHILE ADMINISTRADORA GENERAL DE FONDOS S.A.;I;CLP;Ganancia (pérdida) por acción básica;623;TAX CI;ERFG
-202203;96767630;BANCHILE ADMINISTRADORA GENERAL DE FONDOS S.A.;I;CLP;Ganancias (pérdida) diluida por acción procedente de operaciones continuadas;623;TAX CI;ERFG
-202203;96767630;BANCHILE ADMINISTRADORA GENERAL DE FONDOS S.A.;I;CLP;Ganancias (pérdida) diluida por acción;623;TAX CI;ERFG
+202203;96767630;BANCHILE ADMINISTRADORA GENERAL DE FONDOS S.A.;I;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;623.7878;TAX CI;ERFG
+202203;96767630;BANCHILE ADMINISTRADORA GENERAL DE FONDOS S.A.;I;CLP;Ganancia (pérdida) por acción básica;623.7878;TAX CI;ERFG
+202203;96767630;BANCHILE ADMINISTRADORA GENERAL DE FONDOS S.A.;I;CLP;Ganancias (pérdida) diluida por acción procedente de operaciones continuadas;623.7878;TAX CI;ERFG
+202203;96767630;BANCHILE ADMINISTRADORA GENERAL DE FONDOS S.A.;I;CLP;Ganancias (pérdida) diluida por acción;623.7878;TAX CI;ERFG
 202203;96802690;MASISA S.A.;C;USD;Ingresos de actividades ordinarias;121870000;TAX CI;ERFG
 202203;96802690;MASISA S.A.;C;USD;Costo de ventas;85506000;TAX CI;ERFG
 202203;96802690;MASISA S.A.;C;USD;Ganancia bruta;36364000;TAX CI;ERFG
@@ -1523,8 +1523,8 @@
 202203;99541380;AGUAS DEL VALLE S.A.;I;CLP;Ganancia (pérdida);3212523000;TAX CI;ERNG
 202203;99541380;AGUAS DEL VALLE S.A.;I;CLP;Ganancia (pérdida), atribuible a los propietarios de la controladora;3212523000;TAX CI;ERNG
 202203;99541380;AGUAS DEL VALLE S.A.;I;CLP;Ganancia (pérdida);3212523000;TAX CI;ERNG
-202203;99541380;AGUAS DEL VALLE S.A.;I;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;0;TAX CI;ERNG
-202203;99541380;AGUAS DEL VALLE S.A.;I;CLP;Ganancia (pérdida) por acción básica;0;TAX CI;ERNG
+202203;99541380;AGUAS DEL VALLE S.A.;I;CLP;Ganancia (pérdida) por acción básica en operaciones continuadas;.1947;TAX CI;ERNG
+202203;99541380;AGUAS DEL VALLE S.A.;I;CLP;Ganancia (pérdida) por acción básica;.1947;TAX CI;ERNG
 202203;61604000;POLLA CHILENA DE BENEFICENCIA S.A.;I;CLP;Ganancia (pérdida);846425000;TAX CI;ERI
 202203;61604000;POLLA CHILENA DE BENEFICENCIA S.A.;I;CLP;Otro resultado integral, antes de impuestos, ganancias (pérdidas) por revaluación;9882000;TAX CI;ERI
 202203;61604000;POLLA CHILENA DE BENEFICENCIA S.A.;I;CLP;Total otro resultado integral que no se reclasificará al resultado del periodo, antes de impuestos;9882000;TAX CI;ERI
