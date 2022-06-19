@@ -1,0 +1,25 @@
+/* <===== Creación tabla Indice_Quarter=====> */
+
+CREATE TABLE Indice_Quarter(
+ID_Query INT DEFAULT NULL,
+ID_Consultor INT DEFAULT NULL,
+Rut INT DEFAULT NULL,
+Trimestre INT DEFAULT NULL,
+Cuentas IFRS VARCHAR (400) DEFAULT NULL,
+Indice_Componentes VARCHAR(5000) DEFAULT NULL,
+Indice_PesoTotal VARCHAR(5000) DEFAULT NULL,
+Indice_Activos(5000) DEFAULT NULL,
+Indice_Pasivos VARCHAR(5000) DEFAULT NULL,
+Indice_LiquidezC VARCHAR(5000) DEFAULT NULL,
+Indice_Ebitda VARCHAR(5000) DEFAULT NULL,
+Indice_Ingresos VARCHAR(5000) DEFAULT NULL,
+Indice_Liquidez VARCHAR(5000) DEFAULT NULL,
+Indice_CCE VARCHAR(5000) DEFAULT NULL,
+Indice_RazonEndudamiento VARCHAR(5000) DEFAULT NULL,
+Indice_KdeT VARCHAR(5000) DEFAULT NULL
+
+PRIMARY KEY (id_Serial_cliente),
+FOREIGN KEY (ID_Consultor) REFERENCES Cuenta_Cliente(id_Serial_cliente),
+FOREIGN KEY (Rut) REFERENCES Empresas_SA(Rut_SA)
+
+)

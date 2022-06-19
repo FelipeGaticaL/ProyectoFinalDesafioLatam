@@ -3,25 +3,31 @@ A) Link de trello https://trello.com/b/queJSXt5/proyecto-full-stack
 
 1.- Historias de usuario
 
+Cliente: 
+
 HU1 .- Como "cliente" quiero registrarme para poder poder iniciar sesión
 
-HU2 .- Como "administrador" quiero válidar las nuevas cuentas registradas para que el "cliente" las pueda utilizar
+HU4 .- Como "Cliente" quiero iniciar sesión para poder utilizar todos los elementos que entrega el servicios
 
-HU3 .- Como "administrador" quiero eliminar cuentas registradas para que no estén las que no correspondan
+HU5 .- Como "Cliente" quiero cargar y actualizar información de la Comisión Mercado Financiero para poder analizarla a través de los informes e indicadores que entrega la aplicación
 
-HU4 .- Como "Cliente" quiero iniciar sesión para poder utilizar la aplicación
+HU6 .- Como "Cliente" quiero poder eliminar la información cargada para cargar información de otros periodos si es que lo veo necesario. 
 
-HU5 .- Como "Cliente" quiero cargar información de la Comisión Mercado Financiero para que la aplicación pueda gestionarla
+HU7 .- Como "Cliente" quiero poder elegir a una empresa de la CMF y escojer los trimestres disponibles, para así realizar un análisis financiero. 
 
-HU6 .- Como "Cliente" quiero revisar las empresas de la Comisión del Mercado financiero para escoger la que yo necesito
+HU8 .- Como "Cliente" quiero poder hacer clicks sobre el panel de gestión de información, para visualizar ya sea informes de ponderación horizontal o vertical
 
-HU7 .- Como "Cliente" quiero revisar los años o trimestre disponibles para poder escoger el filtro temporal que necesito
+HU9 .- Como "Cliente" quiero poder hacer click sobre el panel de gestión de gráficos, para sí seleccionar el que necesite de acuerdo a la lista desplegada por el programa
 
-HU8 .- Como "Cliente", con los filtros HU4 y HU5 ya seleccionados, quiero poder ver en la página todo los datos financieros disponibles por la aplicación
+HU10 .- Como "Cliente" quiero al terminar de utilizar la aplicación a través de un botón para cerrar la sesión.
 
-HU9 .- Como "Cliente", quiero actualizar la información a través de nuevas cargas
+Administrador: 
 
-HU10 .- Como "Cliente", quiero eliminar la información para volver a cargar una carga diferente a la actual en formato de la Comisión del Mercado Financiero
+HU1 .- Como "administrador" quiero válidar las nuevas cuentas registradas para que el "cliente" las pueda utilizar
+
+HU2 .- Como "administrador" quiero dehabilitar cuentas registradas que correspondan a clientes que decidieron no utilizar la aplicación
+
+
 
 *****Posibles Upgrade futuros******
 

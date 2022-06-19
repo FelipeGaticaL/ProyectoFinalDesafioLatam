@@ -13,7 +13,8 @@ Monto numeric DEFAULT NULL,
 Taxonomia VARCHAR(20) DEFAULT NULL,
 Tipo_de_Informe VARCHAR(20) DEFAULT NULL
 
-PRIMARY KEY (id)
-
+PRIMARY KEY (id),
+FOREIGN KEY (Cuentas_IFRS) REFERENCES cuentas(Cuentas_IFRS),
+FOREIGN KEY (Rut) REFERENCES Empresas_SA(Rut_SA)
 )
 
