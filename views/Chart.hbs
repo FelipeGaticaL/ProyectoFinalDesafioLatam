@@ -1,0 +1,1127 @@
+{{!-- <button type="button" class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#addModal">
+    Stack 100%
+</button> --}}
+
+<div class="container-fluid">
+    <div class="row">
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark sidebar collapse ">
+            <div class="position-sticky pt-3 sidebar-sticky  ">
+                <ul class="nav flex-column align-items-start ">
+                    <li class="nav-item ">
+                        <a type="button" class="nav-link active button" data-bs-toggle="modal"
+                            data-bs-target="#stack_activos" aria-current="page" href="#">
+                            Stack Activos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a type="button" class="nav-link active button" data-bs-toggle="modal"
+                            data-bs-target="#stack_pasivos" aria-current="page" href="#">
+                            Stacks Pasivos y Patrimonio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a type="button" class="nav-link active button" data-bs-toggle="modal"
+                            data-bs-target="#stack_liquidez" aria-current="page" href="#">
+                            Liquidez
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a type="button" class="nav-link active button" data-bs-toggle="modal"
+                            data-bs-target="#stack_RLiquidezRAcida" aria-current="page" href="#">
+                            Razón Liquidez y Ácida
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a type="button" class="nav-link active button" data-bs-toggle="modal"
+                            data-bs-target="#stack_KdeTrabajo" aria-current="page" href="#">
+                            Capital de Trabajo
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a type="button" class="nav-link active button" data-bs-toggle="modal"
+                            data-bs-target="#stack_Rentabilidad" aria-current="page" href="#">
+                            Rentabilidad
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a type="button" class="nav-link active button" data-bs-toggle="modal"
+                            data-bs-target="#stack_EBITDA" aria-current="page" href="#">
+                            EBITDA
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a type="button" class="nav-link active button" data-bs-toggle="modal"
+                            data-bs-target="#stack_REndeudamiento" aria-current="page" href="#">
+                            Razón de Endeudamiento
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a type="button" class="nav-link active button" data-bs-toggle="modal"
+                            data-bs-target="#stack_CCE" aria-current="page" href="#">
+                            Ciclo Conversión Efectivo
+                        </a>
+                    </li>
+
+                </ul>
+
+                </ul>
+            </div>
+        </nav>
+
+        {{!-- <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <h2>Section title</h2>
+            <div class="table-responsive">
+                <table class="table table-striped table-sm">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Header</th>
+                            <th scope="col">Header</th>
+                            <th scope="col">Header</th>
+                            <th scope="col">Header</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1,001</td>
+                            <td>random</td>
+                            <td>data</td>
+                            <td>placeholder</td>
+                            <td>text</td>
+                        </tr>
+                        <tr>
+                            <td>1,002</td>
+                            <td>placeholder</td>
+                            <td>irrelevant</td>
+                            <td>visual</td>
+                            <td>layout</td>
+                        </tr>
+                        <tr>
+                            <td>1,003</td>
+                            <td>data</td>
+                            <td>rich</td>
+                            <td>dashboard</td>
+                            <td>tabular</td>
+                        </tr>
+                        <tr>
+                            <td>1,003</td>
+                            <td>information</td>
+                            <td>placeholder</td>
+                            <td>illustrative</td>
+                            <td>data</td>
+                        </tr>
+                        <tr>
+                            <td>1,004</td>
+                            <td>text</td>
+                            <td>random</td>
+                            <td>layout</td>
+                            <td>dashboard</td>
+                        </tr>
+                        <tr>
+                            <td>1,005</td>
+                            <td>dashboard</td>
+                            <td>irrelevant</td>
+                            <td>text</td>
+                            <td>placeholder</td>
+                        </tr>
+                        <tr>
+                            <td>1,006</td>
+                            <td>dashboard</td>
+                            <td>illustrative</td>
+                            <td>rich</td>
+                            <td>data</td>
+                        </tr>
+                        <tr>
+                            <td>1,007</td>
+                            <td>placeholder</td>
+                            <td>tabular</td>
+                            <td>information</td>
+                            <td>irrelevant</td>
+                        </tr>
+                        <tr>
+                            <td>1,008</td>
+                            <td>random</td>
+                            <td>data</td>
+                            <td>placeholder</td>
+                            <td>text</td>
+                        </tr>
+                        <tr>
+                            <td>1,009</td>
+                            <td>placeholder</td>
+                            <td>irrelevant</td>
+                            <td>visual</td>
+                            <td>layout</td>
+                        </tr>
+                        <tr>
+                            <td>1,010</td>
+                            <td>data</td>
+                            <td>rich</td>
+                            <td>dashboard</td>
+                            <td>tabular</td>
+                        </tr>
+                        <tr>
+                            <td>1,011</td>
+                            <td>information</td>
+                            <td>placeholder</td>
+                            <td>illustrative</td>
+                            <td>data</td>
+                        </tr>
+                        <tr>
+                            <td>1,012</td>
+                            <td>text</td>
+                            <td>placeholder</td>
+                            <td>layout</td>
+                            <td>dashboard</td>
+                        </tr>
+                        <tr>
+                            <td>1,013</td>
+                            <td>dashboard</td>
+                            <td>irrelevant</td>
+                            <td>text</td>
+                            <td>visual</td>
+                        </tr>
+                        <tr>
+                            <td>1,014</td>
+                            <td>dashboard</td>
+                            <td>illustrative</td>
+                            <td>rich</td>
+                            <td>data</td>
+                        </tr>
+                        <tr>
+                            <td>1,015</td>
+                            <td>random</td>
+                            <td>tabular</td>
+                            <td>information</td>
+                            <td>text</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main> --}}
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <div class="accordion" id="accordionExample">
+                <!-- Activos -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            ACTIVOS
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <!-- Total Activos -->
+
+                            <div class="accordion" id="accordionExample2">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading-5">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseFive"
+                                            aria-expanded="false" aria-controls="collapseFive">
+                                            TOTAL ACTIVOS
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFive" class="accordion-collapse collapse"
+                                        aria-labelledby="heading-5" data-bs-parent="#accordionExample2">
+                                        <div class="accordion-body">
+                                            <!--  -->
+                                            <div class="col text-center">
+                                                <table class="table">
+                                                    <thead class="table-dark text-center">
+                                                        <th>Cuenta</th>
+                                                        <th>202106</th>
+                                                        <th>202109</th>
+                                                        <th>202112</th>
+                                                        <th>%202106</th>
+                                                        <th>%202109</th>
+                                                        <th>%202112</th>
+                                                    </thead>
+                                                    <tbody class="activos text-start"></tbody>
+                                                </table>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Activos Corrientes -->
+                            <div class="accordion" id="accordionExample2">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading-6">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapsesix"
+                                            aria-expanded="false" aria-controls="collapsesix">
+                                            ACTIVOS CORRIENTES
+                                        </button>
+                                    </h2>
+                                    <div id="collapsesix" class="accordion-collapse collapse"
+                                        aria-labelledby="heading-6" data-bs-parent="#accordionExample2">
+                                        <div class="accordion-body">
+                                            <!--  -->
+                                            <div class="col text-center">
+                                                <table class="table">
+                                                    <thead class="table-dark text-center">
+                                                        <th>Cuenta</th>
+                                                        <th>202106</th>
+                                                        <th>202109</th>
+                                                        <th>202112</th>
+                                                        <th>%202106</th>
+                                                        <th>%202109</th>
+                                                        <th>%202112</th>
+                                                    </thead>
+                                                    <tbody class="ActivoCP text-start"></tbody>
+                                                </table>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Activos No Corrientes -->
+                            <div class="accordion" id="accordionExample2">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading-7">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseseven"
+                                            aria-expanded="false" aria-controls="collapseseven">
+                                            ACTIVOS NO CORRIENTES
+                                        </button>
+                                    </h2>
+                                    <div id="collapseseven" class="accordion-collapse collapse"
+                                        aria-labelledby="heading-7" data-bs-parent="#accordionExample2">
+                                        <div class="accordion-body">
+                                            <!--  -->
+                                            <div class="col text-center">
+                                                <table class="table">
+                                                    <thead class="table-dark text-center">
+                                                        <th>Cuenta</th>
+                                                        <th>202106</th>
+                                                        <th>202109</th>
+                                                        <th>202112</th>
+                                                        <th>%202106</th>
+                                                        <th>%202109</th>
+                                                        <th>%202112</th>
+                                                    </thead>
+                                                    <tbody class="ActivoLP text-start"></tbody>
+                                                </table>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            PASIVOS Y PATRIMONIO
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <!--  -->
+                            <!--  TOTAL PASIVOS Y PATRIMONIO -->
+                            <div class="accordion" id="accordionExample3">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading-8">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseeight"
+                                            aria-expanded="false" aria-controls="collapseeight">
+                                            TOTAL PASIVOS Y PATRIMONIO
+                                        </button>
+                                    </h2>
+                                    <div id="collapseeight" class="accordion-collapse collapse"
+                                        aria-labelledby="heading-8" data-bs-parent="#accordionExample3">
+                                        <div class="accordion-body">
+                                            <!--  -->
+                                            <div class="col text-center">
+                                                <table class="table">
+                                                    <thead class="table-dark text-center">
+                                                        <th>Cuenta</th>
+                                                        <th>202106</th>
+                                                        <th>202109</th>
+                                                        <th>202112</th>
+                                                        <th>%202106</th>
+                                                        <th>%202109</th>
+                                                        <th>%202112</th>
+                                                    </thead>
+                                                    <tbody class="PasivosPatrimonio text-start"></tbody>
+                                                </table>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <!-- PASIVOS CORRIENTES -->
+                            <div class="accordion" id="accordionExample3">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading-9">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapse_9" aria-expanded="false"
+                                            aria-controls="collapse_9">
+                                            PASIVOS CORRIENTE
+                                        </button>
+                                    </h2>
+                                    <div id="collapse_9" class="accordion-collapse collapse" aria-labelledby="heading-9"
+                                        data-bs-parent="#accordionExample3">
+                                        <div class="accordion-body">
+                                            <!--  -->
+                                            <div class="col text-center">
+                                                <table class="table">
+                                                    <thead class="table-dark text-center">
+                                                        <th>Cuenta</th>
+                                                        <th>202106</th>
+                                                        <th>202109</th>
+                                                        <th>202112</th>
+                                                        <th>%202106</th>
+                                                        <th>%202109</th>
+                                                        <th>%202112</th>
+                                                    </thead>
+                                                    <tbody class="PasivoCP text-start"></tbody>
+                                                </table>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <!-- PASIVOS NO CORRIENTE -->
+                            <div class="accordion" id="accordionExample3">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading-10">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapse_10"
+                                            aria-expanded="false" aria-controls="collapse_10">
+                                            PASIVOS NO CORRIENTE
+                                        </button>
+                                    </h2>
+                                    <div id="collapse_10" class="accordion-collapse collapse"
+                                        aria-labelledby="heading-10" data-bs-parent="#accordionExample3">
+                                        <div class="accordion-body">
+                                            <!--  -->
+                                            <div class="col text-center">
+                                                <table class="table">
+                                                    <thead class="table-dark text-center">
+                                                        <th>Cuenta</th>
+                                                        <th>202106</th>
+                                                        <th>202109</th>
+                                                        <th>202112</th>
+                                                        <th>%202106</th>
+                                                        <th>%202109</th>
+                                                        <th>%202112</th>
+                                                    </thead>
+                                                    <tbody class="PasivoLP text-start"></tbody>
+                                                </table>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <!--  -->
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            ESTADOS DE RESULTADOS
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <!--  -->
+                            <div class="col text-center">
+                                <table class="table">
+                                    <thead class="table-dark text-center">
+                                        <th>Cuenta</th>
+                                        <th>202106</th>
+                                        <th>202109</th>
+                                        <th>202112</th>
+                                        <th>%202106</th>
+                                        <th>%202109</th>
+                                        <th>%202112</th>
+                                    </thead>
+                                    <tbody class="EERR text-start"></tbody>
+                                </table>
+                            </div>
+                            <!--  -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+
+    </div>
+</div>
+
+
+{{!-- Modal Stack Activos --}}
+<div class="modal fade" id="stack_activos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title  w-100 text-center" id="exampleModalLabel">Stack Activos 100%</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id='myDiv1' style='height:500px; width: 720px'></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{!-- Modal Stack Pasivos --}}
+
+<div class="modal fade" id="stack_pasivos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title  w-100 text-center" id="exampleModalLabel">Stack Pasivos y Patrimonio 100%</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id='myDiv2' style='height:500px; width: 720px'></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{!-- Modal Liquidez --}}
+
+<div class="modal fade" id="stack_liquidez" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title  w-100 text-center" id="exampleModalLabel">Liquidez</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id='myDiv3' style='height:500px; width: 720px'></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{{!-- Modal R L y R A --}}
+
+<div class="modal fade" id="stack_RLiquidezRAcida" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title  w-100 text-center" id="exampleModalLabel">Razón de Liquidez y Razón Ácida</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id='myDiv4' style='height:500px; width: 720px'></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{!-- Modal R L y R A --}}
+
+<div class="modal fade" id="stack_KdeTrabajo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title  w-100 text-center" id="exampleModalLabel">Capital de Trabajo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id='myDiv5' style='height:500px; width: 720px'></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{!-- Rentabilidad --}}
+
+<div class="modal fade" id="stack_Rentabilidad" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title  w-100 text-center" id="exampleModalLabel">Rentabilidad</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id='myDiv6' style='height:500px; width: 720px'></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{!-- stack_EBITDA --}}
+
+<div class="modal fade" id="stack_EBITDA" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title  w-100 text-center" id="exampleModalLabel">Rentabilidad</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id='myDiv7' style='height:500px; width: 720px'></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{!-- stack_REndeudamiento --}}
+
+<div class="modal fade" id="stack_REndeudamiento" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title  w-100 text-center" id="exampleModalLabel">Razón de endeudamiento</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id='myDiv8' style='height:500px; width: 720px'></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{!-- stack_CCE --}}
+
+<div class="modal fade" id="stack_CCE" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title  w-100 text-center" id="exampleModalLabel">Ciclo Conversión Efectivo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id='myDiv9' style='height:500px; width: 720px'></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    //Gráficos
+    //Gráfico Stacks
+    const getStack = async () => {
+        const response = await axios.get("/chartsStacksActivos")
+        let data1 = response.data
+
+        Plotly.newPlot(
+            "myDiv1",
+            [
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[0],
+                    type: "bar",
+                    name: "Activos corrientes",
+                    xaxis: "x1",
+                    barmode: "stack",
+                    marker: { color: "#008080" },
+                },
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[1],
+                    type: "bar",
+                    name: "Activos no corrientes",
+                    xaxis: "x1",
+                    barmode: "stack",
+                    marker: { color: "#00c3af" },
+                },
+            ],
+            {
+                barmode: "stack",
+                yaxis: { tickformat: ".0%" },
+                xaxis: {
+                    domain: [0, 1],
+                    anchor: "x1",
+                },
+            }
+        );
+    }
+
+    getStack()
+
+    const getStackPasivo = async () => {
+        const response = await axios.get("/chartsStacksPasivos")
+        let data1 = response.data
+
+        Plotly.newPlot(
+            "myDiv2",
+            [
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[2],
+                    type: "bar",
+                    name: "Patrimonio",
+                    xaxis: "x1",
+                    barmode: "stack",
+                    marker: { color: "#1810F0" },
+                },
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[1],
+                    type: "bar",
+                    name: "Pasivos no corrientes",
+                    xaxis: "x1",
+                    barmode: "stack",
+                    marker: { color: "#352EF2" },
+                },
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[0],
+                    type: "bar",
+                    name: "Pasivos Corrientes",
+                    xaxis: "x1",
+                    barmode: "stack",
+                    marker: { color: "#524CF4" },
+                }
+            ],
+            {
+                barmode: "stack",
+                yaxis: { tickformat: ".0%" },
+                xaxis: {
+                    domain: [0, 1],
+                    anchor: "x1",
+
+                },
+            }
+        );
+    }
+
+    getStackPasivo()
+
+    //Liquidez
+
+    const getStackLiquidez = async () => {
+        const response = await axios.get("/chartLiquidez")
+        let data1 = response.data
+        Plotly.newPlot(
+            "myDiv3",
+            [
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[0],
+                    type: "bar",
+                    name: "Activos Corrientes",
+                    marker: { color: "#1088F0" },
+                },
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[1],
+                    type: "bar",
+                    name: "Pasivos corrientes",
+                    marker: { color: "#F01088" },
+                },
+            ],
+            {
+                barmode: "group",
+            }
+        );
+    }
+
+    getStackLiquidez()
+
+    // R Liquidez R Acida
+
+    const getRLiquidezRAcida = async () => {
+        const response = await axios.get("/RLiquidezRAcida")
+        let data1 = response.data
+
+        Plotly.newPlot(
+            "myDiv4",
+            [
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[0],
+                    type: "bar",
+                    name: "Razón de Liquidez",
+                    marker: { color: "#106BF0" },
+                },
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[1],
+                    type: "bar",
+                    name: "Razón Ácida",
+                    marker: { color: "#727D8E" },
+                },
+            ],
+            {
+                barmode: "group",
+            }
+        );
+    }
+
+    getRLiquidezRAcida()
+
+
+
+    // KdeTrabajo 
+
+    const getKdeTrabajo = async () => {
+        const response = await axios.get("/KdeTrabajo")
+        let data1 = response.data
+
+        Plotly.newPlot(
+            "myDiv5",
+            [
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[0],
+                    type: "bar",
+                    name: "Capital de Trabajo",
+                    marker: { color: "#106BF0" },
+                },
+            ],
+            {
+                barmode: "group",
+            }
+        );
+    }
+
+    getKdeTrabajo()
+
+
+    //Rentabilidad
+
+    const getRentabilidad = async () => {
+        const response = await axios.get("/Rentabilidad")
+        let data1 = response.data
+
+        Plotly.newPlot(
+            "myDiv6",
+            [
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[0],
+                    type: "scatter",
+                    name: "Ingresos de actividades ordinarias",
+                    marker: { color: "#106BF0" },
+                },
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[1],
+                    type: "scatter",
+                    name: "Ganancia bruta",
+                    marker: { color: "#727D8E" },
+                },
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[3],
+                    type: "scatter",
+                    name: "Actividad Operacional",
+                    marker: { color: "#F01010" },
+                },
+            ],
+        );
+    }
+
+    getRentabilidad()
+
+
+    // EBITDA
+
+    const getEBITDA = async () => {
+        const response = await axios.get("/EBITDA")
+        let data1 = response.data
+
+        Plotly.newPlot(
+            "myDiv7",
+            [
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[0],
+                    type: "bar",
+                    name: "Capital de Trabajo",
+                    marker: { color: "#7C8E72" },
+                },
+            ],
+            {
+                barmode: "group",
+            }
+        );
+    }
+
+    getEBITDA()
+
+    // Razon de endeudamiento
+
+    const getREndeudamiento = async () => {
+        const response = await axios.get("/REndeudamiento")
+        let data1 = response.data
+
+        Plotly.newPlot(
+            "myDiv8",
+            [
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[0],
+                    type: "bar",
+                    name: "Corto Plazo",
+                    marker: { color: "#7C8E72" },
+                },
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[1],
+                    type: "bar",
+                    name: "Largo Plazo",
+                    marker: { color: "#F01010" },
+                },
+            ],
+            {
+                barmode: "stack",
+            }
+        );
+    }
+
+    getREndeudamiento()
+
+
+    // Ciclo conversión Efectivo
+
+    const getCCE = async () => {
+        const response = await axios.get("/CCE")
+        let data1 = response.data
+
+        Plotly.newPlot(
+            "myDiv9",
+            [
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[0],
+                    type: "scatter",
+                    name: "Plazo Promedio de Proveedores",
+                    marker: { color: "#BFF010" },
+                },
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[1],
+                    type: "scatter",
+                    name: "Plazo Promedio Existencias",
+                    marker: { color: "#F0B110" },
+                },
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[2],
+                    type: "scatter",
+                    name: "Plazo Promedio de Cobro",
+                    marker: { color: "#F04110" },
+                },
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[3],
+                    type: "bar",
+                    name: "Ciclo de Caja",
+                    marker: { color: "#F01017" },
+                }
+            ],
+        );
+    }
+
+    getCCE()
+
+    //TABLAs
+
+    /* <!-- Activos --> */
+    const getActivos = async () => {
+        const { data } = await axios.get("/activos");
+        $(".activos").html("");
+
+        data.forEach((t) => {
+            $(".activos").append(`
+         <tr>
+           <td> ${t[0]} </td>
+           <td> ${t[1]} </td>
+           <td> ${t[2]} </td>
+           <td> ${t[3]} </td>
+           <td class="text-light bg-secondary"> ${t[4]} </td>
+           <td class="text-light bg-secondary"> ${t[5]} </td>
+           <td class="text-light bg-secondary"> ${t[6]} </td>
+         </tr>
+       `);
+        });
+    };
+    getActivos();
+    /* Pasivos y Patrimonio */
+    const getPasivosPatrimonio = async () => {
+        const { data } = await axios.get("/PasivosPatrimonio");
+        $(".PasivosPatrimonio").html("");
+
+        data.forEach((t) => {
+            $(".PasivosPatrimonio").append(`
+         <tr>
+           <td> ${t[0]} </td>
+           <td> ${t[1]} </td>
+           <td> ${t[2]} </td>
+           <td> ${t[3]} </td>
+           <td class="text-light bg-secondary"> ${t[4]} </td>
+           <td class="text-light bg-secondary"> ${t[5]} </td>
+           <td class="text-light bg-secondary"> ${t[6]} </td>
+         </tr>
+       `);
+        });
+    };
+    getPasivosPatrimonio();
+    /* EERR */
+    const getEERR = async () => {
+        const { data } = await axios.get("/EERR");
+        $(".EERR").html("");
+
+        data.forEach((t) => {
+            $(".EERR").append(`
+         <tr>
+           <td> ${t[0]} </td>
+           <td> ${t[1]} </td>
+           <td> ${t[2]} </td>
+           <td> ${t[3]} </td>
+           <td class="text-light bg-secondary"> ${t[4]} </td>
+           <td class="text-light bg-secondary"> ${t[5]} </td>
+           <td class="text-light bg-secondary"> ${t[6]} </td>
+         </tr>
+       `);
+        });
+    };
+    getEERR();
+    /* Componentes activo, pasivo */
+
+    const getActivoCP = async () => {
+        const { data } = await axios.get("/ActivoCP");
+        $(".ActivoCP").html("");
+
+        data.forEach((t) => {
+            $(".ActivoCP").append(`
+         <tr>
+           <td> ${t[0]} </td>
+           <td> ${t[1]} </td>
+           <td> ${t[2]} </td>
+           <td> ${t[3]} </td>
+           <td class="text-light bg-secondary"> ${t[4]} </td>
+           <td class="text-light bg-secondary"> ${t[5]} </td>
+           <td class="text-light bg-secondary"> ${t[6]} </td>
+         </tr>
+       `);
+        });
+    };
+    getActivoCP();
+
+    const getActivoLP = async () => {
+        const { data } = await axios.get("/ActivoLP");
+        $(".ActivoLP").html("");
+
+        data.forEach((t) => {
+            $(".ActivoLP").append(`
+         <tr>
+           <td> ${t[0]} </td>
+           <td> ${t[1]} </td>
+           <td> ${t[2]} </td>
+           <td> ${t[3]} </td>
+           <td class="text-light bg-secondary"> ${t[4]} </td>
+           <td class="text-light bg-secondary"> ${t[5]} </td>
+           <td class="text-light bg-secondary"> ${t[6]} </td>
+         </tr>
+       `);
+        });
+    };
+    getActivoLP();
+
+    const getPasivoCP = async () => {
+        const { data } = await axios.get("/PasivoCP");
+        $(".PasivoCP").html("");
+
+        data.forEach((t) => {
+            $(".PasivoCP").append(`
+         <tr>
+           <td> ${t[0]} </td>
+           <td> ${t[1]} </td>
+           <td> ${t[2]} </td>
+           <td> ${t[3]} </td>
+           <td class="text-light bg-secondary"> ${t[4]} </td>
+           <td class="text-light bg-secondary"> ${t[5]} </td>
+           <td class="text-light bg-secondary"> ${t[6]} </td>
+         </tr>
+       `);
+        });
+    };
+    getPasivoCP();
+
+    const getPasivoLP = async () => {
+        const { data } = await axios.get("/PasivoLP");
+        $(".PasivoLP").html("");
+
+        data.forEach((t) => {
+            $(".PasivoLP").append(`
+         <tr>
+           <td> ${t[0]} </td>
+           <td> ${t[1]} </td>
+           <td> ${t[2]} </td>
+           <td> ${t[3]} </td>
+           <td class="text-light bg-secondary"> ${t[4]} </td>
+           <td class="text-light bg-secondary"> ${t[5]} </td>
+           <td class="text-light bg-secondary"> ${t[6]} </td>
+         </tr>
+       `);
+        });
+    };
+    getPasivoLP();
+
+    const getResumenEstructuras = async () => {
+        const { data } = await axios.get("/ResumenEstructuras");
+        $(".ResumenEstructuras").html("");
+
+        data.forEach((t) => {
+            $(".ResumenEstructuras").append(`
+         <tr>
+           <td> ${t[1]} </td>
+           <td> ${t[2]} </td>
+           <td> ${t[3]} </td>
+           <td> ${t[4]} </td>
+         </tr>
+       `);
+        });
+    };
+    getResumenEstructuras();
+
+
+</script>
