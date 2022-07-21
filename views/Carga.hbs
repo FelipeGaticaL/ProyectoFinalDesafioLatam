@@ -8,9 +8,22 @@
             <input type="file" name="target_file" id="files" />
           </div>
         </div>
-        <input class="btn btn-light" type="submit" value="Cargar Archivo" />
+        <input class="btn btn-light" type="submit" value="Cargar Archivo" onclick="carga()"/>
       </form>
     </div>
 
 
+<script>
 
+  async function carga(){
+      alert.fire({
+        title: 'Cargado de Información',
+        text: 'Carga realizada con éxito',
+        icon: 'success'
+      })
+  }
+
+
+
+
+</script>

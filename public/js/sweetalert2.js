@@ -12,3 +12,17 @@ const deleteAlert = Swal.mixin({
     buttonsStyling: false,
     reverseButtons: true
 });
+
+const carga = Swal.mixin({
+    title: 'Carga de Información',
+    text: "Todo OK",
+    icon: 'success',
+    showCancelButton: true,
+    cancelButtonText: 'Close',
+    customClass: {
+        confirmButton: 'btn btn-danger mx-2',
+        cancelButton: 'btn btn-secondary mx-2'
+    },
+    buttonsStyling: false,
+    reverseButtons: true
+});

@@ -1,11 +1,11 @@
 /* <===== Creación tabla plan_de_cuentas=====> */
 
-CREATE TABLE cuentas(
-ID_Cuenta_IFRS INT DEFAULT,
-Cunetas_Ifrs VARCHAR(400) DEFAULT NULL,
-TIPO VARCHAR(20) DEFAULT NULL,
+CREATE TABLE cuentas (
+ 	num_id INT,
+	id_cuenta VARCHAR(8) DEFAULT NULL,
+	cuenta VARCHAR (500) DEFAULT NULL,
+	tipo_informe VARCHAR (20) DEFAULT NULL,
+	nombre_informe VARCHAR (55) DEFAULT NULL,
+	estatus_cuenta VARCHAR (3) DEFAULT NULL	
+);
 
-
-PRIMARY KEY (ID_Cuenta_IFRS)
-
-)
