@@ -13,7 +13,7 @@ const AgregandoDatos = async (parseDatos) => {
         (err, result) => {
             /*    console.log(err)
                console.log(result) */
-
+            
             console.log("Se han insertado : " + result.rowCount + " lineas");
         }
     );
