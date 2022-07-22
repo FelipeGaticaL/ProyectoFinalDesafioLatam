@@ -8,11 +8,9 @@
             <input type="file" name="target_file" id="files" />
           </div>
         </div>
-        <input id="alert1" class="btn btn-light" type="submit" value="Cargar Archivo" />
+        <input id="alert1" class="btn btn-dark" type="submit" value="Cargar Archivo" />
       </form>
     </div>
-
-
   </section>
 
   <section id="seleccionEmpresaTrimestre">
@@ -37,7 +35,7 @@
   <script>
 
 
-
+//Alerta del botón de carga con sweet alert
     $("#alert1").click(function () {
       Swal.fire({
         title: 'Cargando Información',
@@ -92,7 +90,18 @@
     };
     getTrimestre();
 
-  
+    const ActivarBoton = async () => {
+      const { data } = await axios.get("/getEmpresas");
+      if (data.length > 0) {
+        document.getElementById("botoncarga").innerHTML=`
+        <form action='/cargaInfoSelect' method='POST' enctype='multipart/form-data'>
+        <input class='btn btn-dark' type='submit' value='Activar Información' />`
+
+
+      } else ('')
+
+    };
+    ActivarBoton();
 
 
   </script>

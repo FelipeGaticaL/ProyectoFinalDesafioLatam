@@ -5,6 +5,7 @@ const path = require("path");
 require('dotenv').config();
 
 const db = require("./db/consultasEEFF");
+const { Console } = require("console");
 
 
 const app = express();
@@ -67,3 +68,11 @@ app.post("/carga", async (req, res) => {
       }
 });
 
+app.post("/cargaInfoSelect", async (req, res) => {
+    try {
+        const respuesta = await db.CreaTabla();
+        res.status(200).redirect("/user/chart");
+      } catch (error) {
+        res.status(500).send(error);
+      }
+});
