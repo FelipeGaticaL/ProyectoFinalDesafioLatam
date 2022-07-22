@@ -5,27 +5,18 @@ A) Link de trello https://trello.com/b/queJSXt5/proyecto-full-stack
 
 Cliente: 
 
-HU1 .- Como "cliente" quiero registrarme para poder poder iniciar sesión
-
+HU1 .- Como "cliente" quiero registrarme para poder iniciar sesión
 HU4 .- Como "Cliente" quiero iniciar sesión para poder utilizar todos los elementos que entrega el servicios
-
 HU5 .- Como "Cliente" quiero cargar y actualizar información de la Comisión Mercado Financiero para poder analizarla a través de los informes e indicadores que entrega la aplicación
-
 HU6 .- Como "Cliente" quiero poder eliminar la información cargada para cargar información de otros periodos si es que lo veo necesario. 
-
-HU7 .- Como "Cliente" quiero poder elegir a una empresa de la CMF y escojer los trimestres disponibles, para así realizar un análisis financiero. 
-
+HU7 .- Como "Cliente" quiero poder elegir a una empresa de la CMF y escoger los trimestres disponibles, para así realizar un análisis financiero. 
 HU8 .- Como "Cliente" quiero poder hacer clicks sobre el panel de gestión de información, para visualizar ya sea informes de ponderación horizontal o vertical
-
 HU9 .- Como "Cliente" quiero poder hacer click sobre el panel de gestión de gráficos, para sí seleccionar el que necesite de acuerdo a la lista desplegada por el programa
-
 HU10 .- Como "Cliente" quiero al terminar de utilizar la aplicación a través de un botón para cerrar la sesión.
 
 Administrador: 
-
-HU1 .- Como "administrador" quiero válidar las nuevas cuentas registradas para que el "cliente" las pueda utilizar
-
-HU2 .- Como "administrador" quiero dehabilitar cuentas registradas que correspondan a clientes que decidieron no utilizar la aplicación
+HU1 .- Como "administrador" quiero validar las nuevas cuentas registradas para que el "cliente" las pueda utilizar
+HU2 .- Como "administrador" quiero deshabilitar cuentas registradas que correspondan a clientes que decidieron no utilizar la aplicación
 
 
 
