@@ -2,64 +2,84 @@
     Stack 100%
 </button> --}}
 
+
 <div class="container-fluid">
     <div class="row">
         <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark sidebar collapse ">
             <div class="position-sticky pt-3 sidebar-sticky  ">
                 <ul class="nav flex-column align-items-start ">
-                    <li class="nav-item ">
+                    <li class="nav-item ">     
+                        <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="% de peso de activos corrientes y no corrientes">                
                         <a type="button" class="nav-link active button" data-bs-toggle="modal"
-                            data-bs-target="#stack_activos" aria-current="page" href="#">
+                            data-bs-target="#stack_activos"  aria-current="page" href="#">
                             Stack Activos
                         </a>
+                        </span> 
+                   
                     </li>
                     <li class="nav-item">
+                        <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="% de peso de los pasivos a corto y largo plazo, en relación al total">
                         <a type="button" class="nav-link active button" data-bs-toggle="modal"
                             data-bs-target="#stack_pasivos" aria-current="page" href="#">
                             Stacks Pasivos y Patrimonio
                         </a>
+                        </span>
                     </li>
                     <li class="nav-item">
+                        <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Capacidad e la empresa para hacer frente a las obligaciones de corto plazo">
                         <a type="button" class="nav-link active button" data-bs-toggle="modal"
                             data-bs-target="#stack_liquidez" aria-current="page" href="#">
                             Liquidez
                         </a>
+                        </span>
                     </li>
                     <li class="nav-item">
+                         <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Cantidad de veces que se puede hacer cargo de obligaciones, con o sin inventario">
                         <a type="button" class="nav-link active button" data-bs-toggle="modal"
                             data-bs-target="#stack_RLiquidezRAcida" aria-current="page" href="#">
                             Razón Liquidez y Ácida
                         </a>
+                        </span>
                     </li>
                     <li class="nav-item">
+                         <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Cantidad de capital que cuenta la empresa para que esta funcione">
                         <a type="button" class="nav-link active button" data-bs-toggle="modal"
                             data-bs-target="#stack_KdeTrabajo" aria-current="page" href="#">
                             Capital de Trabajo
                         </a>
+                        </span>
                     </li>
                     <li class="nav-item">
+                        <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Ingresos totales en $MM, sin y con descuentos">
                         <a type="button" class="nav-link active button" data-bs-toggle="modal"
                             data-bs-target="#stack_Rentabilidad" aria-current="page" href="#">
                             Rentabilidad
                         </a>
+                        </span>
                     </li>
                     <li class="nav-item">
+                        <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Las ganancias de una empresa antes de intereses, impuestos, depreciación y amortización">
                         <a type="button" class="nav-link active button" data-bs-toggle="modal"
                             data-bs-target="#stack_EBITDA" aria-current="page" href="#">
                             EBITDA
                         </a>
+                        </span>
                     </li>
                     <li class="nav-item">
+                         <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Determinar qué parte de los activos de una empresa se financia mediante deuda">
                         <a type="button" class="nav-link active button" data-bs-toggle="modal"
                             data-bs-target="#stack_REndeudamiento" aria-current="page" href="#">
                             Razón de Endeudamiento
                         </a>
+                        </span>
                     </li>
                     <li class="nav-item">
+                        <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Tiempo que transcurre desde el compromiso de efectivo para compras hasta el cobro de las cuentas por cobrar que resultan de la venta de bienes o servicios">
                         <a type="button" class="nav-link active button" data-bs-toggle="modal"
                             data-bs-target="#stack_CCE" aria-current="page" href="#">
                             Ciclo Conversión Efectivo
                         </a>
+                        </span>
                     </li>
 
 
@@ -1026,6 +1046,11 @@
 
     let botonEliminarTodo = document.getElementById("eliminarAll");
     botonEliminarTodo.addEventListener("click", eliminarAll)
+
+
+    //Popovers
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
 
 
 </script>
