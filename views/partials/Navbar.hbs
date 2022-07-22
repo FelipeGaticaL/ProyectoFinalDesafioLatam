@@ -1,5 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
+        <a id="titulo1" class="navbar-brand ms-3 "></a>
+        <a id="titulo2" class="navbar-brand" style="width: 50rem"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -44,6 +46,7 @@
         `;
     }
 
+ 
     // active class for navbar
     const activeLink = document.querySelector(`[href='${window.location.pathname}']`);
     // if active link is not null, add class active
@@ -54,4 +57,31 @@
         localStorage.removeItem("user");
         location.replace('/');
     }
+
+   //Si la pagina actual es chart, entonces agregar titulo y nombre de la empresa en el navbar
+
+    const Titulos = async () => {
+        let URLactual2 = (window.location.pathname);
+        let revisor = '/user/chart'
+        //const { data } = await axios.get("/getEmpresas");
+        const  data  = await axios.get("/getEmpresas");
+        let concat1 = `${URLactual2}+${data.statusText}`
+        let concat2 = `${revisor}+OK`
+        console.log(concat1,concat2)
+        concat1 === concat2 ? document.getElementById("titulo1").innerHTML=`${data.data[0]}` : document.getElementById("titulo1").innerHTML=""; 
+        URLactual2 == revisor ? document.getElementById("titulo2").innerHTML="Estados Financieros" : document.getElementById("titulo1").innerHTML=""; 
+            
+    
+  
+        
+        
+
+
+    }
+
+Titulos()
+
+   
+
+
 </script>
