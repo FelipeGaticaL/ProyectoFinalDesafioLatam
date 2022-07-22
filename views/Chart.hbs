@@ -975,7 +975,7 @@
     getActivoLP();
 
     const getPasivoCP = async () => {
-        const { data } = await axios.get("/PasivoCP");
+        const { data } = await axios.get("/table/PasivoCP");
         $(".PasivoCP").html("");
 
         data.forEach((t) => {
@@ -1033,7 +1033,7 @@
 
 //Botón eliminar
     const eliminarAll = async () => {
-        const { data } = await axios.get("/getEmpresas")
+        const { data } = await axios.get("/table/getEmpresas")
 
 
         try {

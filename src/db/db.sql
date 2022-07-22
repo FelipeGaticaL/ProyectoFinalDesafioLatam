@@ -1,5 +1,6 @@
 CREATE DATABASE proyecto
 
+
 CREATE TABLE roles(
     id SERIAL PRIMARY KEY,
     name VARCHAR(255) UNIQUE NOT NULL
@@ -48,9 +49,8 @@ Monto numeric DEFAULT NULL,
 Taxonomia VARCHAR(20) DEFAULT NULL,
 Tipo_de_Informe VARCHAR(20) DEFAULT NULL)
 
-
-
 CREATE EXTENSION IF NOT EXISTS tablefunc;
+
 
 INSERT INTO cuentas VALUES
 ('1','11.10.10','Efectivo y equivalentes al efectivo','ESF C/NC','Estado de Situación Financiera, Corriente/No Corriente','on'),
@@ -152,7 +152,7 @@ INSERT INTO cuentas VALUES
 
 
 
-INSERT INTO ratioS VALUES
+INSERT INTO ratios VALUES
 ('640','Total de Costos'),
 ('641','EbItda'),
 ('655','Tasa Impuesto General Empresas Chile'),

@@ -64,12 +64,12 @@
         let URLactual2 = (window.location.pathname);
         let revisor = '/user/chart'
         //const { data } = await axios.get("/getEmpresas");
-        const  data  = await axios.get("/getEmpresas");
+        const  data  = await axios.get("/table/getEmpresas");
         let concat1 = `${URLactual2}+${data.statusText}`
         let concat2 = `${revisor}+OK`
         URLactual2 == revisor ? document.getElementById("titulo2").innerHTML="Estados Financieros" : document.getElementById("titulo1").innerHTML="";
-        console.log(concat1,concat2)
-        console.log(data.data.length)
+        //console.log(concat1,concat2)
+        //console.log(data.data.length)
 
         if(data.data.length > 0){
         concat1 == concat2 ? document.getElementById("titulo1").innerHTML=`${data.data[0]}` : document.getElementById("titulo1").innerHTML=""; 

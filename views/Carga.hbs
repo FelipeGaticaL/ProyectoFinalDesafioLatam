@@ -46,7 +46,7 @@
     })
 //Librería del multi select https://www.cssscript.com/select-box-virtual-scroll/
     const getEmpresas = async () => {
-      const { data } = await axios.get("/getEmpresas");
+      const { data } = await axios.get("/table/getEmpresas");
       if (data.length > 0) {
 
         myOptions1 = [
@@ -68,7 +68,7 @@
     getEmpresas();
 
     const getTrimestre = async () => {
-      const { data } = await axios.get("/getTrimestre");
+      const { data } = await axios.get("/table/getTrimestre");
 
       if (data.length > 0) {
          
@@ -92,7 +92,7 @@
     getTrimestre();
 
     const ActivarBoton = async () => {
-      const { data } = await axios.get("/getEmpresas");
+      const { data } = await axios.get("/table/getEmpresas");
       if (data.length > 0) {
         document.getElementById("botoncarga").innerHTML=`
         <form action='/api/v1/bdinput/cargaInfoSelect' method='POST' enctype='multipart/form-data'>
