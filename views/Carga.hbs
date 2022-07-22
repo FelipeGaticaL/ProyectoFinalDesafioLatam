@@ -2,7 +2,7 @@
 <h1 class="bd-title mb-0" id="content">CARGA DE INFORMACIÓN</h1>
   <section id="SeccionCarga" class="p-3">
     <div class="container p-5 w-50 border">
-      <form action="/carga" method="POST" enctype="multipart/form-data">
+      <form action="/api/v1/bdinput/carga" method="POST" enctype="multipart/form-data">
         <div class="row my-3">
           <div class="col">
             <input type="file" name="target_file" id="files" />
@@ -95,7 +95,7 @@
       const { data } = await axios.get("/getEmpresas");
       if (data.length > 0) {
         document.getElementById("botoncarga").innerHTML=`
-        <form action='/cargaInfoSelect' method='POST' enctype='multipart/form-data'>
+        <form action='/api/v1/bdinput/cargaInfoSelect' method='POST' enctype='multipart/form-data'>
         <input class='btn btn-dark' type='submit' value='Activar Información' />`
          document.getElementById("Titulo2").innerHTML=`<H2 class="bd-title mb-0" id="content"> SELECCIONAR CONJUNTO DE DATOS</H2>`
 

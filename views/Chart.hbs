@@ -554,7 +554,7 @@
     //Gráficos
     //Gráfico Stacks
     const getStack = async () => {
-        const response = await axios.get("/chartsStacksActivos")
+        const response = await axios.get("/charts/chartsStacksActivos")
         let data1 = response.data
 
         Plotly.newPlot(
@@ -593,7 +593,7 @@
     getStack()
 
     const getStackPasivo = async () => {
-        const response = await axios.get("/chartsStacksPasivos")
+        const response = await axios.get("/charts/chartsStacksPasivos")
         let data1 = response.data
 
         Plotly.newPlot(
@@ -644,7 +644,7 @@
     //Liquidez
 
     const getStackLiquidez = async () => {
-        const response = await axios.get("/chartLiquidez")
+        const response = await axios.get("/charts/chartLiquidez")
         let data1 = response.data
         Plotly.newPlot(
             "myDiv3",
@@ -675,7 +675,7 @@
     // R Liquidez R Acida
 
     const getRLiquidezRAcida = async () => {
-        const response = await axios.get("/RLiquidezRAcida")
+        const response = await axios.get("/charts/RLiquidezRAcida")
         let data1 = response.data
 
         Plotly.newPlot(
@@ -709,7 +709,7 @@
     // KdeTrabajo 
 
     const getKdeTrabajo = async () => {
-        const response = await axios.get("/KdeTrabajo")
+        const response = await axios.get("/charts/KdeTrabajo")
         let data1 = response.data
 
         Plotly.newPlot(
@@ -735,7 +735,7 @@
     //Rentabilidad
 
     const getRentabilidad = async () => {
-        const response = await axios.get("/Rentabilidad")
+        const response = await axios.get("/charts/Rentabilidad")
         let data1 = response.data
 
         Plotly.newPlot(
@@ -772,7 +772,7 @@
     // EBITDA
 
     const getEBITDA = async () => {
-        const response = await axios.get("/EBITDA")
+        const response = await axios.get("/charts/EBITDA")
         let data1 = response.data
 
         Plotly.newPlot(
@@ -797,7 +797,7 @@
     // Razon de endeudamiento
 
     const getREndeudamiento = async () => {
-        const response = await axios.get("/REndeudamiento")
+        const response = await axios.get("/charts/REndeudamiento")
         let data1 = response.data
 
         Plotly.newPlot(
@@ -830,7 +830,7 @@
     // Ciclo conversión Efectivo
 
     const getCCE = async () => {
-        const response = await axios.get("/CCE")
+        const response = await axios.get("/charts/CCE")
         let data1 = response.data
 
         Plotly.newPlot(
@@ -874,7 +874,7 @@
 
     /* <!-- Activos --> */
     const getActivos = async () => {
-        const { data } = await axios.get("/activos");
+        const { data } = await axios.get("/table/activos");
         $(".activos").html("");
 
         data.forEach((t) => {
@@ -894,7 +894,7 @@
     getActivos();
     /* Pasivos y Patrimonio */
     const getPasivosPatrimonio = async () => {
-        const { data } = await axios.get("/PasivosPatrimonio");
+        const { data } = await axios.get("/table/PasivosPatrimonio");
         $(".PasivosPatrimonio").html("");
 
         data.forEach((t) => {
@@ -914,7 +914,7 @@
     getPasivosPatrimonio();
     /* EERR */
     const getEERR = async () => {
-        const { data } = await axios.get("/EERR");
+        const { data } = await axios.get("/table/EERR");
         $(".EERR").html("");
 
         data.forEach((t) => {
@@ -935,7 +935,7 @@
     /* Componentes activo, pasivo */
 
     const getActivoCP = async () => {
-        const { data } = await axios.get("/ActivoCP");
+        const { data } = await axios.get("/table/ActivoCP");
         $(".ActivoCP").html("");
 
         data.forEach((t) => {
@@ -955,7 +955,7 @@
     getActivoCP();
 
     const getActivoLP = async () => {
-        const { data } = await axios.get("/ActivoLP");
+        const { data } = await axios.get("/table/ActivoLP");
         $(".ActivoLP").html("");
 
         data.forEach((t) => {
@@ -995,7 +995,7 @@
     getPasivoCP();
 
     const getPasivoLP = async () => {
-        const { data } = await axios.get("/PasivoLP");
+        const { data } = await axios.get("/table/PasivoLP");
         $(".PasivoLP").html("");
 
         data.forEach((t) => {
@@ -1015,7 +1015,7 @@
     getPasivoLP();
 
     const getResumenEstructuras = async () => {
-        const { data } = await axios.get("/ResumenEstructuras");
+        const { data } = await axios.get("/table/ResumenEstructuras");
         $(".ResumenEstructuras").html("");
 
         data.forEach((t) => {
@@ -1041,7 +1041,7 @@
             const result = await deleteInfo.fire();
 
             if (result.isConfirmed) {
-                const { status } = await axios.delete("/EliminarTodo")
+                const { status } = await axios.delete("/charts/EliminarTodo")
                
 
             }

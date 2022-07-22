@@ -44,48 +44,5 @@ app.use('/', require('./routes/views'));
 app.use('/api/v1/auth', require('./routes/auth'));
 app.use('/api/v1/users', require('./routes/users'));
 app.use('/api/v1/charts', require('./routes/charts'));
-
-app.post("/carga", async (req, res) => {
-    
-  let buffer = req.files.target_file.data;
-  let datos = buffer.toString('utf8').split("\n");
-  let parseDatos = datos.map((texto) => {
-      let entries = texto.split(";").map((item) => {
-        return item.trim();
-      });
-      return entries;
-      });
-
-      //Eliminamos el último elemento del arreglo de arrelgos, porque viene vacío y esto afecta la carga final.
-    parseDatos.pop()
-    /* parseDatos.splice(-1,1) --> También funciona*/
-    //console.log(parseDatos[Object.keys(parseDatos)[Object.keys(parseDatos).length - 1]]) //Obteniendo último valor
-    try {
-        const respuesta = await db.AgregandoDatos(parseDatos);
-        res.status(200).redirect("/user/carga");
-      } catch (error) {
-        res.status(500).send(error);
-      }
-});
-
-
-app.post("/cargaInfoSelect", async (req, res) => {
-  try {
-      const respuesta = await db.CreaTabla();
-      res.status(200).redirect("/user/chart");
-    } catch (error) {
-      res.status(500).send(error);
-    }
-});
-
-
-app.delete("/api/v1/EliminarTodo", async (req, res) => {
-
-
-    try {
-      const respuesta = await db.EliminarTodo();
-      res.status(200).redirect("/user/carga");
-    } catch (error) {
-      res.status(500).send(error);
-    }
-});
+app.use('/api/v1/bdinput', require('./routes/bdinput'));
+app.use('/api/v1/table', require('./routes/table'));
