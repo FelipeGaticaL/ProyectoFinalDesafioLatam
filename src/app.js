@@ -80,7 +80,7 @@ app.post("/cargaInfoSelect", async (req, res) => {
 
 
 app.delete("/api/v1/EliminarTodo", async (req, res) => {
-console.log("entramos")
+
 
     try {
       const respuesta = await db.EliminarTodo();

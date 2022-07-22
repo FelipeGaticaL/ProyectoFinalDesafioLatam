@@ -29,4 +29,14 @@ const deleteInfo = Swal.mixin({
     reverseButtons: true
 });
 
+const confirmacionDeleteInfo = Swal.mixin({
+    title: '¿Todo ha sido eliminado con exito?',
+    icon: 'success',
+    confirmButtonText: 'OK',
+    customClass: {
+        confirmButton: 'btn btn-success mx-2',
+    },
+    buttonsStyling: false,
+    reverseButtons: true
+});
 
