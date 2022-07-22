@@ -68,11 +68,23 @@ app.post("/carga", async (req, res) => {
       }
 });
 
+
 app.post("/cargaInfoSelect", async (req, res) => {
-    try {
-        const respuesta = await db.CreaTabla();
-        res.status(200).redirect("/user/chart");
-      } catch (error) {
-        res.status(500).send(error);
-      }
+  try {
+      const respuesta = await db.CreaTabla();
+      res.status(200).redirect("/user/chart");
+    } catch (error) {
+      res.status(500).send(error);
+    }
+});
+
+
+app.post("/EliminarTodo", async (req, res) => {
+
+  try {
+      const respuesta = await db.EliminarTodo();
+      res.status(200).redirect("/user/carga");
+    } catch (error) {
+      res.status(500).send(error);
+    }
 });

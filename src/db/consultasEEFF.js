@@ -428,9 +428,9 @@ const getTrimestre = async () => {
 };
 
 const CreaTabla = async () => {
-console.log("hola hola pirinola")
-    db.query(   
-`
+
+    db.query(
+        `
     CREATE TABLE IF NOT EXISTS  T_60503000 AS
 SELECT  num_id, id_cuenta, tipo_informe, plan_de_cuentas,coalesce("202106", 0) AS "202106", coalesce("202109", 0) AS "202109", coalesce("202112", 0) AS "202112"
 FROM  crosstab(
@@ -457,16 +457,33 @@ FROM  crosstab(
  , 'VALUES (202106), (202109), (202112)') 
  AS plan (num_id INT, id_cuenta VARCHAR, tipo_informe VARCHAR, plan_de_cuentas VARCHAR, "202106" numeric, "202109" numeric, "202112" numeric);
           `
-          ,(err,res)=>{
-         
-          })
+        , (err, res) => {
+
+        })
+
+};
+
+
+const EliminarTodo = async () => {
+
+    db.query(
+        `
+        DELETE FROM plan_cuentas;
+        DROP TABLE T_60503000
+        `
+        , (err, res) => {
+       /*  console.log(err, res) */
+        })
+
+
 
 };
 
 
 
 
+
 module.exports = {
     AgregandoDatos, getActivos, getPasivosPatrimonio,
-    getEERR, getActivoCP, getActivoLP, getPasivoCP, getPasivoLP, getResumenEstructuras, getchartsStacksActivos, getchartsStacksPasivos, getchartLiquidez, getRLiquidezRAcida, getKdeTrabajo, getRentabilidad, getEBITDA, getREndeudamiento, getCCE, getEmpresas, getTrimestre, CreaTabla
+    getEERR, getActivoCP, getActivoLP, getPasivoCP, getPasivoLP, getResumenEstructuras, getchartsStacksActivos, getchartsStacksPasivos, getchartLiquidez, getRLiquidezRAcida, getKdeTrabajo, getRentabilidad, getEBITDA, getREndeudamiento, getCCE, getEmpresas, getTrimestre, CreaTabla, EliminarTodo
 };

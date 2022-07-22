@@ -302,6 +302,14 @@ router.get("/api/v1/getTrimestre", async (req, res) => {
     }
 })
 
+router.post("/api/v1/cargaInfoSelect", async (req, res) => {
+    try {
+        const respuesta = await db.CreaTabla();
+        res.status(200).redirect("/user/chart");
+      } catch (error) {
+        res.status(500).send(error);
+      }
+});
 
 
 
