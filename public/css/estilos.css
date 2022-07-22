@@ -34,3 +34,9 @@ input {
 .nav-link{
     color: whitesmoke;
 }
+
+.example-select2{
+    max-width: 100%;
+    width: 500px;
+
+}

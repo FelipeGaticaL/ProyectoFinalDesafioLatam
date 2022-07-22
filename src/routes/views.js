@@ -282,6 +282,27 @@ router.get("/api/v1/ResumenEstructuras", async (req, res) => {
 })
 
 
+router.get("/api/v1/getEmpresas", async (req, res) => {
+    try {
+        const resultado = await db.getEmpresas();
+        /* console.log(resultado) */
+        res.end(JSON.stringify(resultado))
+    } catch (error) {
+        res.status(500).send(error)
+    }
+})
+
+router.get("/api/v1/getTrimestre", async (req, res) => {
+    try {
+        const resultado = await db.getTrimestre();
+        /* console.log(resultado) */
+        res.end(JSON.stringify(resultado))
+    } catch (error) {
+        res.status(500).send(error)
+    }
+})
+
+
 
 
 module.exports = router;

@@ -398,11 +398,37 @@ const getCCE = async () => {
     return rows;
 };
 
+    /* Selección Empresas */
+
+    const getEmpresas= async () => {
+        const SQLQuery = {
+            rowMode: "array",
+            text: `
+            SELECT DISTINCT ON (rut) razon_social FROM plan_cuentas
+            WHERE rut < 61113000
+            ORDER BY rut    
+          `,
+        };
+        const { rows } = await db.query(SQLQuery);
+        return rows;
+    };
 
 
+     /* Selección Trimestre */
+
+     const getTrimestre= async () => {
+        const SQLQuery = {
+            rowMode: "array",
+            text: `
+            SELECT DISTINCT ON (trimestre) trimestre FROM  plan_cuentas
+          `,
+        };
+        const { rows } = await db.query(SQLQuery);
+        return rows;
+    };
 
 
 module.exports = {
     AgregandoDatos, getActivos, getPasivosPatrimonio,
-    getEERR, getActivoCP, getActivoLP, getPasivoCP, getPasivoLP, getResumenEstructuras, getchartsStacksActivos, getchartsStacksPasivos, getchartLiquidez, getRLiquidezRAcida, getKdeTrabajo, getRentabilidad, getEBITDA, getREndeudamiento, getCCE
+    getEERR, getActivoCP, getActivoLP, getPasivoCP, getPasivoLP, getResumenEstructuras, getchartsStacksActivos, getchartsStacksPasivos, getchartLiquidez, getRLiquidezRAcida, getKdeTrabajo, getRentabilidad, getEBITDA, getREndeudamiento, getCCE, getEmpresas, getTrimestre
 };
