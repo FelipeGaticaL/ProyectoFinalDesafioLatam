@@ -69,9 +69,10 @@
 
             </div>
             <div class="p-5">
-                <form action="/EliminarTodo" method="POST" enctype="multipart/form-data">
-                <button type="submit" type="button" class="btn btn-danger">Eliminar</button>
-                </form>
+                <button id="eliminarAll" type="button" class="btn btn-danger">Eliminar</button>
+                {{!-- <form action="/EliminarTodo" method="POST" enctype="multipart/form-data">
+                    <button type="submit" type="button" class="btn btn-danger">Eliminar</button>
+                </form> --}}
             </div>
         </nav>
 
@@ -1002,8 +1003,29 @@
     getResumenEstructuras();
 
 
-{{!--     function eliminar(){
-       axios.get("/EliminarTodo");
-    } --}}
+    const eliminarAll = async () => {
+        const { data } = await axios.get("/getEmpresas")
+
+
+        try {
+
+            const result = await deleteInfo.fire();
+
+            if (result.isConfirmed) {
+                const { status } = await axios.delete("/EliminarTodo")
+
+
+            }
+        } catch (error) {
+            Swal.fire({
+                title: 'Todo ha sido eliminado con exito',
+                icon: 'success'
+            });
+        }
+    }
+
+    let botonEliminarTodo = document.getElementById("eliminarAll");
+    botonEliminarTodo.addEventListener("click", eliminarAll)
+
 
 </script>

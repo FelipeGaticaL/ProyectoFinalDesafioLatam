@@ -79,9 +79,10 @@ app.post("/cargaInfoSelect", async (req, res) => {
 });
 
 
-app.post("/EliminarTodo", async (req, res) => {
+app.delete("/api/v1/EliminarTodo", async (req, res) => {
+console.log("entramos")
 
-  try {
+    try {
       const respuesta = await db.EliminarTodo();
       res.status(200).redirect("/user/carga");
     } catch (error) {
