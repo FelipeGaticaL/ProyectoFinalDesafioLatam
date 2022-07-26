@@ -12,7 +12,7 @@ router.post("/login", authController.login);
 
 router.post("/register", async (req, res) => {
     if (!req.files || !req.files.foto) {
-        return res.status(400).send("No se encontro ningun archivo en la consulta");
+        return res.status(400).send("No has colocado la foto!!");
     }
 
     const user = req.body;

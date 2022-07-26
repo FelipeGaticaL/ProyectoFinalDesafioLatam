@@ -40,3 +40,25 @@ const confirmacionDeleteInfo = Swal.mixin({
     reverseButtons: true
 });
 
+const actualizacion = Swal.mixin({
+    title: 'Se han actualizado tus datos',
+    icon: 'success',
+    confirmButtonText: 'OK',
+    customClass: {
+        confirmButton: 'btn btn-success mx-2',
+    },
+    buttonsStyling: false,
+    reverseButtons: true
+});
+
+const deleteAlert3 = Swal.mixin({
+    title:'No tienes la autorización para hacer esto',
+    text: 'Serás redirigido al login',
+    icon: 'error',
+    confirmButtonText: 'OK',
+    customClass: {
+        confirmButton: 'btn btn-success mx-2',
+    },
+    buttonsStyling: false,
+    reverseButtons: true
+});

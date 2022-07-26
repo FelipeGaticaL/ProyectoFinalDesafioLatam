@@ -32,24 +32,41 @@
   </div>
 </div>
 <script>
+  
+  
   function verificarUserRole() {
+    
     if (JSON.parse(localStorage.getItem("user")).role_id !== 2) {
       window.location.href = "/login";
     }
   }
 
   async function deleteUser(userId) {
+  
     try {
       const result = await deleteAlert.fire();
 
       if (result.isConfirmed) {
         const { data: token } = await axios.delete(`/users/${userId}`);
-        alert("Usuario eliminado con éxito");
-        // window.location.href = '/';
-        // localStorage.removeItem('user');
-        // localStorage.removeItem('token');
+           
+        localStorage.removeItem('user');
+        localStorage.removeItem('token');
+         //window.location.href = '/';
       }
     } catch (error) {
+       const result2 = await deleteAlert3.fire();
+
+       if(result2.isConfirmed){
+        localStorage.clear();
+        window.location.href = '/'
+       }
+       function redirigir(){
+        localStorage.clear();
+        window.location.href = '/'
+       }
+       setTimeout(redirigir,5000)
+       
+       
       console.log(error);
     }
   }

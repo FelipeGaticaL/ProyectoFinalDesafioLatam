@@ -1,6 +1,7 @@
 const { Router } = require('express');
 const { getUsers } = require("../db/users");
 const db = require("../db/consultasEEFF");
+const { requiresAuth, verifyRoles } = require('../middlewares/requiresAuth');
 
 const router = Router();
 
@@ -31,6 +32,7 @@ router.get("/admin", async (req, res) => {
     const users = await getUsers();
     res.render("Admin", { users, requiresAuth: true });
 });
+
 
 router.get("/user/chart", async (req, res) => {
 

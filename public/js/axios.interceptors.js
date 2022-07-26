@@ -9,17 +9,22 @@ axios.interceptors.request.use(function (config) {
     return config;
 });
 
-// Add a response interceptor
+//Add a response interceptor
 axios.interceptors.response.use(function (response) {
     // Cualquier código de estado que este dentro del rango de 2xx causa la ejecución de esta función 
-    return response;
+   return response;
 }, function (error) {
     // Cualquier código de estado que este fuera del rango de 2xx causa la ejecución de esta función
     const { status } = error.response;
-    if (status === 401 || status === 403) {
+    if ( status === 403) {
         localStorage.clear();
         location.href = '/login';
     }
+    //Esta parte del código, hacía que no se pudiera ejecutar el error de no ser usuario rol = 2 en el admin
+//    if (status === 401 || status === 403) {
+//        localStorage.clear();
+//        location.href = '/login';
+//    }
 
     return Promise.reject(error);
 });

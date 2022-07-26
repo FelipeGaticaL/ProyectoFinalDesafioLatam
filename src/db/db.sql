@@ -23,7 +23,7 @@ CREATE TABLE users(
 );
 
 CREATE TABLE cuentas (
- 	num_id INT,
+ 	num_id INT PRIMARY KEY,
 	id_cuenta VARCHAR(8) DEFAULT NULL,
 	cuenta VARCHAR (500) DEFAULT NULL,
 	tipo_informe VARCHAR (20) DEFAULT NULL,
@@ -32,13 +32,13 @@ CREATE TABLE cuentas (
 );
 
 CREATE TABLE ratios (
-	id_ratio INT,
+	id_ratio INT PRIMARY KEY,
 	nombre_ratio VARCHAR (400)
 )
 
 
 CREATE TABLE plan_cuentas(
-id SERIAL,
+id SERIAL INT PRIMARY KEY,
 Trimestre INT DEFAULT NULL,
 Rut INT DEFAULT NULL,
 Razon_Social VARCHAR(300) DEFAULT NULL,
@@ -47,7 +47,10 @@ UM VARCHAR(6) DEFAULT NULL,
 plan_de_cuentas VARCHAR(400) DEFAULT NULL,
 Monto numeric DEFAULT NULL,
 Taxonomia VARCHAR(20) DEFAULT NULL,
-Tipo_de_Informe VARCHAR(20) DEFAULT NULL)
+Tipo_de_Informe VARCHAR(20) DEFAULT NULL
+
+FOREIGN KEY (plan_de_cuentas) REFERENCES cuentas(cuenta)
+)
 
 CREATE EXTENSION IF NOT EXISTS tablefunc;
 

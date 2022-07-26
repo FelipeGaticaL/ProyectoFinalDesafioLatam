@@ -51,10 +51,9 @@
         e.preventDefault()
 
         let [email, name, password, repeat_password] = document.querySelectorAll("input");
-
+        
         name = name.value
         password = password.value
-
         if (password !== repeat_password.value) {
             return alert('Las contraseñas deben ser iguales');
         }
@@ -69,11 +68,19 @@
         }
 
         try {
-            await axios.put("/users", user);
-            alert("Datos actualizados con éxito")
-            window.location = "/login"
+            await axios.put("users/users", user);
+            
+            const result = await actualizacion.fire()
+             if(result.isConfirmed){
+                localStorage.clear();
+                window.location= "/login"
+                }
+
+            //alert("Datos actualizados con éxito")
+            //window.location = "/login"
         } catch (error) {
             console.log(error)
+         
         }
 
     })
