@@ -52,9 +52,9 @@ const actualizacion = Swal.mixin({
 });
 
 const deleteAlert3 = Swal.mixin({
-    title:'No tienes la autorización para hacer esto',
-    text: 'Serás redirigido al login',
-    icon: 'error',
+    title:'Usuario Eliminado',
+    text: 'Usuario Eliminado permanentemente',
+    icon: 'success',
     confirmButtonText: 'OK',
     customClass: {
         confirmButton: 'btn btn-success mx-2',

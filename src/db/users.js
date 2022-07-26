@@ -8,19 +8,30 @@ const newUser = async ({ email, name, password, foto }) => {
   return result.rows[0];
 }
 
-const updateUser = async ({ name, password, email}, id) => {
+const updateUser = async ({ name, password, role_id}, id) => {
   //console.log(name,password, id)
 
   const result = await db.query({
-    text: `UPDATE users SET name = $1, password = $2 WHERE id = $3 RETURNING *`,
-    values: [name, password, id]
+    text: `UPDATE users SET name = $1, password = $2, role_id = $3 WHERE id = $4 RETURNING *`,
+    values: [name, password, role_id,id]
   },(err,res)=>{
     //se ajustó a res, porque con result, había un problema, daba indefinido.
     return res.rows[0];
   });
-  
-  
 }
+
+const updateUser2 = async ({ name, password, role_id}, id) => {
+  //console.log(name,password, id)
+
+  const result = await db.query({
+    text: `UPDATE users SET name = $1, password = $2, role_id = $3 WHERE id = $4 RETURNING *`,
+    values: [name, password, role_id, id]
+  },(err,res)=>{
+    //se ajustó a res, porque con result, había un problema, daba indefinido.
+    return res.rows[0];
+  });
+}
+
 
 const getUsers = async () => {
   const result = await db.query("SELECT id, name, email, foto FROM users");
@@ -63,5 +74,6 @@ module.exports = {
   getUser,
   updateUser,
   deleteUser,
-  eliminarusuario
+  eliminarusuario,
+  updateUser2
 };

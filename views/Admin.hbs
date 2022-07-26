@@ -37,9 +37,16 @@
   function verificarUserRole() {
     
     if (JSON.parse(localStorage.getItem("user")).role_id !== 2) {
-      window.location.href = "/login";
+      
+      function exit(){
+        alert("No eres un usuario autorizado")
+        window.location.href = "/login";
+      }
+      setTimeout(exit, 0)
+      //window.location.href = "/login";
     }
   }
+  verificarUserRole()
 
   async function deleteUser(userId) {
   
@@ -54,6 +61,7 @@
          //window.location.href = '/';
       }
     } catch (error) {
+      console.log(error)
        const result2 = await deleteAlert3.fire();
 
        if(result2.isConfirmed){

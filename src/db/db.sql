@@ -22,6 +22,8 @@ CREATE TABLE users(
     FOREIGN KEY (role_id) REFERENCES roles(id)
 );
 
+
+
 CREATE TABLE cuentas (
  	num_id INT PRIMARY KEY,
 	id_cuenta VARCHAR(8) DEFAULT NULL,
@@ -52,6 +54,7 @@ Tipo_de_Informe VARCHAR(20) DEFAULT NULL
 FOREIGN KEY (plan_de_cuentas) REFERENCES cuentas(cuenta)
 )
 
+/* Agregar funcionalidad a tabla plan de cuentas para que sea posible el CROSSTAB */
 CREATE EXTENSION IF NOT EXISTS tablefunc;
 
 
