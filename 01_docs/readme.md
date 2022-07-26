@@ -44,3 +44,15 @@ Revisar en docs:
 6.- Instalaciones dependiencias OK.
 
 
+
+INSTRUCCIONES DE INSTALACIÓN Y NOTAS
+
+A) Base de datos: Seguir el orden que está en \src\db\db.sql
+
+B) Una vez todo OK, crear usuario
+    En perfil se puede cambiar de usuario corriente a usuario administrador
+    Sólo el usuario administrador puede utilizar la ventana de Administración
+
+C) Cargar desde la página "carga", los datos. Son 3 archivos, se encuentran en docs
+
+D) Una vez cargado los 3 archivos, es posible, que no se muestren los tres trimestres en la lista deplegable en la pantalla de "carga", actualizar con un F5, y aparecerán. Estoy buscando la solución del location.reload() para que funcione correctamente

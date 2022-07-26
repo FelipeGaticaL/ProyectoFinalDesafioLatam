@@ -30,9 +30,7 @@
 
   <div id="botoncarga"></div>
 
-
-
-  </select>
+ 
   <script>
 
 
@@ -42,7 +40,9 @@
         title: 'Cargando Información',
         text: 'Información con exitosamente',
         icon: 'success'
-      })
+      });
+       //setTimeout()
+       location.reload()
     })
 //Librería del multi select https://www.cssscript.com/select-box-virtual-scroll/
     const getEmpresas = async () => {
@@ -51,14 +51,14 @@
 
         myOptions1 = [
           { label: data[0], value: data[0] },
-          { label: data[1], value: '2' },
-          { label: data[2], value: '3' },
-          { label: data[3], value: '4' }
+          { label: data[1], value: data[1] },
+          { label: data[2], value: data[2] },
+          { label: data[3], value: data[3] }
         ]
         VirtualSelect.init({
           ele: '#example-select1',
           options: myOptions1,
-          placeholder: 'Escoge Empresa',
+          placeholder: 'Escoge Empresa'
         });
 
 
@@ -73,16 +73,17 @@
       if (data.length > 0) {
          
         myOptions2 = [
-          { label: data[0], value: '1' },
-          { label: data[1], value: '2' },
-          { label: data[2], value: '2' }
+          { label: data[0], value: data[0] },
+          { label: data[1], value: data[1] },
+          { label: data[2], value: data[2] }
 
         ]
         VirtualSelect.init({
           ele: '#example-select2',
           options: myOptions2,
           placeholder: 'Escoge Trimestre',
-          multiple: true
+          multiple: true,
+          showValueAsTags: true
         });
 
 
@@ -98,7 +99,7 @@
         <form action='/api/v1/bdinput/cargaInfoSelect' method='POST' enctype='multipart/form-data'>
         <input class='btn btn-dark' type='submit' value='Activar Información' />`
          document.getElementById("Titulo2").innerHTML=`<H2 class="bd-title mb-0" id="content"> SELECCIONAR CONJUNTO DE DATOS</H2>`
-
+       
       } else if(data.length == 4){
            location.reload()
       } else{
@@ -108,6 +109,21 @@
     };
     ActivarBoton();
 
+  //*** UPGRADE PARA EL FUTURO ***  
+    //Se puede cambiar la lista con todas las empresas, con un iterador for each
+    //https://sa-si-dev.github.io/virtual-select/#/examples 
+    //Utilizando Maximum Values de la lista, para que la lista tenga un scroll
 
+
+  //Código que nos permite hacer el match para hacer un find y un select, y así escoger una empresa en concreto
+  //Sería importante traer el RUT, pero sólo imprimir en la lista el nombre. Y le rut usable como match
+  //EL código a continuación, nos trae de vuelta lo seleccionado en las listas
+  //https://sa-si-dev.github.io/virtual-select/#/events -> Event on change
+  document.querySelector('#example-select1').addEventListener('change', function() {
+  console.log(this.value);
+  });
+  document.querySelector('#example-select2').addEventListener('change', function() {
+  console.log(this.value);
+  });
 
   </script>
