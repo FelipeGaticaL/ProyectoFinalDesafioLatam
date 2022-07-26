@@ -1,0 +1,167 @@
+<script>
+
+
+
+    //TABLAs
+
+    /* <!-- Activos --> */
+    const getActivos = async () => {
+        const { data } = await axios.get("/table/activos");
+        $(".activos").html("");
+
+        data.forEach((t) => {
+            $(".activos").append(`
+         <tr>
+           <td> ${t[0]} </td>
+           <td> ${t[1]} </td>
+           <td> ${t[2]} </td>
+           <td> ${t[3]} </td>
+           <td class="text-light bg-secondary"> ${t[4]} </td>
+           <td class="text-light bg-secondary"> ${t[5]} </td>
+           <td class="text-light bg-secondary"> ${t[6]} </td>
+         </tr>
+       `);
+        });
+    };
+    getActivos();
+    /* Pasivos y Patrimonio */
+    const getPasivosPatrimonio = async () => {
+        const { data } = await axios.get("/table/PasivosPatrimonio");
+        $(".PasivosPatrimonio").html("");
+
+        data.forEach((t) => {
+            $(".PasivosPatrimonio").append(`
+         <tr>
+           <td> ${t[0]} </td>
+           <td> ${t[1]} </td>
+           <td> ${t[2]} </td>
+           <td> ${t[3]} </td>
+           <td class="text-light bg-secondary"> ${t[4]} </td>
+           <td class="text-light bg-secondary"> ${t[5]} </td>
+           <td class="text-light bg-secondary"> ${t[6]} </td>
+         </tr>
+       `);
+        });
+    };
+    getPasivosPatrimonio();
+    /* EERR */
+    const getEERR = async () => {
+        const { data } = await axios.get("/table/EERR");
+        $(".EERR").html("");
+
+        data.forEach((t) => {
+            $(".EERR").append(`
+         <tr>
+           <td> ${t[0]} </td>
+           <td> ${t[1]} </td>
+           <td> ${t[2]} </td>
+           <td> ${t[3]} </td>
+           <td class="text-light bg-secondary"> ${t[4]} </td>
+           <td class="text-light bg-secondary"> ${t[5]} </td>
+           <td class="text-light bg-secondary"> ${t[6]} </td>
+         </tr>
+       `);
+        });
+    };
+    getEERR();
+    /* Componentes activo, pasivo */
+
+    const getActivoCP = async () => {
+        const { data } = await axios.get("/table/ActivoCP");
+        $(".ActivoCP").html("");
+
+        data.forEach((t) => {
+            $(".ActivoCP").append(`
+         <tr>
+           <td> ${t[0]} </td>
+           <td> ${t[1]} </td>
+           <td> ${t[2]} </td>
+           <td> ${t[3]} </td>
+           <td class="text-light bg-secondary"> ${t[4]} </td>
+           <td class="text-light bg-secondary"> ${t[5]} </td>
+           <td class="text-light bg-secondary"> ${t[6]} </td>
+         </tr>
+       `);
+        });
+    };
+    getActivoCP();
+
+    const getActivoLP = async () => {
+        const { data } = await axios.get("/table/ActivoLP");
+        $(".ActivoLP").html("");
+
+        data.forEach((t) => {
+            $(".ActivoLP").append(`
+         <tr>
+           <td> ${t[0]} </td>
+           <td> ${t[1]} </td>
+           <td> ${t[2]} </td>
+           <td> ${t[3]} </td>
+           <td class="text-light bg-secondary"> ${t[4]} </td>
+           <td class="text-light bg-secondary"> ${t[5]} </td>
+           <td class="text-light bg-secondary"> ${t[6]} </td>
+         </tr>
+       `);
+        });
+    };
+    getActivoLP();
+
+    const getPasivoCP = async () => {
+        const { data } = await axios.get("/table/PasivoCP");
+        $(".PasivoCP").html("");
+
+        data.forEach((t) => {
+            $(".PasivoCP").append(`
+         <tr>
+           <td> ${t[0]} </td>
+           <td> ${t[1]} </td>
+           <td> ${t[2]} </td>
+           <td> ${t[3]} </td>
+           <td class="text-light bg-secondary"> ${t[4]} </td>
+           <td class="text-light bg-secondary"> ${t[5]} </td>
+           <td class="text-light bg-secondary"> ${t[6]} </td>
+         </tr>
+       `);
+        });
+    };
+    getPasivoCP();
+
+    const getPasivoLP = async () => {
+        const { data } = await axios.get("/table/PasivoLP");
+        $(".PasivoLP").html("");
+
+        data.forEach((t) => {
+            $(".PasivoLP").append(`
+         <tr>
+           <td> ${t[0]} </td>
+           <td> ${t[1]} </td>
+           <td> ${t[2]} </td>
+           <td> ${t[3]} </td>
+           <td class="text-light bg-secondary"> ${t[4]} </td>
+           <td class="text-light bg-secondary"> ${t[5]} </td>
+           <td class="text-light bg-secondary"> ${t[6]} </td>
+         </tr>
+       `);
+        });
+    };
+    getPasivoLP();
+
+    const getResumenEstructuras = async () => {
+        const { data } = await axios.get("/table/ResumenEstructuras");
+        $(".ResumenEstructuras").html("");
+
+        data.forEach((t) => {
+            $(".ResumenEstructuras").append(`
+         <tr>
+           <td> ${t[1]} </td>
+           <td> ${t[2]} </td>
+           <td> ${t[3]} </td>
+           <td> ${t[4]} </td>
+         </tr>
+       `);
+        });
+    };
+    getResumenEstructuras();
+
+
+</script>

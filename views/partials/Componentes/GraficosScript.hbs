@@ -1,0 +1,322 @@
+<script>
+    //Gráficos
+    //Gráfico Stacks
+    const getStack = async () => {
+        const response = await axios.get("/charts/chartsStacksActivos")
+        let data1 = response.data
+
+        Plotly.newPlot(
+            "myDiv1",
+            [
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[0],
+                    type: "bar",
+                    name: "Activos corrientes",
+                    xaxis: "x1",
+                    barmode: "stack",
+                    marker: { color: "#008080" },
+                },
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[1],
+                    type: "bar",
+                    name: "Activos no corrientes",
+                    xaxis: "x1",
+                    barmode: "stack",
+                    marker: { color: "#00c3af" },
+                },
+            ],
+            {
+                barmode: "stack",
+                yaxis: { tickformat: ".0%" },
+                xaxis: {
+                    domain: [0, 1],
+                    anchor: "x1",
+                },
+            }
+        );
+    }
+
+    getStack()
+
+    const getStackPasivo = async () => {
+        const response = await axios.get("/charts/chartsStacksPasivos")
+        let data1 = response.data
+
+        Plotly.newPlot(
+            "myDiv2",
+            [
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[2],
+                    type: "bar",
+                    name: "Patrimonio",
+                    xaxis: "x1",
+                    barmode: "stack",
+                    marker: { color: "#1810F0" },
+                },
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[1],
+                    type: "bar",
+                    name: "Pasivos no corrientes",
+                    xaxis: "x1",
+                    barmode: "stack",
+                    marker: { color: "#352EF2" },
+                },
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[0],
+                    type: "bar",
+                    name: "Pasivos Corrientes",
+                    xaxis: "x1",
+                    barmode: "stack",
+                    marker: { color: "#524CF4" },
+                }
+            ],
+            {
+                barmode: "stack",
+                yaxis: { tickformat: ".0%" },
+                xaxis: {
+                    domain: [0, 1],
+                    anchor: "x1",
+
+                },
+            }
+        );
+    }
+
+    getStackPasivo()
+
+    //Liquidez
+
+    const getStackLiquidez = async () => {
+        const response = await axios.get("/charts/chartLiquidez")
+        let data1 = response.data
+        Plotly.newPlot(
+            "myDiv3",
+            [
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[0],
+                    type: "bar",
+                    name: "Activos Corrientes",
+                    marker: { color: "#1088F0" },
+                },
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[1],
+                    type: "bar",
+                    name: "Pasivos corrientes",
+                    marker: { color: "#F01088" },
+                },
+            ],
+            {
+                barmode: "group",
+            }
+        );
+    }
+
+    getStackLiquidez()
+
+    // R Liquidez R Acida
+
+    const getRLiquidezRAcida = async () => {
+        const response = await axios.get("/charts/RLiquidezRAcida")
+        let data1 = response.data
+
+        Plotly.newPlot(
+            "myDiv4",
+            [
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[0],
+                    type: "bar",
+                    name: "Razón de Liquidez",
+                    marker: { color: "#106BF0" },
+                },
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[1],
+                    type: "bar",
+                    name: "Razón Ácida",
+                    marker: { color: "#727D8E" },
+                },
+            ],
+            {
+                barmode: "group",
+            }
+        );
+    }
+
+    getRLiquidezRAcida()
+
+
+
+    // KdeTrabajo 
+
+    const getKdeTrabajo = async () => {
+        const response = await axios.get("/charts/KdeTrabajo")
+        let data1 = response.data
+
+        Plotly.newPlot(
+            "myDiv5",
+            [
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[0],
+                    type: "bar",
+                    name: "Capital de Trabajo",
+                    marker: { color: "#106BF0" },
+                },
+            ],
+            {
+                barmode: "group",
+            }
+        );
+    }
+
+    getKdeTrabajo()
+
+
+    //Rentabilidad
+
+    const getRentabilidad = async () => {
+        const response = await axios.get("/charts/Rentabilidad")
+        let data1 = response.data
+
+        Plotly.newPlot(
+            "myDiv6",
+            [
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[0],
+                    type: "scatter",
+                    name: "Ingresos de actividades ordinarias",
+                    marker: { color: "#106BF0" },
+                },
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[1],
+                    type: "scatter",
+                    name: "Ganancia bruta",
+                    marker: { color: "#727D8E" },
+                },
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[3],
+                    type: "scatter",
+                    name: "Actividad Operacional",
+                    marker: { color: "#F01010" },
+                },
+            ],
+        );
+    }
+
+    getRentabilidad()
+
+
+    // EBITDA
+
+    const getEBITDA = async () => {
+        const response = await axios.get("/charts/EBITDA")
+        let data1 = response.data
+
+        Plotly.newPlot(
+            "myDiv7",
+            [
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[0],
+                    type: "bar",
+                    name: "Capital de Trabajo",
+                    marker: { color: "#7C8E72" },
+                },
+            ],
+            {
+                barmode: "group",
+            }
+        );
+    }
+
+    getEBITDA()
+
+    // Razon de endeudamiento
+
+    const getREndeudamiento = async () => {
+        const response = await axios.get("/charts/REndeudamiento")
+        let data1 = response.data
+
+        Plotly.newPlot(
+            "myDiv8",
+            [
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[0],
+                    type: "bar",
+                    name: "Corto Plazo",
+                    marker: { color: "#7C8E72" },
+                },
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[1],
+                    type: "bar",
+                    name: "Largo Plazo",
+                    marker: { color: "#F01010" },
+                },
+            ],
+            {
+                barmode: "stack",
+            }
+        );
+    }
+
+    getREndeudamiento()
+
+
+    // Ciclo conversión Efectivo
+
+    const getCCE = async () => {
+        const response = await axios.get("/charts/CCE")
+        let data1 = response.data
+
+        Plotly.newPlot(
+            "myDiv9",
+            [
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[0],
+                    type: "scatter",
+                    name: "Plazo Promedio de Proveedores",
+                    marker: { color: "#BFF010" },
+                },
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[1],
+                    type: "scatter",
+                    name: "Plazo Promedio Existencias",
+                    marker: { color: "#F0B110" },
+                },
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[2],
+                    type: "scatter",
+                    name: "Plazo Promedio de Cobro",
+                    marker: { color: "#F04110" },
+                },
+                {
+                    x: ["jun-2021", "sep-2021", "dic-2021"],
+                    y: data1[3],
+                    type: "bar",
+                    name: "Ciclo de Caja",
+                    marker: { color: "#F01017" },
+                }
+            ],
+        );
+    }
+
+    getCCE()
+
+
+</script>
