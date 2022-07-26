@@ -35,7 +35,7 @@
       const { user, token } = data;
       localStorage.setItem('user', JSON.stringify(user));
       localStorage.setItem('token', token);
-      window.location = `/Perfil`
+      window.location = `/user/carga`
     } catch (error) {
       Swal.fire({
         icon: 'error',
