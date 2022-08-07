@@ -45,7 +45,7 @@
        location.reload()
     })
 //Librería del multi select https://www.cssscript.com/select-box-virtual-scroll/
-    const getEmpresas = async () => {
+    {{!-- const getEmpresas = async () => {
       const { data } = await axios.get("/table/getEmpresas");
       if (data.length > 0) {
 
@@ -65,9 +65,9 @@
       } else ('')
 
     };
-    getEmpresas();
+    getEmpresas(); --}}
 
-    const getTrimestre = async () => {
+ {{!--    const getTrimestre = async () => {
       const { data } = await axios.get("/table/getTrimestre");
 
       if (data.length > 0) {
@@ -90,7 +90,7 @@
       } else ('')
 
     };
-    getTrimestre();
+    getTrimestre(); --}}
 
     const ActivarBoton = async () => {
       const { data } = await axios.get("/table/getEmpresas");
@@ -98,7 +98,7 @@
         document.getElementById("botoncarga").innerHTML=`
         <form action='/api/v1/bdinput/cargaInfoSelect' method='POST' enctype='multipart/form-data'>
         <input class='btn btn-dark' type='submit' value='Activar Información' />`
-         document.getElementById("Titulo2").innerHTML=`<H2 class="bd-title mb-0" id="content"> SELECCIONAR CONJUNTO DE DATOS</H2>`
+        {{!--  document.getElementById("Titulo2").innerHTML=`<H2 class="bd-title mb-0" id="content"> SELECCIONAR CONJUNTO DE DATOS</H2>` --}}
        
       } else if(data.length == 4){
            location.reload()

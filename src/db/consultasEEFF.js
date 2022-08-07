@@ -40,12 +40,12 @@ const getPasivosPatrimonio = async () => {
     const SQLQuery = {
         rowMode: "array",
         text: `
-    SELECT plan_de_cuentas, to_char("202106", 'fm999G999D00'), to_char("202109", 'fm999G999D00'),to_char("202112", 'fm999G999D00'), 
-concat(round("202106"/(SELECT "202106" FROM T_60503000 WHERE num_id = 60)*100, 2)) ||'%' AS porcent202106,
-concat(round("202109"/(SELECT "202109" FROM T_60503000 WHERE num_id = 60)*100, 2)) ||'%' AS porcent202109,
-concat(round("202112"/(SELECT "202112" FROM T_60503000 WHERE num_id = 60)*100, 2)) ||'%' AS porcent202112
-FROM T_60503000
-WHERE num_id > 27 AND num_id <50
+        SELECT plan_de_cuentas, to_char("202106", 'fm999G999D00'), to_char("202109", 'fm999G999D00'),to_char("202112", 'fm999G999D00'), 
+        concat(round("202106"/(SELECT "202106" FROM T_60503000 WHERE num_id = 60)*100, 2)) ||'%' AS porcent202106,
+        concat(round("202109"/(SELECT "202109" FROM T_60503000 WHERE num_id = 60)*100, 2)) ||'%' AS porcent202109,
+        concat(round("202112"/(SELECT "202112" FROM T_60503000 WHERE num_id = 60)*100, 2)) ||'%' AS porcent202112
+        FROM T_60503000
+        WHERE num_id > 27 AND num_id <=60
     `,
     };
     const { rows } = await db.query(SQLQuery);
