@@ -12,7 +12,7 @@ La aplicación puede leer correctamente un conjunto de empresas, sin embargo, a�
 
 Como objetivo secundario:
 
-Se profundizaron conocimientos en Postgresql, Javascript, Express, Nodejs, axios, bootstrap, jsnonwebtoken, bcrypt y handlebar, entre otras librerías. 
+Se profundizaron conocimientos en Postgresql, Javascript, Express, Nodejs, axios, bootstrap, jsnonwebtoken, bcrypt y handlebars, entre otras librerías. 
 
 Finalmente, por el tipo de proyecto en el cual se trabajó con varios tipos de consultas a nivel de BD, se puede considerar un trabajo enfocado en el Backend.
 
