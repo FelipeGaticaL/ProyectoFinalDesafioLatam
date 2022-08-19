@@ -1,0 +1,162 @@
+<script>
+ //*** UPGRADE PARA EL FUTURO ***  
+    //Se puede cambiar la lista con todas las empresas, con un iterador for each
+    //https://sa-si-dev.github.io/virtual-select/#/examples 
+    //Utilizando Maximum Values de la lista, para que la lista tenga un scroll
+
+
+  //Código que nos permite hacer el match para hacer un find y un select, y así escoger una empresa en concreto
+  //Sería importante traer el RUT, pero sólo imprimir en la lista el nombre. Y le rut usable como match
+  //EL código a continuación, nos trae de vuelta lo seleccionado en las listas
+  //https://sa-si-dev.github.io/virtual-select/#/events -> Event on change
+//Librería del multi select https://www.cssscript.com/select-box-virtual-scroll/
+
+
+
+const getEmpresas = async () => {
+      const { data } = await axios.get("/table/getEmpresas");
+      //Rut + empresa
+      let listEmpresa = data.map((e)=>{
+        return e[1]
+      })
+         let listRut = data.map((e)=>{
+        return e[0]
+      })
+      myOptions1 = [];
+      for (i = 0; i < data.length; i++){
+        
+        myOptions1.push({label: listEmpresa[i], value: listRut[i]});
+      }
+      if (data.length > 0) {
+ 
+        VirtualSelect.init({
+          ele: '#SeleccionEmpresa',
+          options: myOptions1,
+          placeholder: 'Escoge Empresa',
+          //search: true,
+          maxWidth: '250px',
+          popupDropboxBreakpoint: '3000px'
+        });
+
+
+      } else ('')
+ 
+
+    };
+    getEmpresas();
+
+
+
+ const getTrimestre = async (valorEmpresa) => {
+    
+      
+      let datos =  [parseInt(valorEmpresa)]
+      
+      const { data } = await axios.put("/table/getTrimestreFiltrado",datos );
+     
+
+      myOptions2a = data.map((e)=>{
+        return { label: e, value: e }
+      })
+      if (data.length > 0) {
+
+        myOptions2 = myOptions2a
+   
+        VirtualSelect.init({
+          ele: '#SeleccionTrimestre',
+          options: myOptions2,
+          placeholder: 'Escoge Trimestre',
+          multiple: true,
+          showValueAsTags: true
+        });
+
+
+      } else ('')
+
+    };
+ 
+    
+    var mostrar = true
+
+    document.querySelector('#SeleccionEmpresa').addEventListener("click", inyectar1)
+    function inyectar1(){
+         
+      if(mostrar == true){
+        document.getElementById('accordionExample').style.visibility= 'hidden'
+        mostrar = false
+      }else{
+        document.getElementById('accordionExample').style.visibility ='visible'
+        mostrar = true
+        let valorEmpresa = document.querySelector('#SeleccionEmpresa').value
+        getTrimestre(valorEmpresa)
+      }       
+      
+    }
+   
+
+    async function buscar()  {
+        let ValorTrimestre = document.querySelector('#SeleccionTrimestre').value
+        let valorEmpresa = document.querySelector('#SeleccionEmpresa').value
+        let Valores = {ValorTrimestre, valorEmpresa}
+        thead(ValorTrimestre)
+        localStorage.setItem("rut", valorEmpresa)
+        Titulos()
+        
+       try{
+          
+            let result = await axios.put("table/query", Valores)
+            console.log(result)
+            let TotalActivosTable = result.data[0]
+            let EERR = result.data[1]
+            let ActivosCP = result.data[2]
+            let ActivosLP = result.data[3]
+            let PasivosPatrimonio = result.data[4]
+            let PasivoCP = result.data[5]
+            let PasivoLP = result.data[6]
+        
+            return getActivos(TotalActivosTable), getEERR(EERR),  getActivoCP(ActivosCP), getActivoLP(ActivosLP), getPasivosPatrimonio(PasivosPatrimonio), getPasivoCP(PasivoCP), getPasivoLP(PasivoLP), datosChart(Valores)
+       }catch(error){
+        console.log(error)
+       }
+       
+    
+    }
+
+    let ActivarBuscar = document.getElementById("Buscador");
+    ActivarBuscar.addEventListener("click", buscar)
+
+    /** valores a los chart*/
+
+  async function datosChart (Valores){
+                 
+         try{ let result = await axios.put("charts/consultaChart", Valores)
+         let StackActivos = result.data[0]
+         let StackPasivos = result.data[1]
+         let chartLiquidez = result.data[2]
+         let RLiquidezRAcida = result.data[3]
+         let KdeTrabajo = result.data[4]
+         let Rentabilidad = result.data[5]
+        let EBITDA = result.data[6]
+        let REndeudamiento = result.data[7]
+        let CCE = result.data[8]
+
+        return getStack(StackActivos), getStackPasivo(StackPasivos), getStackLiquidez(chartLiquidez), getRLiquidezRAcida(RLiquidezRAcida), getKdeTrabajo(KdeTrabajo), getRentabilidad(Rentabilidad), getEBITDA(EBITDA), getREndeudamiento(REndeudamiento), getCCE(CCE)
+        }catch(error)
+        {console.log(error)}
+
+        
+  }
+
+
+
+      //Recargar la página
+
+      let ActivarLimpiar = document.getElementById("Limpiar");
+    ActivarLimpiar.addEventListener("click", clean)
+      function clean(){
+        localStorage.removeItem('rut')
+        location.reload()
+
+      }
+
+</script>

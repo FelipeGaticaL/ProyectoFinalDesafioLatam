@@ -1,5 +1,5 @@
 <div class="container py-4">
-<h1 class="bd-title mb-0" id="content">CARGA DE INFORMACIÓN</h1>
+  <h1 class="bd-title mb-0" id="content">CARGA DE INFORMACIÓN</h1>
   <section id="SeccionCarga" class="p-3">
     <div class="container p-5 w-50 border">
       <form action="/api/v1/bdinput/carga" method="POST" enctype="multipart/form-data">
@@ -13,7 +13,7 @@
     </div>
   </section>
 
-<div id="Titulo2"class="p-5"></div>
+  <div id="Titulo2" class="p-5"></div>
   <section id="seleccionEmpresaTrimestre">
     <div class="container-fluid py-4">
       <div class="row justify-content-md-center">
@@ -30,100 +30,59 @@
 
   <div id="botoncarga"></div>
 
- 
+
   <script>
 
 
-//Alerta del botón de carga con sweet alert
+    //Alerta del botón de carga con sweet alert
     $("#alert1").click(function () {
       Swal.fire({
         title: 'Cargando Información',
         text: 'Información con exitosamente',
         icon: 'success'
       });
-       //setTimeout()
-       location.reload()
+      //setTimeout()
+      location.reload()
     })
-//Librería del multi select https://www.cssscript.com/select-box-virtual-scroll/
-    {{!-- const getEmpresas = async () => {
-      const { data } = await axios.get("/table/getEmpresas");
-      if (data.length > 0) {
-
-        myOptions1 = [
-          { label: data[0], value: data[0] },
-          { label: data[1], value: data[1] },
-          { label: data[2], value: data[2] },
-          { label: data[3], value: data[3] }
-        ]
-        VirtualSelect.init({
-          ele: '#example-select1',
-          options: myOptions1,
-          placeholder: 'Escoge Empresa'
-        });
+    //Librería del multi select https://www.cssscript.com/select-box-virtual-scroll/
 
 
-      } else ('')
-
-    };
-    getEmpresas(); --}}
-
- {{!--    const getTrimestre = async () => {
-      const { data } = await axios.get("/table/getTrimestre");
-
-      if (data.length > 0) {
-         
-        myOptions2 = [
-          { label: data[0], value: data[0] },
-          { label: data[1], value: data[1] },
-          { label: data[2], value: data[2] }
-
-        ]
-        VirtualSelect.init({
-          ele: '#example-select2',
-          options: myOptions2,
-          placeholder: 'Escoge Trimestre',
-          multiple: true,
-          showValueAsTags: true
-        });
 
 
-      } else ('')
-
-    };
-    getTrimestre(); --}}
-
+    //Lógica que aparezca botón
     const ActivarBoton = async () => {
+
+
       const { data } = await axios.get("/table/getEmpresas");
+
       if (data.length > 0) {
-        document.getElementById("botoncarga").innerHTML=`
-        <form action='/api/v1/bdinput/cargaInfoSelect' method='POST' enctype='multipart/form-data'>
+
+        document.getElementById("botoncarga").innerHTML = `
         <input class='btn btn-dark' type='submit' value='Activar Información' />`
-        {{!--  document.getElementById("Titulo2").innerHTML=`<H2 class="bd-title mb-0" id="content"> SELECCIONAR CONJUNTO DE DATOS</H2>` --}}
-       
-      } else if(data.length == 4){
-           location.reload()
-      } else{
+
+      } else if (data.length == 4) {
+        location.reload()
+      } else {
         ''
       }
 
     };
     ActivarBoton();
 
-  //*** UPGRADE PARA EL FUTURO ***  
-    //Se puede cambiar la lista con todas las empresas, con un iterador for each
-    //https://sa-si-dev.github.io/virtual-select/#/examples 
-    //Utilizando Maximum Values de la lista, para que la lista tenga un scroll
+    let activarInfo = document.getElementById("botoncarga");
+    activarInfo.addEventListener("click", Activar)
 
+    async function Activar() {
+     
+      try{
+          let activador = await axios.post("/bdinput/cargaInfoSelect")
+          res.status(200).redirect("/user/chart")
+      }catch(error){
+        console.log(error)
+      }
+      
 
-  //Código que nos permite hacer el match para hacer un find y un select, y así escoger una empresa en concreto
-  //Sería importante traer el RUT, pero sólo imprimir en la lista el nombre. Y le rut usable como match
-  //EL código a continuación, nos trae de vuelta lo seleccionado en las listas
-  //https://sa-si-dev.github.io/virtual-select/#/events -> Event on change
-  document.querySelector('#example-select1').addEventListener('change', function() {
-  console.log(this.value);
-  });
-  document.querySelector('#example-select2').addEventListener('change', function() {
-  console.log(this.value);
-  });
+    }
+    
 
   </script>

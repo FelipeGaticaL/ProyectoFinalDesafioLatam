@@ -61,27 +61,45 @@
 
    //Si la pagina actual es chart, entonces agregar titulo y nombre de la empresa en el navbar
 
+     
+    
     const Titulos = async () => {
         let URLactual2 = (window.location.pathname);
         let revisor = '/user/chart'
         //const { data } = await axios.get("/getEmpresas");
-        const  data  = await axios.get("/table/getEmpresas");
+        //const  data  = await axios.get("/table/getEmpresas");
+        let response = localStorage.getItem('rut')
+        let response2 = [response]
+        try{
+        const  data  = await axios.put("/table/getRazonSocial", response2);
+        //let listEmpresa = data.data.map((e)=>{
+        //    return e[1]
+        //})
+      
         let concat1 = `${URLactual2}+${data.statusText}`
         let concat2 = `${revisor}+OK`
         URLactual2 == revisor ? document.getElementById("titulo2").innerHTML="Estados Financieros" : document.getElementById("titulo1").innerHTML="";
+        document.getElementById("titulo2").style.textAlign='right'
         //console.log(concat1,concat2)
         //console.log(data.data.length)
-
+        //Pendiente: Hacer match con la empresa escojida 
         if(data.data.length > 0){
         concat1 == concat2 ? document.getElementById("titulo1").innerHTML=`${data.data[0]}` : document.getElementById("titulo1").innerHTML=""; 
-         } else {''}
+        //concat1 == concat2 ? document.getElementById("titulo1").innerHTML=`${listEmpresa[0]}` : document.getElementById("titulo1").innerHTML=""; 
+        } else {
+            ' '
+
+        }
+        }catch{
+            URLactual2 == revisor ? document.getElementById("titulo2").innerHTML="Estados Financieros" : document.getElementById("titulo1").innerHTML="";
+            document.getElementById("titulo2").style.textAlign='right'
+        }
+
 
 
     }
 
-Titulos()
 
    
-
 
 </script>

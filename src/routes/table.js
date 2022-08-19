@@ -1,11 +1,42 @@
+const { default: axios } = require("axios");
 const { Router } = require("express");
 const db = require("../db/consultasEEFF");
 
 const router = Router();
 
-router.get("/activos", async (req, res) => {
+
+router.put("/query", async (req, res) => {
+  
+  let ValorTrimestre = req.body.ValorTrimestre;
+  let valorEmpresa = req.body.valorEmpresa;
+
   try {
-    const data = await db.getActivos();
+    let getPasivoLP = await db.getPasivoLP(valorEmpresa, ValorTrimestre );
+    
+    let getPasivoCP = await db.getPasivoCP(valorEmpresa, ValorTrimestre );
+      let resultado1 = await db.getActivos(valorEmpresa, ValorTrimestre );
+      let resultado2 = await db.getEERR(valorEmpresa, ValorTrimestre );
+      let resultado3 = await db.getActivoCP(valorEmpresa, ValorTrimestre );
+      let resultado4 = await db.getActivoLP(valorEmpresa, ValorTrimestre );
+      let resultado5 = await db.getPasivosPatrimonio(valorEmpresa, ValorTrimestre );
+   
+
+
+      let concatenadorArray = [resultado1,resultado2, resultado3, resultado4, resultado5, getPasivoCP, getPasivoLP]
+      res.send(concatenadorArray);
+  } catch (error) {
+      res.status(500).send(error)
+  }  
+
+});
+
+router.put("/activos", async (req, res) => {
+  let data = req.body
+
+  try {
+    
+    //const data = await db.getActivos();
+    
     let CountArreglo = data[0].length / 2 + 1;
     //***Lógica recibir todos los parametros para inyectar a innerHtml
     //**PARTE A) td, sin pintar
@@ -73,9 +104,10 @@ router.get("/activos", async (req, res) => {
   }
 });
 
-router.get("/PasivosPatrimonio", async (req, res) => {
+router.put("/PasivosPatrimonio", async (req, res) => {
+  let data = req.body
   try {
-    const data = await db.getPasivosPatrimonio();
+    //const data = await db.getPasivosPatrimonio();
     let CountArreglo = data[0].length / 2 + 1;
     let PartOne = [];
     let PartOneB = [];
@@ -125,9 +157,11 @@ router.get("/PasivosPatrimonio", async (req, res) => {
   }
 });
 
-router.get("/EERR", async (req, res) => {
+router.put("/EERR", async (req, res) => {
+  let data = req.body
+  
   try {
-    const data = await db.getEERR();
+    //const data = await db.getEERR();
     let CountArreglo = data[0].length / 2 + 1;
     let PartOne = [];
     let PartOneB = [];
@@ -177,62 +211,10 @@ router.get("/EERR", async (req, res) => {
   }
 });
 
-router.get("/ActivoCP", async (req, res) => {
+router.put("/ActivoCP", async (req, res) => {
+  let data = req.body
   try {
-    const data = await db.getActivoCP();
-    let CountArreglo = data[0].length / 2 + 1;
-    let PartOne = [];
-    let PartOneB = [];
-    let PartOnec = [];
-    for (let i = 0; i < data.length; i++) {
-      PartOne.push(data[i].slice(0, CountArreglo));
-    }
-    for (let i = 0; i < PartOne.length; i++) {
-      for (let j = 0; j < PartOne[0].length; j++) {
-        PartOneB.push("<td>" + data[i][j] + "</td>");
-      }
-    }
-    for (let i = 0; i < PartOne.length; i++) {
-      PartOnec.push(PartOneB.splice(0, PartOne[0].length));
-    }
-    let PartTwo = [];
-    let PartTwoB = [];
-    let PartTwoC = [];
-    for (let i = 0; i < data.length; i++) {
-      PartTwo.push(data[i].slice(CountArreglo));
-    }
-    for (let i = 0; i < PartTwo.length; i++) {
-      for (let j = 0; j < PartTwo[0].length; j++) {
-        PartTwoB.push(
-          " <td class='text-light bg-secondary'>" + PartTwo[i][j] + "</td>"
-        );
-      }
-    }
-    for (let i = 0; i < PartTwo.length; i++) {
-      PartTwoC.push(PartTwoB.splice(0, PartTwo[0].length));
-    }
-    let joinA = PartOnec.map((e, i) => {
-      return PartOnec[i].join(" ");
-    });
-    let joinB = PartTwoC.map((e, i) => {
-      return PartTwoC[i].join(" ");
-    });
-    let Union = joinA.map((e, i) => e + joinB[i]);
-    let FinalUnion = [];
-    for (let i = 0; i < PartOne.length; i++) {
-      FinalUnion.push("<tr>" + Union[i] + "</tr>");
-    }
-    let tableInyecHtml = FinalUnion.join(" ");
-
-    res.end(JSON.stringify(tableInyecHtml));
-  } catch (error) {
-    res.status(500).send(error);
-  }
-});
-
-router.get("/ActivoLP", async (req, res) => {
-  try {
-    const data = await db.getActivoLP();
+    //const data = await db.getActivoCP();
     let CountArreglo = data[0].length / 2 + 1;
     let PartOne = [];
     let PartOneB = [];
@@ -283,9 +265,65 @@ router.get("/ActivoLP", async (req, res) => {
   }
 });
 
-router.get("/PasivoCP", async (req, res) => {
+router.put("/ActivoLP", async (req, res) => {
+  let data = req.body
   try {
-    const data = await db.getPasivoCP();
+    //const data = await db.getActivoLP();
+    let CountArreglo = data[0].length / 2 + 1;
+    let PartOne = [];
+    let PartOneB = [];
+    let PartOnec = [];
+    for (let i = 0; i < data.length; i++) {
+      PartOne.push(data[i].slice(0, CountArreglo));
+    }
+    for (let i = 0; i < PartOne.length; i++) {
+      for (let j = 0; j < PartOne[0].length; j++) {
+        PartOneB.push("<td>" + data[i][j] + "</td>");
+      }
+    }
+    for (let i = 0; i < PartOne.length; i++) {
+      PartOnec.push(PartOneB.splice(0, PartOne[0].length));
+    }
+    let PartTwo = [];
+    let PartTwoB = [];
+    let PartTwoC = [];
+    for (let i = 0; i < data.length; i++) {
+      PartTwo.push(data[i].slice(CountArreglo));
+    }
+    for (let i = 0; i < PartTwo.length; i++) {
+      for (let j = 0; j < PartTwo[0].length; j++) {
+        PartTwoB.push(
+          " <td class='text-light bg-secondary'>" + PartTwo[i][j] + "</td>"
+        );
+      }
+    }
+    for (let i = 0; i < PartTwo.length; i++) {
+      PartTwoC.push(PartTwoB.splice(0, PartTwo[0].length));
+    }
+    let joinA = PartOnec.map((e, i) => {
+      return PartOnec[i].join(" ");
+    });
+    let joinB = PartTwoC.map((e, i) => {
+      return PartTwoC[i].join(" ");
+    });
+    let Union = joinA.map((e, i) => e + joinB[i]);
+    let FinalUnion = [];
+    for (let i = 0; i < PartOne.length; i++) {
+      FinalUnion.push("<tr>" + Union[i] + "</tr>");
+    }
+    let tableInyecHtml = FinalUnion.join(" ");
+
+    res.end(JSON.stringify(tableInyecHtml));
+  } catch (error) {
+    res.status(500).send(error);
+  }
+});
+
+router.put("/PasivoCP", async (req, res) => {
+  let data = req.body
+  
+  try {
+    //const data = await db.getPasivoCP();
     let CountArreglo = data[0].length / 2 + 1;
     let PartOne = [];
     let PartOneB = [];
@@ -335,9 +373,10 @@ router.get("/PasivoCP", async (req, res) => {
   }
 });
 
-router.get("/PasivoLP", async (req, res) => {
+router.put("/PasivoLP", async (req, res) => {
+  let data = req.body
   try {
-    const data = await db.getPasivoLP();
+    //const data = await db.getPasivoLP();
     let CountArreglo = data[0].length / 2 + 1;
     let PartOne = [];
     let PartOneB = [];
@@ -416,5 +455,33 @@ router.get("/getTrimestre", async (req, res) => {
     res.status(500).send(error);
   }
 });
+
+router.put("/getTrimestreFiltrado", async (req, res) => {
+  let datos =(req.body);
+  try {
+    
+    const resultado = await db.getTrimestreFiltrado(datos);
+   res.end(JSON.stringify(resultado));
+  } catch (error) {
+    res.status(500).send(error);
+  }
+});
+
+router.put("/getRazonSocial", async (req, res) => {
+  let datos = req.body;
+  
+  try {
+    const resultado = await db.getRazonSocial(datos);
+    let resultado2 = resultado.flat()
+   console.log()
+   res.send(resultado2);
+  } catch (error) {
+    res.status(500).send(error);
+  }
+});
+
+
+
+
 
 module.exports = router;

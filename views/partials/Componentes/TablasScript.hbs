@@ -3,10 +3,9 @@
   //***** Nombre de columnas dinámicos
   //**** Falta agregar que sea seleccionable
   //Cabecera de las tables
-  const thead = async () => {
-    //Sección de trimtres
-    const trimestre = await axios.get("/table/getTrimestre");
-    let trimestres = trimestre.data
+  const thead = async (ValorTrimestre) => {
+
+    let trimestres = ValorTrimestre
     //Ordenamos con el método sort, para que siempre sea de menor a mayor
     trimestres.sort(function (a, b) {
       return a - b
@@ -36,80 +35,84 @@
     document.getElementById("thead7").innerHTML = theadresult
   }
 
-  thead()
+
 
 
   //TABLAs
   //ACTIVOS
-  const getActivos = async () => {
-    const { data } = await axios.get("/table/activos");
+  const getActivos = async (TotalActivosTable) => {
+    let resultado = await axios.put("/table/activos", TotalActivosTable);
+    let data = resultado.data
     $(".activos").html(""); //--> Prevent default e
     document.getElementById("TotalActivos").innerHTML = data
   };
 
-  getActivos();
 
-  const getActivoCP = async () => {
-    const { data } = await axios.get("/table/ActivoCP");
+          
+  const getActivoCP = async (ActivosCP) => {
+    const resultado = await axios.put("/table/ActivoCP", ActivosCP );
+    let data = resultado.data
     $(".ActivoCP").html("");
     document.getElementById("ActivoCP").innerHTML = data
    
   };
-  getActivoCP();
+ 
 
-  const getActivoLP = async () => {
-    const { data } = await axios.get("/table/ActivoLP");
+  const getActivoLP = async (ActivosLP) => {
+    const resultado = await axios.put("/table/ActivoLP", ActivosLP);
+    let data = resultado.data
     $(".ActivoLP").html("");
-    console.log(data)
     document.getElementById("ActivoLP").innerHTML = data
 
  
   };
-  getActivoLP();
-  
+   
   /* Pasivos y Patrimonio */
-  const getPasivosPatrimonio = async () => {
-    const { data } = await axios.get("/table/PasivosPatrimonio");
+  const getPasivosPatrimonio = async (PasivosPatrimonio) => {
+
+    const resultado = await axios.put("/table/PasivosPatrimonio", PasivosPatrimonio);
+    let data = resultado.data
     $(".PasivosPatrimonio").html("");
     document.getElementById("PasivosPatrimonio").innerHTML = data
 
   };
-  getPasivosPatrimonio();
+ 
   /* EERR */
-  const getEERR = async () => {
-    const { data } = await axios.get("/table/EERR");
+  const getEERR = async (EERR) => {
+  
+    const resultado = await axios.put("/table/EERR", EERR);
+    let data =resultado.data
     $(".EERR").html("");
     document.getElementById("EERR").innerHTML = data
    
   };
-  getEERR();
-  /* Componentes activo, pasivo */
+  
 
-
-
-  const getPasivoCP = async () => {
-    const { data } = await axios.get("/table/PasivoCP");
+  const getPasivoCP = async (PasivoCP) => {
+    const resultado = await axios.put("/table/PasivoCP", PasivoCP);
+    let data =resultado.data
     $(".PasivoCP").html("");
     document.getElementById("PasivoCP").innerHTML = data
     };
-  getPasivoCP();
 
-  const getPasivoLP = async () => {
-    const { data } = await axios.get("/table/PasivoLP");
+
+  const getPasivoLP = async (PasivoLP) => {
+    const resultado = await axios.put("/table/PasivoLP", PasivoLP);
+    let data =resultado.data
     $(".PasivoLP").html("");
     document.getElementById("PasivoLP").innerHTML = data
 
  
   };
-  getPasivoLP();
 
-  const getResumenEstructuras = async () => {
+
+ {{!--  const getResumenEstructuras = async () => {
     const { data } = await axios.get("/table/ResumenEstructuras");
     $(".ResumenEstructuras").html("");
 
    
   };
   getResumenEstructuras();
-
+ --}}
 
 </script>

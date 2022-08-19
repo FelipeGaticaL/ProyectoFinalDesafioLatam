@@ -1,27 +1,37 @@
 <script>
     //Gráficos
     //Gráfico Stacks
-    const getStack = async () => {
-        const response = await axios.get("/charts/chartsStacksActivos")
-        let data1 = response.data
+    const getStack = async (StackActivos) => {
+        let alldata = StackActivos
+        let CutData = alldata.slice(0, 2);
+        let CutX = alldata.slice(2)
+        //Aplanar el array, quitando profundidad
+        let x = CutX.flat()
+        let ColumnsNames =[]
+        for(i=0; i < CutData[0].length ; i++){
+	    ColumnsNames.push(x[i][1])
 
+        }
+
+        //const response = await axios.get("/charts/chartsStacksActivos")
+        //let data1 = response.data
         Plotly.newPlot(
             "myDiv1",
             [
                 {
-                    x: ["jun-2021", "sep-2021", "dic-2021"],
-                    y: data1[0],
+                    x: ColumnsNames,
+                    y: CutData[1],
                     type: "bar",
-                    name: "Activos corrientes",
+                    name: "Activos no corrientes",
                     xaxis: "x1",
                     barmode: "stack",
                     marker: { color: "#008080" },
                 },
                 {
-                    x: ["jun-2021", "sep-2021", "dic-2021"],
-                    y: data1[1],
+                    x: ColumnsNames,
+                    y: CutData[0],
                     type: "bar",
-                    name: "Activos no corrientes",
+                    name: "Activos corrientes",
                     xaxis: "x1",
                     barmode: "stack",
                     marker: { color: "#00c3af" },
@@ -38,18 +48,26 @@
         );
     }
 
-    getStack()
 
-    const getStackPasivo = async () => {
-        const response = await axios.get("/charts/chartsStacksPasivos")
-        let data1 = response.data
+    const getStackPasivo = async (StackPasivos) => {
+
+        let alldata = StackPasivos
+        let CutData = alldata.slice(0, 3);
+        let CutX = alldata.slice(3)
+        //Aplanar el array, quitando profundidad
+        let x = CutX.flat()
+        let ColumnsNames =[]
+        for(i=0; i < CutData[0].length ; i++){
+	    ColumnsNames.push(x[i][1])
+        }
+        
 
         Plotly.newPlot(
             "myDiv2",
             [
                 {
-                    x: ["jun-2021", "sep-2021", "dic-2021"],
-                    y: data1[2],
+                    x: ColumnsNames,
+                    y: CutData[2],
                     type: "bar",
                     name: "Patrimonio",
                     xaxis: "x1",
@@ -57,8 +75,8 @@
                     marker: { color: "#1810F0" },
                 },
                 {
-                    x: ["jun-2021", "sep-2021", "dic-2021"],
-                    y: data1[1],
+                    x: ColumnsNames,
+                    y: CutData[1],
                     type: "bar",
                     name: "Pasivos no corrientes",
                     xaxis: "x1",
@@ -66,8 +84,8 @@
                     marker: { color: "#352EF2" },
                 },
                 {
-                    x: ["jun-2021", "sep-2021", "dic-2021"],
-                    y: data1[0],
+                    x: ColumnsNames,
+                    y: CutData[0],
                     type: "bar",
                     name: "Pasivos Corrientes",
                     xaxis: "x1",
@@ -87,26 +105,34 @@
         );
     }
 
-    getStackPasivo()
 
     //Liquidez
 
-    const getStackLiquidez = async () => {
-        const response = await axios.get("/charts/chartLiquidez")
-        let data1 = response.data
+    const getStackLiquidez = async (chartLiquidez) => {
+        let alldata = chartLiquidez
+        let CutData = alldata.slice(0, 2);
+        let CutX = alldata.slice(2)
+        //Aplanar el array, quitando profundidad
+        let x = CutX.flat()
+        let ColumnsNames =[]
+        for(i=0; i < CutData[0].length ; i++){
+	    ColumnsNames.push(x[i][1])
+        }
+        //const response = await axios.get("/charts/chartLiquidez")
+        //let data1 = response.data
         Plotly.newPlot(
             "myDiv3",
             [
                 {
-                    x: ["jun-2021", "sep-2021", "dic-2021"],
-                    y: data1[0],
+                    x: ColumnsNames,
+                    y: CutData[0],
                     type: "bar",
                     name: "Activos Corrientes",
                     marker: { color: "#1088F0" },
                 },
                 {
-                    x: ["jun-2021", "sep-2021", "dic-2021"],
-                    y: data1[1],
+                    x: ColumnsNames,
+                    y: CutData[1],
                     type: "bar",
                     name: "Pasivos corrientes",
                     marker: { color: "#F01088" },
@@ -118,27 +144,37 @@
         );
     }
 
-    getStackLiquidez()
+
 
     // R Liquidez R Acida
 
-    const getRLiquidezRAcida = async () => {
-        const response = await axios.get("/charts/RLiquidezRAcida")
-        let data1 = response.data
+    const getRLiquidezRAcida = async (RLiquidezRAcida) => {
+        let alldata = RLiquidezRAcida
+        let CutData = alldata.slice(0, 2);
+        let CutX = alldata.slice(2)
+        //Aplanar el array, quitando profundidad
+        let x = CutX.flat()
+        let ColumnsNames =[]
+        for(i=0; i < CutData[0].length ; i++){
+	    ColumnsNames.push(x[i][1])
+        }
+
+        //const response = await axios.get("/charts/RLiquidezRAcida")
+        //let data1 = response.data
 
         Plotly.newPlot(
             "myDiv4",
             [
                 {
-                    x: ["jun-2021", "sep-2021", "dic-2021"],
-                    y: data1[0],
+                    x: ColumnsNames,
+                    y: CutData[0],
                     type: "bar",
                     name: "Razón de Liquidez",
                     marker: { color: "#106BF0" },
                 },
                 {
-                    x: ["jun-2021", "sep-2021", "dic-2021"],
-                    y: data1[1],
+                    x: ColumnsNames,
+                    y: CutData[1],
                     type: "bar",
                     name: "Razón Ácida",
                     marker: { color: "#727D8E" },
@@ -150,22 +186,33 @@
         );
     }
 
-    getRLiquidezRAcida()
+
 
 
 
     // KdeTrabajo 
 
-    const getKdeTrabajo = async () => {
-        const response = await axios.get("/charts/KdeTrabajo")
-        let data1 = response.data
-
+    const getKdeTrabajo = async (KdeTrabajo) => {
+        
+        let alldata = KdeTrabajo
+        let CutData = alldata.slice(0, 1);
+        let CutX = alldata.slice(1)
+        
+        //Aplanar el array, quitando profundidad
+        let x = CutX.flat()
+        let ColumnsNames =[]
+        for(i=0; i < CutData[0].length ; i++){
+	    ColumnsNames.push(x[i][1])
+        }
+        //const response = await axios.get("/charts/KdeTrabajo")
+        //let data1 = response.data
+    
         Plotly.newPlot(
             "myDiv5",
             [
                 {
-                    x: ["jun-2021", "sep-2021", "dic-2021"],
-                    y: data1[0],
+                    x: ColumnsNames,
+                    y: CutData[0],
                     type: "bar",
                     name: "Capital de Trabajo",
                     marker: { color: "#106BF0" },
@@ -177,35 +224,44 @@
         );
     }
 
-    getKdeTrabajo()
-
+    
 
     //Rentabilidad
 
-    const getRentabilidad = async () => {
-        const response = await axios.get("/charts/Rentabilidad")
-        let data1 = response.data
+    const getRentabilidad = async (Rentabilidad) => {
+         let alldata = Rentabilidad
+        let CutData = alldata.slice(0, 3);
+        let CutX = alldata.slice(3)
+        //Aplanar el array, quitando profundidad
+        let x = CutX.flat()
+        let ColumnsNames =[]
+        for(i=0; i < CutData[0].length ; i++){
+	    ColumnsNames.push(x[i][1])
+        }
+        
+        //const response = await axios.get("/charts/Rentabilidad")
+        //let data1 = response.data
 
         Plotly.newPlot(
             "myDiv6",
             [
                 {
-                    x: ["jun-2021", "sep-2021", "dic-2021"],
-                    y: data1[0],
+                    x: ColumnsNames,
+                    y: CutData[0],
                     type: "scatter",
                     name: "Ingresos de actividades ordinarias",
                     marker: { color: "#106BF0" },
                 },
                 {
-                    x: ["jun-2021", "sep-2021", "dic-2021"],
-                    y: data1[1],
+                    x: ColumnsNames,
+                    y: CutData[1],
                     type: "scatter",
                     name: "Ganancia bruta",
                     marker: { color: "#727D8E" },
                 },
                 {
-                    x: ["jun-2021", "sep-2021", "dic-2021"],
-                    y: data1[3],
+                    x: ColumnsNames,
+                    y: CutData[2],
                     type: "scatter",
                     name: "Actividad Operacional",
                     marker: { color: "#F01010" },
@@ -214,21 +270,30 @@
         );
     }
 
-    getRentabilidad()
 
 
     // EBITDA
 
-    const getEBITDA = async () => {
-        const response = await axios.get("/charts/EBITDA")
-        let data1 = response.data
+    const getEBITDA = async (EBITDA) => {
+         let alldata = EBITDA
+        let CutData = alldata.slice(0, 1);
+        let CutX = alldata.slice(1)
+        //Aplanar el array, quitando profundidad
+        let x = CutX.flat()
+        let ColumnsNames =[]
+        for(i=0; i < CutData[0].length ; i++){
+	    ColumnsNames.push(x[i][1])
+        }
+        
+        //const response = await axios.get("/charts/EBITDA")
+        //let data1 = response.data
 
         Plotly.newPlot(
             "myDiv7",
             [
                 {
-                    x: ["jun-2021", "sep-2021", "dic-2021"],
-                    y: data1[0],
+                    x: ColumnsNames,
+                    y: CutData[0],
                     type: "bar",
                     name: "Capital de Trabajo",
                     marker: { color: "#7C8E72" },
@@ -240,27 +305,39 @@
         );
     }
 
-    getEBITDA()
+
 
     // Razon de endeudamiento
 
-    const getREndeudamiento = async () => {
-        const response = await axios.get("/charts/REndeudamiento")
-        let data1 = response.data
+    const getREndeudamiento = async (REndeudamiento) => {
+        let alldata = REndeudamiento
+        let CutData = alldata.slice(0, 2);
+        let CutX = alldata.slice(2)
+        //Aplanar el array, quitando profundidad
+        let x = CutX.flat()
+        let ColumnsNames =[]
+        for(i=0; i < CutData[0].length ; i++){
+	    ColumnsNames.push(x[i][1])
+        }
+        
+        
+        
+        //const response = await axios.get("/charts/REndeudamiento")
+        //let data1 = response.data
 
         Plotly.newPlot(
             "myDiv8",
             [
                 {
-                    x: ["jun-2021", "sep-2021", "dic-2021"],
-                    y: data1[0],
+                    x: ColumnsNames,
+                    y: CutData[0],
                     type: "bar",
                     name: "Corto Plazo",
                     marker: { color: "#7C8E72" },
                 },
                 {
-                    x: ["jun-2021", "sep-2021", "dic-2021"],
-                    y: data1[1],
+                    x: ColumnsNames,
+                    y: CutData[1],
                     type: "bar",
                     name: "Largo Plazo",
                     marker: { color: "#F01010" },
@@ -272,42 +349,51 @@
         );
     }
 
-    getREndeudamiento()
 
 
     // Ciclo conversión Efectivo
 
-    const getCCE = async () => {
-        const response = await axios.get("/charts/CCE")
-        let data1 = response.data
+    const getCCE = async (CCE) => {
+        let alldata = CCE
+        let CutData = alldata.slice(0, 4);
+        let CutX = alldata.slice(4)
+        //Aplanar el array, quitando profundidad
+        let x = CutX.flat()
+        let ColumnsNames =[]
+        for(i=0; i < CutData[0].length ; i++){
+	    ColumnsNames.push(x[i][1])
+        }
+
+        //const response = await axios.get("/charts/CCE")
+        //let data1 = response.data
 
         Plotly.newPlot(
             "myDiv9",
             [
                 {
-                    x: ["jun-2021", "sep-2021", "dic-2021"],
-                    y: data1[0],
+                    x: ColumnsNames,
+                    y: CutData[0],
                     type: "scatter",
                     name: "Plazo Promedio de Proveedores",
                     marker: { color: "#BFF010" },
                 },
                 {
-                    x: ["jun-2021", "sep-2021", "dic-2021"],
-                    y: data1[1],
+                    x: ColumnsNames,
+                    y: CutData[1],
                     type: "scatter",
                     name: "Plazo Promedio Existencias",
                     marker: { color: "#F0B110" },
                 },
                 {
-                    x: ["jun-2021", "sep-2021", "dic-2021"],
-                    y: data1[2],
+                    x: ColumnsNames,
+                    y: CutData[2],
                     type: "scatter",
                     name: "Plazo Promedio de Cobro",
                     marker: { color: "#F04110" },
                 },
                 {
-                    x: ["jun-2021", "sep-2021", "dic-2021"],
-                    y: data1[3],
+                    x: ColumnsNames,
+                    y: CutData[3],
                     type: "bar",
                     name: "Ciclo de Caja",
                     marker: { color: "#F01017" },
@@ -316,7 +402,7 @@
         );
     }
 
-    getCCE()
+
 
 
 </script>

@@ -2,6 +2,28 @@
     <div class="row">
         <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark sidebar collapse ">
             <div class="position-sticky pt-3 sidebar-sticky  ">
+                <ul class="nav flex-column align-items-center" style="width: 100%">
+                    <li class="nav-item ">
+                        <span class="d-inline-block">
+                            <a class="link filtro-datos" id="SeleccionEmpresa">
+                            </a>
+                        </span>
+
+                    </li>
+                    <li class="nav-item ">
+                        <span class="d-inline-block">
+                            <a class="link filtro-datos mt-3" id="SeleccionTrimestre">
+
+                            </a>
+                        </span>
+
+                    </li>
+                    <li class="nav-item ">
+                        <button id="Buscador" type="button" class="btn btn-success mt-3">Buscar</button>
+                        <button id="Limpiar" type="button" class="btn btn-success mt-3">Limpiar</button>
+                    </li>
+                </ul>
+
                 <ul class="nav flex-column align-items-start ">
                     <li class="nav-item ">
                         <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus"
@@ -94,7 +116,7 @@
             </div>
         </nav>
 
-{{!-- Eliminamos el espacio intermedio "gutters en bootstrap" con mx-0 y g-0 --}}
+        {{!-- Eliminamos el espacio intermedio "gutters en bootstrap" con mx-0 y g-0 --}}
         <main class="mx-0 g-0 col-md-9 ms-sm-auto col-lg-10 ">
             <div class="accordion" id="accordionExample">
                 <!-- Activos -->
@@ -127,9 +149,9 @@
                             ESTADOS DE RESULTADOS
                         </button>
                     </h2>
-                    {{!--  --}}
+                    {{!-- --}}
                     {{> Componentes/TablaEERR }}
-                    {{!--  --}}
+                    {{!-- --}}
                 </div>
             </div>
         </main>
@@ -142,7 +164,7 @@
 {{> Componentes/Modals }}
 {{> Componentes/TablasScript }}
 {{> Componentes/GraficosScript }}
-
+{{> Componentes/FiltrosBusqueda }}
 
 <script>
 
@@ -156,7 +178,7 @@
             const result = await deleteInfo.fire();
 
             if (result.isConfirmed) {
-                const { status } = await axios.delete("/charts/EliminarTodo")
+                const { status } = await axios.delete("/bdinput/EliminarTodo")
 
 
             }
@@ -172,6 +194,8 @@
 
     let botonEliminarTodo = document.getElementById("eliminarAll");
     botonEliminarTodo.addEventListener("click", eliminarAll)
+
+
 
 
     //Popovers

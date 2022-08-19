@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const db = require("../db/consultasEEFF");
+const db = require("../db/uploadInfo");
 const router = Router();
 
 router.post("/carga", async (req, res) => {
@@ -27,6 +27,7 @@ router.post("/carga", async (req, res) => {
 
 
 router.post("/cargaInfoSelect", async (req, res) => {
+   console.log(res)
     try {
         const respuesta = await db.CreaTabla();
         res.status(200).redirect("/user/chart");
@@ -35,9 +36,20 @@ router.post("/cargaInfoSelect", async (req, res) => {
       }
   });
   
+/* Eliminar datos */
 
+router.delete("/EliminarTodo", async (req, res) => {
 
+  try {
+const respuesta = await db.EliminarTodo();
+/* No está funcionando el redirect por qué?? */
+res.status(200).redirect("/user/carga");
+} catch (error) {
+res.status(500).send(error);
+}
+});
 
+  
 
 
 module.exports = router;
