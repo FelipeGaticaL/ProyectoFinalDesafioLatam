@@ -15,7 +15,7 @@ let getActivos = async (valorEmpresa, ValorTrimestre) => {
   });
 
   let interT2 = ValorTrimestre.map(function (x) {
-    return `concat(round("${x}"/(SELECT "${x}" FROM AllACount WHERE num_id = 27 AND  rut = ${rut})*100, 2)) ||'%' AS porcent${x},`;
+    return `concat(round("${x}"/(SELECT "${x}" FROM allaccount WHERE num_id = 27 AND  rut = ${rut})*100, 2)) ||'%' AS porcent${x},`;
   });
 
   //--> Proceso para sacarle la coma final, causa error en Postgresql
@@ -28,9 +28,9 @@ let getActivos = async (valorEmpresa, ValorTrimestre) => {
   let interT1b = interT1.join(" ");
   let interT2b = interT2.join(" ");
 
-  let inter3 = `FROM AllACount WHERE rut = ${rut} AND num_id < 28 ORDER BY num_id ASC`;
+  let inter3 = `FROM allaccount WHERE rut = ${rut} AND num_id < 28 ORDER BY num_id ASC`;
   let text = `SELECT plan_de_cuentas, ${interT1b} ${interT2b} ${inter3}`;
-
+/*   console.log(text) */
   const SQLQuery = {
     rowMode: "array",
     text: text,
@@ -48,7 +48,7 @@ let getPasivosPatrimonio = async (valorEmpresa, ValorTrimestre) => {
   });
 
   let interT2 = ValorTrimestre.map(function (x) {
-    return `concat(round("${x}"/(SELECT "${x}" FROM AllACount WHERE num_id = 27 AND  rut = ${rut})*100, 2)) ||'%' AS porcent${x},`;
+    return `concat(round("${x}"/(SELECT "${x}" FROM allaccount WHERE num_id = 27 AND  rut = ${rut})*100, 2)) ||'%' AS porcent${x},`;
   });
 
   //--> Proceso para sacarle la coma final, causa error en Postgresql
@@ -61,7 +61,7 @@ let getPasivosPatrimonio = async (valorEmpresa, ValorTrimestre) => {
   let interT1b = interT1.join(" ");
   let interT2b = interT2.join(" ");
 
-  let inter3 = `FROM AllACount WHERE rut = ${rut} AND num_id > 27 AND num_id <=60 ORDER BY num_id ASC`;
+  let inter3 = `FROM allaccount WHERE rut = ${rut} AND num_id > 27 AND num_id <=60 ORDER BY num_id ASC`;
   let text = `SELECT plan_de_cuentas, ${interT1b} ${interT2b} ${inter3}`;
 
   const SQLQuery = {
@@ -83,7 +83,7 @@ let getEERR = async (valorEmpresa, ValorTrimestre) => {
 
   
   let interT2 = ValorTrimestre.map(function (x) {
-    return `concat(round("${x}"/(SELECT "${x}" FROM allacount WHERE num_id = 100 AND  rut = ${rut})*100, 2)) ||'%' AS porcent${x},`;
+    return `concat(round("${x}"/(SELECT "${x}" FROM allaccount WHERE num_id = 100 AND  rut = ${rut})*100, 2)) ||'%' AS porcent${x},`;
   });
 
   //--> Proceso para sacarle la coma final, causa error en Postgresql
@@ -96,7 +96,7 @@ let getEERR = async (valorEmpresa, ValorTrimestre) => {
   let interT1b = interT1.join(" ");
   let interT2b = interT2.join(" ");
 
-  let inter3 = `FROM allacount WHERE rut = ${rut} AND num_id > 99 AND num_id <124 ORDER BY num_id ASC`;
+  let inter3 = `FROM allaccount WHERE rut = ${rut} AND num_id > 99 AND num_id <124 ORDER BY num_id ASC`;
   let text = `SELECT plan_de_cuentas, ${interT1b} ${interT2b} ${inter3}`;
   
   
@@ -116,7 +116,7 @@ let getActivoCP = async (valorEmpresa, ValorTrimestre) => {
   });
 
   let interT2 = ValorTrimestre.map(function (x) {
-    return `concat(round("${x}"/(SELECT "${x}" FROM AllACount WHERE num_id = 11 AND  rut = ${rut})*100, 2)) ||'%' AS porcent${x},`;
+    return `concat(round("${x}"/(SELECT "${x}" FROM allaccount WHERE num_id = 11 AND  rut = ${rut})*100, 2)) ||'%' AS porcent${x},`;
   });
 
   //--> Proceso para sacarle la coma final, causa error en Postgresql
@@ -129,7 +129,7 @@ let getActivoCP = async (valorEmpresa, ValorTrimestre) => {
   let interT1b = interT1.join(" ");
   let interT2b = interT2.join(" ");
 
-  let inter3 = `FROM AllACount WHERE rut = ${rut} AND num_id >= 1 AND num_id <= 11 ORDER BY num_id ASC`;
+  let inter3 = `FROM allaccount WHERE rut = ${rut} AND num_id >= 1 AND num_id <= 11 ORDER BY num_id ASC`;
   let text = `SELECT plan_de_cuentas, ${interT1b} ${interT2b} ${inter3}`;
 
   const SQLQuery = {
@@ -148,7 +148,7 @@ let getActivoLP = async (valorEmpresa, ValorTrimestre) => {
   });
 
   let interT2 = ValorTrimestre.map(function (x) {
-    return `concat(round("${x}"/(SELECT "${x}" FROM AllACount WHERE num_id = 26 AND  rut = ${rut})*100, 2)) ||'%' AS porcent${x},`;
+    return `concat(round("${x}"/(SELECT "${x}" FROM allaccount WHERE num_id = 26 AND  rut = ${rut})*100, 2)) ||'%' AS porcent${x},`;
   });
 
   //--> Proceso para sacarle la coma final, causa error en Postgresql
@@ -161,7 +161,7 @@ let getActivoLP = async (valorEmpresa, ValorTrimestre) => {
   let interT1b = interT1.join(" ");
   let interT2b = interT2.join(" ");
 
-  let inter3 = `FROM AllACount WHERE rut = ${rut} AND num_id >= 12 AND num_id <= 26 ORDER BY num_id ASC`;
+  let inter3 = `FROM allaccount WHERE rut = ${rut} AND num_id >= 12 AND num_id <= 26 ORDER BY num_id ASC`;
   let text = `SELECT plan_de_cuentas, ${interT1b} ${interT2b} ${inter3}`;
 
   const SQLQuery = {
@@ -180,7 +180,7 @@ let getPasivoCP = async (valorEmpresa, ValorTrimestre) => {
   });
 
   let interT2 = ValorTrimestre.map(function (x) {
-    return `concat(round("${x}"/(SELECT "${x}" FROM AllACount WHERE num_id = 38 AND  rut = ${rut})*100, 2)) ||'%' AS porcent${x},`;
+    return `concat(round("${x}"/(SELECT "${x}" FROM allaccount WHERE num_id = 38 AND  rut = ${rut})*100, 2)) ||'%' AS porcent${x},`;
   });
 
   //--> Proceso para sacarle la coma final, causa error en Postgresql
@@ -193,7 +193,7 @@ let getPasivoCP = async (valorEmpresa, ValorTrimestre) => {
   let interT1b = interT1.join(" ");
   let interT2b = interT2.join(" ");
 
-  let inter3 = `FROM AllACount WHERE rut = ${rut} AND num_id >= 28 AND num_id <= 38 ORDER BY num_id ASC`;
+  let inter3 = `FROM allaccount WHERE rut = ${rut} AND num_id >= 28 AND num_id <= 38 ORDER BY num_id ASC`;
   let text = `SELECT plan_de_cuentas, ${interT1b} ${interT2b} ${inter3}`;
 
   const SQLQuery = {
@@ -212,7 +212,7 @@ let getPasivoLP = async (valorEmpresa, ValorTrimestre) => {
   });
 
   let interT2 = ValorTrimestre.map(function (x) {
-    return `concat(round("${x}"/(SELECT "${x}" FROM AllACount WHERE num_id = 48 AND  rut = ${rut})*100, 2)) ||'%' AS porcent${x},`;
+    return `concat(round("${x}"/(SELECT "${x}" FROM allaccount WHERE num_id = 48 AND  rut = ${rut})*100, 2)) ||'%' AS porcent${x},`;
   });
 
   //--> Proceso para sacarle la coma final, causa error en Postgresql
@@ -225,7 +225,7 @@ let getPasivoLP = async (valorEmpresa, ValorTrimestre) => {
   let interT1b = interT1.join(" ");
   let interT2b = interT2.join(" ");
 
-  let inter3 = `FROM AllACount WHERE rut = ${rut} AND num_id >= 39 AND num_id <= 48 ORDER BY num_id ASC`;
+  let inter3 = `FROM allaccount WHERE rut = ${rut} AND num_id >= 39 AND num_id <= 48 ORDER BY num_id ASC`;
   let text = `SELECT plan_de_cuentas, ${interT1b} ${interT2b} ${inter3}`;
 
   const SQLQuery = {
@@ -276,7 +276,7 @@ const getchartsStacksActivos = async (datos) => {
   //*** Lógica 2 */
   let rut = datos.valorEmpresa;
   let interT1 = trimestre.map(function (x) {
-    return `round("${x}"/(SELECT "${x}" FROM AllACount WHERE num_id = 27 AND rut = ${rut}), 2) AS porcent${x},`;
+    return `round("${x}"/(SELECT "${x}" FROM allaccount WHERE num_id = 27 AND rut = ${rut}), 2) AS porcent${x},`;
   });
 
   //--> Proceso para sacarle la coma final, causa error en Postgresql
@@ -289,9 +289,9 @@ const getchartsStacksActivos = async (datos) => {
   let text =
     "SELECT " +
     interT1b +
-    ` FROM AllACount WHERE rut = ${rut} AND num_id = 11 UNION SELECT ` +
+    ` FROM allaccount WHERE rut = ${rut} AND num_id = 11 UNION SELECT ` +
     interT1b +
-    ` FROM AllACount WHERE rut = ${rut} AND num_id = 26`;
+    ` FROM allaccount WHERE rut = ${rut} AND num_id = 26`;
 
   let SQLQuery = {
     rowMode: "array",
@@ -316,7 +316,7 @@ const getchartsStacksPasivos = async (datos) => {
   //*** Lógica 2 */
   let rut = datos.valorEmpresa;
   let interT1 = trimestre.map(function (x) {
-    return `round("${x}"/(SELECT "${x}" FROM AllACount WHERE num_id = 27 AND rut = ${rut}), 2) AS porcent${x},`;
+    return `round("${x}"/(SELECT "${x}" FROM allaccount WHERE num_id = 27 AND rut = ${rut}), 2) AS porcent${x},`;
   });
 
   //--> Proceso para sacarle la coma final, causa error en Postgresql
@@ -326,15 +326,15 @@ const getchartsStacksPasivos = async (datos) => {
   interT1.pop();
   interT1.push(result2);
   let interT1b = interT1.join(" ");
-  /* let text = "SELECT " + interT1b + ` FROM AllACount WHERE rut = ${rut} AND num_id = 38 UNION SELECT ` + interT1b + ` FROM AllACount WHERE rut = ${rut} AND num_id = 48 `+ "UNION SELECT "+  interT1b +  ` FROM AllACount WHERE rut = ${rut} AND num_id = 59 `
+  /* let text = "SELECT " + interT1b + ` FROM allaccount WHERE rut = ${rut} AND num_id = 38 UNION SELECT ` + interT1b + ` FROM allaccount WHERE rut = ${rut} AND num_id = 48 `+ "UNION SELECT "+  interT1b +  ` FROM allaccount WHERE rut = ${rut} AND num_id = 59 `
    */
   // El retorno es desordenado, por eso un select a la vez
   let CP =
-    "SELECT " + interT1b + ` FROM AllACount WHERE rut = ${rut} AND num_id = 38`;
+    "SELECT " + interT1b + ` FROM allaccount WHERE rut = ${rut} AND num_id = 38`;
   let LP =
-    "SELECT " + interT1b + ` FROM AllACount WHERE rut = ${rut} AND num_id = 48`;
+    "SELECT " + interT1b + ` FROM allaccount WHERE rut = ${rut} AND num_id = 48`;
   let P =
-    "SELECT " + interT1b + ` FROM AllACount WHERE rut = ${rut} AND num_id = 59`;
+    "SELECT " + interT1b + ` FROM allaccount WHERE rut = ${rut} AND num_id = 59`;
   let SQLQuery1 = {
     rowMode: "array",
     text: CP,
@@ -382,9 +382,9 @@ const getchartLiquidez = async (datos) => {
   interT1.push(result2);
   let interT1b = interT1.join(" ");
   let textA =
-    "SELECT " + interT1b + ` FROM AllACount WHERE rut = ${rut} AND num_id = 26`;
+    "SELECT " + interT1b + ` FROM allaccount WHERE rut = ${rut} AND num_id = 26`;
   let textB =
-    "SELECT " + interT1b + ` FROM AllACount WHERE rut = ${rut} AND num_id = 48`;
+    "SELECT " + interT1b + ` FROM allaccount WHERE rut = ${rut} AND num_id = 48`;
   const SQLQuery1 = {
     rowMode: "array",
     text: textA,
@@ -414,7 +414,7 @@ const getRLiquidezRAcida = async (datos) => {
   //*** Lógica 2 */
   let rut = datos.valorEmpresa;
   let interT1 = trimestre.map(function (x) {
-    return `round((SELECT "${x}" FROM AllACount WHERE rut= ${rut} AND num_id = 26)/(SELECT "${x}" FROM AllACount WHERE rut= ${rut} AND num_id = 38), 2) AS "${x}" ,`;
+    return `round((SELECT "${x}" FROM allaccount WHERE rut= ${rut} AND num_id = 26)/(SELECT "${x}" FROM allaccount WHERE rut= ${rut} AND num_id = 38), 2) AS "${x}" ,`;
   });
   //--> Proceso para sacarle la coma final A, causa error en Postgresql
   let lastIndex = trimestre.length - 1;
@@ -423,9 +423,9 @@ const getRLiquidezRAcida = async (datos) => {
   interT1.push(result1);
   let interT1b = interT1.join(" ");
   let inter2 = trimestre.map(function (x) {
-    return `round(((SELECT "${x}" FROM AllACount WHERE rut= ${rut} AND num_id = 11)
-    -(SELECT SUM("${x}") FROM AllACount WHERE rut= ${rut} AND num_id >= 6 AND num_id <=7))
-    /(SELECT "${x}" FROM AllACount WHERE rut= ${rut} AND num_id = 38), 2) AS "${x}" ,`;
+    return `round(((SELECT "${x}" FROM allaccount WHERE rut= ${rut} AND num_id = 11)
+    -(SELECT SUM("${x}") FROM allaccount WHERE rut= ${rut} AND num_id >= 6 AND num_id <=7))
+    /(SELECT "${x}" FROM allaccount WHERE rut= ${rut} AND num_id = 38), 2) AS "${x}" ,`;
   });
   //--> Proceso para sacarle la coma final A, causa error en Postgresql
   let result2 = inter2[lastIndex].substring(0, inter2[0].length - 1);
@@ -435,11 +435,11 @@ const getRLiquidezRAcida = async (datos) => {
   let RL =
     "SELECT " +
     interT1b +
-    ` FROM AllACount LEFT JOIN ratios ON (num_id = 1) = (id_ratio = 502) WHERE rut=${rut} AND num_id = 1`;
+    ` FROM allaccount LEFT JOIN ratios ON (num_id = 1) = (id_ratio = 502) WHERE rut=${rut} AND num_id = 1`;
   let RA =
     "SELECT " +
     inter2b +
-    ` FROM AllACount LEFT JOIN ratios ON (num_id = 1) = (id_ratio = 504) WHERE rut=${rut} AND num_id = 1`;
+    ` FROM allaccount LEFT JOIN ratios ON (num_id = 1) = (id_ratio = 504) WHERE rut=${rut} AND num_id = 1`;
 
   const SQLQuery1 = {
     rowMode: "array",
@@ -469,8 +469,8 @@ const getKdeTrabajo = async (datos) => {
   //*** Lógica 2 */
   let rut = datos.valorEmpresa;
   let interT1 = trimestre.map(function (x) {
-    return `round((SELECT "${x}" FROM AllACount WHERE  rut=${rut} AND num_id = 11)
-  -(SELECT "${x}" FROM AllACount WHERE  rut=${rut} AND num_id = 38), 2) AS "${x}" ,`;
+    return `round((SELECT "${x}" FROM allaccount WHERE  rut=${rut} AND num_id = 11)
+  -(SELECT "${x}" FROM allaccount WHERE  rut=${rut} AND num_id = 38), 2) AS "${x}" ,`;
   });
   //--> Proceso para sacarle la coma final A, causa error en Postgresql
   let lastIndex = trimestre.length - 1;
@@ -481,7 +481,7 @@ const getKdeTrabajo = async (datos) => {
   let text =
     "SELECT " +
     interT1b +
-    ` FROM AllACount LEFT JOIN ratios ON (num_id = 1) = (id_ratio = 500)  WHERE rut=${rut} AND num_id = 1 `;
+    ` FROM allaccount LEFT JOIN ratios ON (num_id = 1) = (id_ratio = 500)  WHERE rut=${rut} AND num_id = 1 `;
 
   const SQLQuery = {
     rowMode: "array",
@@ -517,15 +517,15 @@ const getRentabilidad = async (datos) => {
   let IAO =
     "SELECT " +
     interT1b +
-    ` FROM AllACount WHERE rut= ${rut} AND num_id = 100 `;
+    ` FROM allaccount WHERE rut= ${rut} AND num_id = 100 `;
   let GB =
     "SELECT " +
     interT1b +
-    ` FROM AllACount WHERE rut= ${rut} AND num_id = 102 `;
+    ` FROM allaccount WHERE rut= ${rut} AND num_id = 102 `;
   let GAO =
     "SELECT " +
     interT1b +
-    ` FROM AllACount WHERE rut= ${rut} AND num_id = 108 `;
+    ` FROM allaccount WHERE rut= ${rut} AND num_id = 108 `;
   const SQLQuery1 = {
     rowMode: "array",
     text: IAO,
@@ -560,12 +560,12 @@ const getEBITDA = async (datos) => {
   //*** Lógica 2 */
   let rut = datos.valorEmpresa;
   let interT1 = trimestre.map(function (x) {
-    return `(SELECT "${x}" FROM AllACount WHERE num_id = 108 AND rut= ${rut})
-    +coalesce((SELECT "${x}" FROM AllACount WHERE num_id = 112 AND rut= ${rut}),0)
-    +coalesce((SELECT "${x}" FROM AllACount WHERE num_id = 113 AND rut= ${rut}),0)
-    +coalesce((SELECT "${x}" FROM AllACount WHERE num_id = 114 AND rut= ${rut}),0)
-    +coalesce((SELECT "${x}" FROM AllACount WHERE num_id = 115 AND rut= ${rut}),0)
-    +coalesce((SELECT "${x}" FROM AllACount WHERE num_id = 118 AND rut= ${rut}),0) AS "${x}" ,`;
+    return `(SELECT "${x}" FROM allaccount WHERE num_id = 108 AND rut= ${rut})
+    +coalesce((SELECT "${x}" FROM allaccount WHERE num_id = 112 AND rut= ${rut}),0)
+    +coalesce((SELECT "${x}" FROM allaccount WHERE num_id = 113 AND rut= ${rut}),0)
+    +coalesce((SELECT "${x}" FROM allaccount WHERE num_id = 114 AND rut= ${rut}),0)
+    +coalesce((SELECT "${x}" FROM allaccount WHERE num_id = 115 AND rut= ${rut}),0)
+    +coalesce((SELECT "${x}" FROM allaccount WHERE num_id = 118 AND rut= ${rut}),0) AS "${x}" ,`;
   });
   //--> Proceso para sacarle la coma final A, causa error en Postgresql
   let lastIndex = trimestre.length - 1;
@@ -573,7 +573,7 @@ const getEBITDA = async (datos) => {
   interT1.pop();
   interT1.push(result1);
   let interT1b = interT1.join(" ");
-  let text = "SELECT " + interT1b + ` FROM AllACount LEFT JOIN ratios ON (num_id = 1) = (id_ratio = 641)   WHERE rut= ${rut} AND num_id = 1`
+  let text = "SELECT " + interT1b + ` FROM allaccount LEFT JOIN ratios ON (num_id = 1) = (id_ratio = 641)   WHERE rut= ${rut} AND num_id = 1`
 
 
 
@@ -601,8 +601,8 @@ const getREndeudamiento = async (datos) => {
   //*** Lógica 2 */
   let rut = datos.valorEmpresa;
   let interT1 = trimestre.map(function (x) {
-    return `round((SELECT "${x}" FROM AllACount WHERE rut=${rut} AND num_id = 38 )
-    /(SELECT "${x}" FROM AllACount WHERE rut=${rut} AND num_id = 59),2) AS "${x}" ,`;
+    return `round((SELECT "${x}" FROM allaccount WHERE rut=${rut} AND num_id = 38 )
+    /(SELECT "${x}" FROM allaccount WHERE rut=${rut} AND num_id = 59),2) AS "${x}" ,`;
   });
   //--> Proceso para sacarle la coma final A, causa error en Postgresql
   let lastIndex = trimestre.length - 1;
@@ -612,16 +612,16 @@ const getREndeudamiento = async (datos) => {
   let interT1b = interT1.join(" ");
   
   let interT2 = trimestre.map(function (x) {
-    return `round((SELECT "${x}" FROM AllACount WHERE rut=${rut} AND num_id = 48 )
-    /(SELECT "${x}" FROM AllACount WHERE rut=${rut} AND num_id = 59),2) AS "${x}" ,`;
+    return `round((SELECT "${x}" FROM allaccount WHERE rut=${rut} AND num_id = 48 )
+    /(SELECT "${x}" FROM allaccount WHERE rut=${rut} AND num_id = 59),2) AS "${x}" ,`;
   });
   let result2 = interT2[lastIndex].substring(0, interT2[0].length - 1);
   interT2.pop();
   interT2.push(result2);
   let interT2b = interT2.join(" ");
   //Afecta el orden el query con UNION
-  let texta = "SELECT " + interT1b + ` FROM AllACount LEFT JOIN ratios ON (num_id = 1) = (id_ratio = 538)  WHERE rut=${rut} AND num_id = 1 `
-  let textb = "SELECT "+  interT2b+ ` FROM AllACount LEFT JOIN ratios ON (num_id = 1) = (id_ratio = 537)  WHERE rut=${rut} AND num_id = 1`
+  let texta = "SELECT " + interT1b + ` FROM allaccount LEFT JOIN ratios ON (num_id = 1) = (id_ratio = 538)  WHERE rut=${rut} AND num_id = 1 `
+  let textb = "SELECT "+  interT2b+ ` FROM allaccount LEFT JOIN ratios ON (num_id = 1) = (id_ratio = 537)  WHERE rut=${rut} AND num_id = 1`
     let SQLQuery1 = {
     rowMode: "array",
     text: texta,
@@ -650,8 +650,8 @@ const getCCE = async (datos) => {
   //*** Plazo Promedio de Cobro*/
  
   let interT1 = trimestre.map(function (x) {
-    return `round(365/(((SELECT "${x}" FROM allacount WHERE rut= ${rut} AND num_id = 100)*1)
-    /(SELECT "${x}" FROM allacount WHERE rut= ${rut} AND num_id = 4)),2) AS "${x}" ,`;
+    return `round(365/(((SELECT "${x}" FROM allaccount WHERE rut= ${rut} AND num_id = 100)*1)
+    /(SELECT "${x}" FROM allaccount WHERE rut= ${rut} AND num_id = 4)),2) AS "${x}" ,`;
   });
   //--> Delete Comma
   let lastIndex = trimestre.length - 1;
@@ -662,8 +662,8 @@ const getCCE = async (datos) => {
   
    //*** Plazo Promedio Existencias*/
    let inter2 = trimestre.map(function (x) {
-     return `round(365/((SELECT "${x}" FROM allacount WHERE rut= ${rut} AND num_id = 101)
-     /(SELECT SUM("${x}") FROM allacount WHERE rut= ${rut} AND num_id >= 6 AND num_id <= 7)),2) AS "${x}" ,`;
+     return `round(365/((SELECT "${x}" FROM allaccount WHERE rut= ${rut} AND num_id = 101)
+     /(SELECT SUM("${x}") FROM allaccount WHERE rut= ${rut} AND num_id >= 6 AND num_id <= 7)),2) AS "${x}" ,`;
    });
    //--> Delete Comma
    let result2 = inter2[lastIndex].substring(0, inter2[0].length - 1);
@@ -673,8 +673,8 @@ const getCCE = async (datos) => {
   
   //*** Plazo Promedio Proveedores*/
    let inter3 = trimestre.map(function (x) {
-     return `round(365/((SELECT "${x}" FROM allacount WHERE rut = ${rut} AND num_id = 101)
-     /(SELECT SUM("${x}") FROM allacount WHERE rut = ${rut} AND num_id =30)),2) AS "${x}" ,`;
+     return `round(365/((SELECT "${x}" FROM allaccount WHERE rut = ${rut} AND num_id = 101)
+     /(SELECT SUM("${x}") FROM allaccount WHERE rut = ${rut} AND num_id =30)),2) AS "${x}" ,`;
    });
    //--> Delete Comma
    let result3 = inter3[lastIndex].substring(0, inter3[0].length - 1);
@@ -684,14 +684,14 @@ const getCCE = async (datos) => {
    
    //*** Ciclo de Caja*/
    let inter4 = trimestre.map(function (x) {
-    return `round((365/(((SELECT "${x}" FROM allacount WHERE rut = ${rut} AND num_id = 100)*1)
-    /(SELECT "${x}" FROM allacount WHERE rut = ${rut} AND num_id = 4)))
+    return `round((365/(((SELECT "${x}" FROM allaccount WHERE rut = ${rut} AND num_id = 100)*1)
+    /(SELECT "${x}" FROM allaccount WHERE rut = ${rut} AND num_id = 4)))
     + 
-  (365/((SELECT "${x}" FROM allacount WHERE rut = ${rut} AND num_id = 101)
-    /(SELECT SUM("${x}") FROM allacount WHERE rut = ${rut} AND num_id >= 6 AND num_id <= 7))) 
+  (365/((SELECT "${x}" FROM allaccount WHERE rut = ${rut} AND num_id = 101)
+    /(SELECT SUM("${x}") FROM allaccount WHERE rut = ${rut} AND num_id >= 6 AND num_id <= 7))) 
     -
-  (365/((SELECT "${x}" FROM allacount WHERE rut = ${rut} AND num_id = 101)
-    /(SELECT SUM("${x}") FROM allacount WHERE rut = ${rut} AND num_id =30))),2) AS "${x}" ,`;
+  (365/((SELECT "${x}" FROM allaccount WHERE rut = ${rut} AND num_id = 101)
+    /(SELECT SUM("${x}") FROM allaccount WHERE rut = ${rut} AND num_id =30))),2) AS "${x}" ,`;
   });
   //--> Delete Comma
   let result4 = inter4[lastIndex].substring(0, inter4[0].length - 1);
@@ -701,10 +701,10 @@ const getCCE = async (datos) => {
   
   // Unión de sentencia SQL
 
-  let PPC = "SELECT " + interT1b + ` FROM allacount LEFT JOIN ratios ON (num_id = 1) = (id_ratio = 512) WHERE rut= ${rut} AND num_id = 1`
-  let PPE = "SELECT " + inter2b+ ` FROM allacount  LEFT JOIN ratios ON (num_id = 1) = (id_ratio = 513)  WHERE rut= ${rut} AND num_id = 1`
-  let PPP = "SELECT " + inter3b + ` FROM allacount LEFT JOIN ratios ON (num_id = 1) = (id_ratio = 514)  WHERE rut = ${rut} AND num_id = 1`
-  let CCC = "SELECT " +inter4b + ` FROM allacount LEFT JOIN ratios ON (num_id = 1) = (id_ratio = 517) WHERE rut = ${rut} AND num_id = 1`
+  let PPC = "SELECT " + interT1b + ` FROM allaccount LEFT JOIN ratios ON (num_id = 1) = (id_ratio = 512) WHERE rut= ${rut} AND num_id = 1`
+  let PPE = "SELECT " + inter2b+ ` FROM allaccount  LEFT JOIN ratios ON (num_id = 1) = (id_ratio = 513)  WHERE rut= ${rut} AND num_id = 1`
+  let PPP = "SELECT " + inter3b + ` FROM allaccount LEFT JOIN ratios ON (num_id = 1) = (id_ratio = 514)  WHERE rut = ${rut} AND num_id = 1`
+  let CCC = "SELECT " +inter4b + ` FROM allaccount LEFT JOIN ratios ON (num_id = 1) = (id_ratio = 517) WHERE rut = ${rut} AND num_id = 1`
 
 
 
@@ -777,7 +777,7 @@ const getTrimestreFiltrado = async (datos) => {
   const SQLQuery = {
     rowMode: "array",
     text: `
-            SELECT DISTINCT trimestre FROM  plan_cuentas WHERE rut = ${datos} ORDER BY trimestre
+            SELECT DISTINCT trimestre FROM  plan_cuentas WHERE rut = ${datos} AND tipo_de_informe = 'ESF C/NC' ORDER BY trimestre
           `,
   };
   const { rows } = await db.query(SQLQuery);

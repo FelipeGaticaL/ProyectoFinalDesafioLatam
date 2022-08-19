@@ -9,6 +9,7 @@ router.put("/query", async (req, res) => {
   
   let ValorTrimestre = req.body.ValorTrimestre;
   let valorEmpresa = req.body.valorEmpresa;
+  
 
   try {
     let getPasivoLP = await db.getPasivoLP(valorEmpresa, ValorTrimestre );
@@ -473,7 +474,7 @@ router.put("/getRazonSocial", async (req, res) => {
   try {
     const resultado = await db.getRazonSocial(datos);
     let resultado2 = resultado.flat()
-   console.log()
+  
    res.send(resultado2);
   } catch (error) {
     res.status(500).send(error);

@@ -27,7 +27,7 @@ try{
   
   const SQLQuery = {
   text: `
-  DROP TABLE IF EXISTS allacount
+  DROP TABLE IF EXISTS allaccount
         `,
 };
 const resultDrop = await db.query(SQLQuery);
@@ -44,7 +44,7 @@ let CreateTalbe = trimestres.map((e)=>{
   return `"${e}" NUMERIC DEFAULT NULL`
 })
 let CreateTalbetext = CreateTalbe.join(' , ')
-let textCreateTable = `CREATE TABLE  IF NOT EXISTS allacount (
+let textCreateTable = `CREATE TABLE  IF NOT EXISTS allaccount (
   num_id INT DEFAULT NULL,
   rut INT DEFAULT NULL,
   id_cuenta VARCHAR(500) DEFAULT NULL,
@@ -94,7 +94,7 @@ let interT4b = interT4.join(" ");
 
 
 /* let ConsultaInterpolada = rut.map(function (x) {
-  return `INSERT INTO AllAcount (num_id, rut, id_cuenta, tipo_informe, plan_de_cuentas, ${interT4b})
+  return `INSERT INTO allaccount (num_id, rut, id_cuenta, tipo_informe, plan_de_cuentas, ${interT4b})
     SELECT  num_id, rut, id_cuenta, tipo_informe, plan_de_cuentas, ${interT1b}
   FROM  crosstab(
      $$
@@ -107,7 +107,7 @@ let interT4b = interT4.join(" ");
    , 'VALUES ${interT2b}') 
    AS plan (num_id INT, rut INT, id_cuenta VARCHAR, tipo_informe VARCHAR, plan_de_cuentas VARCHAR, ${interT3b});
    
-   INSERT INTO AllAcount (num_id, rut, id_cuenta, tipo_informe, plan_de_cuentas, ${interT4b})
+   INSERT INTO allaccount (num_id, rut, id_cuenta, tipo_informe, plan_de_cuentas, ${interT4b})
   SELECT  num_id, rut, id_cuenta, tipo_informe, plan_de_cuentas, ${interT1b}
   FROM  crosstab(
      $$
@@ -131,7 +131,7 @@ for (i = 0 ; i<rut.length ; i++){
  const SQLQuery = {
     rowMode: "array",
     text: `
-    INSERT INTO AllAcount (num_id, rut, id_cuenta, tipo_informe, plan_de_cuentas, ${interT4b})
+    INSERT INTO allaccount (num_id, rut, id_cuenta, tipo_informe, plan_de_cuentas, ${interT4b})
     SELECT  num_id, rut, id_cuenta, tipo_informe, plan_de_cuentas, ${interT1b}
     FROM  crosstab(
        $$
@@ -145,7 +145,7 @@ for (i = 0 ; i<rut.length ; i++){
      AS plan (num_id INT, rut INT, id_cuenta VARCHAR, tipo_informe VARCHAR, plan_de_cuentas VARCHAR, ${interT3b});
      
 
-     INSERT INTO AllAcount (num_id, rut, id_cuenta, tipo_informe, plan_de_cuentas, ${interT4b})
+     INSERT INTO allaccount (num_id, rut, id_cuenta, tipo_informe, plan_de_cuentas, ${interT4b})
       SELECT  num_id, rut, id_cuenta, tipo_informe, plan_de_cuentas, ${interT1b}
       FROM  crosstab(
      $$
@@ -179,7 +179,7 @@ const EliminarTodo = async () => {
   db.query(
     `
           DELETE FROM plan_cuentas;
-          DROP TABLE allacount
+          DROP TABLE allaccount
           `,
     (err, res) => {
       /*  console.log(err, res) */
