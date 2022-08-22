@@ -752,7 +752,7 @@ const getEmpresas = async () => {
           `,
   };
   const { rows } = await db.query(SQLQuery);
-  
+  console.log
   
   
   return rows;
