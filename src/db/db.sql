@@ -1,14 +1,9 @@
-CREATE DATABASE proyecto
+/* CREATE DATABASE proyecto */
+CREATE TABLE roles
+    (id SERIAL PRIMARY KEY,
+    name VARCHAR(255) UNIQUE NOT NULL);
 
-
-CREATE TABLE roles(
-    id SERIAL PRIMARY KEY,
-    name VARCHAR(255) UNIQUE NOT NULL
-);
-
-INSERT INTO
-    roles(id, name)
-VALUES
+INSERT INTO roles VALUES
     (1, 'user'),
     (2, 'admin');
 
@@ -36,11 +31,11 @@ CREATE TABLE cuentas (
 CREATE TABLE ratios (
 	id_ratio INT PRIMARY KEY,
 	nombre_ratio VARCHAR (400)
-)
+);
 
 
 CREATE TABLE plan_cuentas(
-id SERIAL INT PRIMARY KEY,
+id SERIAL PRIMARY KEY,
 Trimestre INT DEFAULT NULL,
 Rut INT DEFAULT NULL,
 Razon_Social VARCHAR(300) DEFAULT NULL,
@@ -51,8 +46,8 @@ Monto numeric DEFAULT NULL,
 Taxonomia VARCHAR(20) DEFAULT NULL,
 Tipo_de_Informe VARCHAR(20) DEFAULT NULL
 
-FOREIGN KEY (plan_de_cuentas) REFERENCES cuentas(cuenta)
-)
+/* FOREIGN KEY (plan_de_cuentas) REFERENCES cuentas(cuenta) */
+);
 
 /* Agregar funcionalidad a tabla plan de cuentas para que sea posible el CROSSTAB */
 CREATE EXTENSION IF NOT EXISTS tablefunc;
@@ -154,7 +149,7 @@ INSERT INTO cuentas VALUES
 ('132','42.13.30','Ganancia (pérdida) por acción básica en operaciones discontinuadas','ERFG','Estado del Resultado, por Función de Gasto','off'),
 ('133','42.13.40','Ganancias (pérdida) diluida por acción procedentes de operaciones discontinuadas','ERFG','Estado del Resultado, por Función de Gasto','off'),
 ('134','42.14.10','Ganancias por acción [bloque de texto]','ERFG','Estado del Resultado, por Función de Gasto','off'),
-('135','42.15.10','Ganancia (pérdida) acumulada anteriormente reconocida en otro resultado integral que surge de la reclasificación de activos financieros de la categoría de medición de valor razonable con cambios en otro resultado integral a la de valor razonable con cambios en resultados','ERFG','Estado del Resultado, por Función de Gasto','off')
+('135','42.15.10','Ganancia (pérdida) acumulada anteriormente reconocida en otro resultado integral que surge de la reclasificación de activos financieros de la categoría de medición de valor razonable con cambios en otro resultado integral a la de valor razonable con cambios en resultados','ERFG','Estado del Resultado, por Función de Gasto','off');
 
 
 
@@ -302,5 +297,5 @@ INSERT INTO ratios VALUES
 ('636','Razon de Endeudamiento'),
 ('637','Cobertura de Intereses'),
 ('638','Payout'),
-('639','Tasa de Crecimiento g')
+('639','Tasa de Crecimiento g');
 

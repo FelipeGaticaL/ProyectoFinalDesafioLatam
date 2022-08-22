@@ -12,6 +12,7 @@ const app = express();
 
 // server
 const PORT = process.env.PORT || 3000;
+
 app.listen(PORT, () => console.log(`Servidor encendido: http://localhost:${PORT}`));
 
 // middlewares
