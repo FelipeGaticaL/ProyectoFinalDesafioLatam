@@ -1,6 +1,6 @@
-# Proyecto lecto de Estados Financieros CMF
+# Proyecto lector de Estados Financieros CMF
 
-Objetivo:  La APP Web es un lector de Estados Financierso de la CMF, en la cual se pueden cargar y leer "Estado de Situación Financiera, Corriente/No Corriente" y "Estado del Resultado, por Función de Gasto". De esta información la apliación es capaz de crear las tablas respectivas y calcular ratios de acuerdo a la elección de los usuarios para mostrarlos en gráficos.
+Objetivo:  La APP Web es un lector de Estados Financierso de la CMF, en la cual se pueden cargar y leer "Estado de Situación Financiera, Corriente/No Corriente" y "Estado del Resultado, por Función de Gasto". A partir de esta información la apliación es capaz de crear las tablas respectivas y calcular ratios de acuerdo a la elección de los usuarios para mostrarlos en gráficos.
 
 Objetivo secundario: Se profundizaron conocimientos en Postgresql, Javascript, Express, Nodejs, axios, bootstrap, jsnonwebtoken, bcrypt y handlebars, entre otras librerías. 
 
