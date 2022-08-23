@@ -1,19 +1,30 @@
-# ProyectoFinalDesafioLatam
+# Proyecto lecto de Estados Financieros CMF
 
-Proyecto lector de Estados Financieros CMF
+Objetivo:  La APP Web es un lector de Estados Financierso de la CMF, en la cual se pueden cargar y leer "Estado de Situación Financiera, Corriente/No Corriente" y "Estado del Resultado, por Función de Gasto". De esta información la apliación es capaz de crear las tablas respectivas y calcular ratios de acuerdo a la elección de los usuarios para mostrarlos en gráficos.
 
-Este proyecto tenía como principal objetivo: 
+Objetivo secundario: Se profundizaron conocimientos en Postgresql, Javascript, Express, Nodejs, axios, bootstrap, jsnonwebtoken, bcrypt y handlebars, entre otras librerías. 
 
-La APP Web es un lector de Estados Financierso de la CMF, en la cual se pueden cargar y leer "Estado de Situación Financiera, Corriente/No Corriente" y "Estado del Resultado, por Función de Gasto"
+Principales desafio:
 
-De esta información la apliación es capaz de crear las tablas respectivas y calcular ratios de acuerdo a la elección de los usuarios.
+1.- Creación de taxonomía y reglas del negocio BD
 
-La aplicación puede leer correctamente un conjunto de empresas, sin embargo, aún falta agregar algunos ajustes a nivel SQL en cuanto a la normalización de datos. Estos últimos vienen en diferente formato por parte de los archivos de la CMF.
+![Image text](https://github.com/NoGravity77/ProyectoFinalDesafioLatam/blob/main/01_docs/Imagenes%20Readme/Arhcivo%20de%20lectura.PNG)
+![Image text](https://github.com/NoGravity77/ProyectoFinalDesafioLatam/blob/main/01_docs/Imagenes%20Readme/Taxonomia.PNG)
+![Image text](https://github.com/NoGravity77/ProyectoFinalDesafioLatam/blob/main/01_docs/Imagenes%20Readme/Posibles%20Ratios.PNG)
 
-Como objetivo secundario:
+2.- Lector de datos y activación de información legible para operaciones del sistema
 
-Se profundizaron conocimientos en Postgresql, Javascript, Express, Nodejs, axios, bootstrap, jsnonwebtoken, bcrypt y handlebars, entre otras librerías. 
+![Image text](https://github.com/NoGravity77/ProyectoFinalDesafioLatam/blob/main/01_docs/Imagenes%20Readme/Seccion%20de%20carga.PNG)
 
-Finalmente, por el tipo de proyecto en el cual se trabajó con varios tipos de consultas a nivel de BD, se puede considerar un trabajo enfocado en el Backend.
+3.- Dashboard, tablas Activos, Pasivos, Patrimonio y Estados de Resultado con su respectivo análisis vertical (composition weight)
 
-![Image text](https://github.com/NoGravity77/ProyectoFinalDesafioLatam/blob/main/public/uploads/fdadbc0f-7379-4c89-802a-78539d795c38.jpg)
+![Image text](https://github.com/NoGravity77/ProyectoFinalDesafioLatam/blob/main/01_docs/Imagenes%20Readme/Acordi%C3%B3n%20de%20Estados%20Financieros.PNG)
+![Image text](https://github.com/NoGravity77/ProyectoFinalDesafioLatam/blob/main/01_docs/Imagenes%20Readme/Ejemplo%20de%20tabla%20desplegado.PNG)
+
+
+4.- Filtro dinámico de Empresas y Trimestres, gráficos y popovers descriptivos. 
+
+![Image text](https://github.com/NoGravity77/ProyectoFinalDesafioLatam/blob/main/01_docs/Imagenes%20Readme/1_Filtros%20y%20Gr%C3%A1ficos.PNG)
+![Image text](https://github.com/NoGravity77/ProyectoFinalDesafioLatam/blob/main/01_docs/Imagenes%20Readme/Stack.PNG)
+![Image text](https://github.com/NoGravity77/ProyectoFinalDesafioLatam/blob/main/01_docs/Imagenes%20Readme/CCE.PNG)
+![Image text](https://github.com/NoGravity77/ProyectoFinalDesafioLatam/blob/main/01_docs/Imagenes%20Readme/Popover%20Secci%C3%B3n%20Gr%C3%A1ficos.PNG)
