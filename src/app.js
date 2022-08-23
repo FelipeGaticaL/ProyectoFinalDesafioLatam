@@ -1,7 +1,6 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
 const expressFileUpload = require("express-fileupload");
-const { expressCspHeader, INLINE, NONE, SELF } = require('express-csp-header');
 const path = require("path");
 const cors = require('cors')
 require('dotenv').config();
@@ -22,16 +21,8 @@ app.listen(PORT, () => console.log(`Servidor encendido: http://localhost:${PORT}
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(expressFileUpload());
-//cors -> error de cors en heroku servidor
+//cors
 app.use(cors())
-//error de bloqueo de recursos por politicas de privacidad  Content Security Policy
-
-app.use(expressCspHeader({
-    directives: {
-        'font-src' : ['data:', SELF],
-      
-    }
-}));
 
 // public folders
 app.use(express.static(path.join(__dirname, "..", "/public")));
