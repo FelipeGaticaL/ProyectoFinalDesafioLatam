@@ -2,7 +2,9 @@ const express = require("express");
 const exphbs = require("express-handlebars");
 const expressFileUpload = require("express-fileupload");
 const path = require("path");
+const cors = require('cors')
 require('dotenv').config();
+
 
 const db = require("./db/consultasEEFF");
 const { Console } = require("console");
@@ -19,6 +21,8 @@ app.listen(PORT, () => console.log(`Servidor encendido: http://localhost:${PORT}
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(expressFileUpload());
+//cors
+app.use(cors())
 
 // public folders
 app.use(express.static(path.join(__dirname, "..", "/public")));

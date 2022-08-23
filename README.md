@@ -16,3 +16,4 @@ Se profundizaron conocimientos en Postgresql, Javascript, Express, Nodejs, axios
 
 Finalmente, por el tipo de proyecto en el cual se trabajó con varios tipos de consultas a nivel de BD, se puede considerar un trabajo enfocado en el Backend.
 
+![Image text](https://github.com/NoGravity77/ProyectoFinalDesafioLatam/blob/main/public/uploads/fdadbc0f-7379-4c89-802a-78539d795c38.jpg)
